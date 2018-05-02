@@ -4,7 +4,9 @@
   "description": "a game about democracy in the early 20th century",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack",
+    "deploy": "webpack --config webpack.production.config.js",
+    "test": "eslint ./src/**/**.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,23 @@
   "bugs": {
     "url": "https://github.com/agar3s/TheDemocracyTimes/issues"
   },
-  "homepage": "https://github.com/agar3s/TheDemocracyTimes#readme"
+  "homepage": "https://github.com/agar3s/TheDemocracyTimes#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.23.6",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "copy-webpack-plugin": "^4.4.2",
+    "expose-loader": "^0.7.4",
+    "html-webpack-plugin": "^2.30.1",
+    "raw-loader": "^0.5.1",
+    "webpack": "^3.0.0"
+  },
+  "dependencies": {
+    "phaser": "^3.6.0"
+  }
 }
