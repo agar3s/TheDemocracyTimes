@@ -1,0 +1,22 @@
+{
+  "name": "the-democracy-times",
+  "version": "1.0.0",
+  "description": "a game about democracy in the early 20th century",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agar3s/TheDemocracyTimes.git"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "agar3s",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agar3s/TheDemocracyTimes/issues"
+  },
+  "homepage": "https://github.com/agar3s/TheDemocracyTimes#readme"
+}
