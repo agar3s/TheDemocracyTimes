@@ -22,9 +22,29 @@
     		top: 0;
             border: 1px solid #aaaaaa;
     	}
+        @font-face {
+            font-family: newsgeek;
+            src: url('assets/fonts/NewsgeekSerif.ttf');
+            font-weight: 400;
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: newsgeekPixel;
+            src: url('assets/fonts/Newsgeek.ttf');
+            font-weight: 400;
+            font-weight: normal;
+        }
+        .fontLoader {
+            position: absolute;
+            left: -1000px;
+            visibility: hidden;
+        }
+    </style>
     </style>
 </head>
 
 <body>
+    <div class='fontLoader' style='font-family: newsgeek;'>-</div>
+    <div class='fontLoader' style='font-family: newsgeekPixel;'>-</div>
     <canvas id='game' autofocus></canvas>
 </body>

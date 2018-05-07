@@ -4,8 +4,8 @@ import {BootScene} from './scenes/boot'
 let config = {
   type: Phaser.AUTO,
   parent: 'content',
-  width: 800,
-  height: 600,
+  width: 1200,
+  height: 800,
   scaleMode: 1,
   pixelArt: true,
   canvas: document.getElementById('game'),
