@@ -1,0 +1,32 @@
+{
+  "1x1":   {"headlineFont": "na16", "leadFont": "small8", "width": 1, "height": 1, "columns": 1 },
+  "1.5x1": {"headlineFont": "na16", "leadFont": "small8", "width": 1.5, "height": 1, "columns": 1},
+  "2x1":   {"headlineFont": "na16", "leadFont": "small8", "width": 2, "height": 1, "columns": 1},
+  "3x1":   {"headlineFont": "na16", "leadFont": "small10", "width": 3, "height": 1, "columns": 1},
+
+	"1x1.5": {"headlineFont": "na16", "leadFont": "small8", "width": 1, "height": 1.5, "columns": 1},
+  "2x1.5": {"headlineFont": "na22", "leadFont": "small10", "width": 2, "height": 1.5, "columns": 1},
+  "3x1.5": {"headlineFont": "na22", "leadFont": "small10", "width": 3, "height": 1.5, "columns": 1},
+
+  "1x2":   {"headlineFont": "na18", "leadFont": "small8", "width": 1, "height": 2, "columns": 1},
+  "1.5x2": {"headlineFont": "na22", "leadFont": "small10", "width": 1.5, "height": 2, "columns": 1},
+  "2x2":   {"headlineFont": "na22", "leadFont": "small10", "width": 2, "height": 2, "columns": 1},
+  "3x2":   {"headlineFont": "na22", "leadFont": "small12", "width": 3, "height": 2, "columns": 1},
+
+  "1x2.5": {"headlineFont": "na18", "leadFont": "small10", "width": 1, "height": 2.5, "columns": 1},
+  "2x2.5": {"headlineFont": "na28", "leadFont": "small12", "width": 2, "height": 2.5, "columns": 1},
+  "3x2.5": {"headlineFont": "na24", "leadFont": "small12", "width": 3, "height": 2.5, "columns": 1},
+
+  "1x3":   {"headlineFont": "na18", "leadFont": "small10", "width": 1, "height": 3, "columns": 1},
+  "1.5x3": {"headlineFont": "na22", "leadFont": "small10", "width": 1.5, "height": 3, "columns": 1},
+  "2x3":   {"headlineFont": "na24", "leadFont": "small12", "width": 2, "height": 3, "columns": 1},
+  "3x3":   {"headlineFont": "na28", "leadFont": "small12", "width": 3, "height": 3, "columns": 1},
+
+  "clip": {
+  	"headlineFont": "na16",
+  	"leadFont": "small10",
+		"columns": 1,
+		"width": 1.5,
+		"height": 1.5
+	}
+}

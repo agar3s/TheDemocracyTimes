@@ -11,40 +11,28 @@
     <meta name="format-detection" content="telephone=no">
     <style>
     	body {
-    		background: #fff;
+    		background: #333;
     	}
     	canvas {
     		display: block;
-    		margin: 0 auto;
+    		margin: auto;
     		position: absolute;
     		left: 0;
     		right: 0;
     		top: 0;
-            border: 1px solid #aaaaaa;
+            bottom: 0;
     	}
-        @font-face {
-            font-family: newsgeek;
-            src: url('assets/fonts/NewsgeekSerif.ttf');
-            font-weight: 400;
-            font-weight: normal;
-        }
-        @font-face {
-            font-family: newsgeekPixel;
-            src: url('assets/fonts/Newsgeek.ttf');
-            font-weight: 400;
-            font-weight: normal;
-        }
-        .fontLoader {
+        #fullScreen {
             position: absolute;
-            left: -1000px;
-            visibility: hidden;
+            top: 0;
+            left: 0;
+            z-index: 3;
         }
     </style>
     </style>
 </head>
 
 <body>
-    <div class='fontLoader' style='font-family: newsgeek;'>-</div>
-    <div class='fontLoader' style='font-family: newsgeekPixel;'>-</div>
     <canvas id='game' autofocus></canvas>
+    <button id='fullScreen'>F</button>
 </body>
