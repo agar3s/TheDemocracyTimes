@@ -31,17 +31,21 @@ export default class NewsBody {
 
     while (!max) {
       let width = this.nextRandom(this.width*0.8)
-      if (x + width + lineHeight*1 > this.width) {
+      if (x + width + lineHeight*1 + paddingX> this.width) {
         this.graphics.fillRect(x, y, this.width - x - paddingX, lineHeight)
         x = paddingX
         y += lineHeight*1.5
         if(y + lineHeight*3.2 > this.height + this.y ) {
           max = true
         }
+      } else {
+        this.graphics.fillRect(x, y, width, lineHeight)
+        x += width + lineHeight*1
+      }
+      if (max) {
+        this.graphics.fillRect(x, y, width, lineHeight)
       }
       
-      this.graphics.fillRect(x, y, width, lineHeight)
-      x += width + lineHeight*1
     }
   }
 
