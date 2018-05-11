@@ -1,4 +1,6 @@
 
+import NewsBody from './newsBody'
+
 export default class NewsItem {
   constructor (config, newsData) {
     this.scene = config.scene
@@ -38,9 +40,15 @@ export default class NewsItem {
     this.container.x = this.geometry.x
     this.container.y = this.geometry.y
 
-    this.drawClip(this.clipDimensions)
+    this.body = new NewsBody({
+      graphics: this.scene.add.graphics(),
+      headline: this.headline
+    })
+    this.container.add(this.body.graphics)
 
     this.listeners = []
+
+    this.drawClip(this.clipDimensions)
   }
 
 
@@ -49,6 +57,7 @@ export default class NewsItem {
 
     this.graphics.lineStyle(1, 0x666666, 1)
     this.graphics.fillStyle(0xefeedc, 1)
+    //this.graphics.fillStyle(0xe7d1a8, 1)
     let paddingNews = {x: 0.02, y: 0.01}
     this.graphics.fillRect(0, 0, this.clipDimensions.width, this.clipDimensions.height)
     this.graphics.strokeRect(
@@ -82,6 +91,13 @@ export default class NewsItem {
 
     this.container.add(this.headlineBitmap)
     this.container.add(this.leadBitmap)
+
+    this.body.setupBounds({
+      y: this.headlineBitmap.height + this.leadBitmap.height + this.ratio*0.15,
+      width: this.clipDimensions.width,
+      height: this.clipDimensions.height
+    })
+    this.body.draw()
   }
 
   update() {
@@ -89,7 +105,7 @@ export default class NewsItem {
   }
 
   fitTo (space, i) {
-    if(this.layoutIndex === i) return
+    if(this.layoutIndex === i) return 
     let format = {}
     let rectangle = {}
     if (!space) {
@@ -99,7 +115,6 @@ export default class NewsItem {
       format = this.formats['clip']
     } else {
       format = this.formats[space.format]
-      console.log(format.headlineFont, space.format)
       rectangle = space.rect
     }
 

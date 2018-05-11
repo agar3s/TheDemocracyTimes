@@ -21,6 +21,7 @@ export default class Frontpage {
 
     // front page
     graphics.fillStyle(0xefeedc, 1)
+    //graphics.fillStyle(0xe7d1a8, 1)
     graphics.fillRect(paddingLeft-10, paddingTop-10, width * ratio + 20, (height + header) * ratio + 20)
     console.log(paddingLeft-10, paddingTop-10, width * ratio + 20, (height + header) * ratio + 20)
     graphics.strokeRect(paddingLeft, paddingTop, width * ratio, (height + header) * ratio)
@@ -95,7 +96,7 @@ export default class Frontpage {
     for (var i = 0; i < this.newspaces.length; i++) {
       let space = this.newspaces[i]
       if (space.hover) {
-        this.layoutGraphics.lineStyle(1, 0x22aa22, 1)
+        this.layoutGraphics.lineStyle(2, 0x22aa22, 1)
       } else {
         this.layoutGraphics.lineStyle(1, 0x2222bb, 0.4)
       }

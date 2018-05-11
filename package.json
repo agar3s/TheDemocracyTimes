@@ -37,6 +37,6 @@
     "webpack": "^3.0.0"
   },
   "dependencies": {
-    "phaser": "^3.6.0"
+    "phaser": "^3.7.1"
   }
 }
