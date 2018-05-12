@@ -52,9 +52,9 @@ export default class Frontpage {
     // specific layout
     this.layout = [
       {i: 0, j: 0, w: 2, h: 2.5},
+      {i: 2, j: 0, w: 1, h: 2.5},
       {i: 0, j: 2.5, w: 2, h: 1.5},
-      {i: 2, j: 0, w: 1, h: 1.5},
-      {i: 2, j: 1.5, w: 1, h: 2.5}
+      {i: 2, j: 2.5, w: 1, h: 1.5}
     ]
     this.newspaces = []
     this.layoutGraphics = scene.add.graphics()

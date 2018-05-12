@@ -1,6 +1,6 @@
 
 const lineHeight = 8
-const paddingX = 9
+const paddingX = 5
 
 export default class NewsBody {
   constructor (config) {
@@ -18,34 +18,36 @@ export default class NewsBody {
     this.height = props.height - props.y
   }
 
-  draw () { 
+  draw (cols) {
     this.graphics.clear()
 
     this.graphics.fillStyle(0xcfceac, 1)
 
-    let max = false
-    let x = paddingX
-    let y = this.y
-
-    let cont = 0
-
-    while (!max) {
-      let width = this.nextRandom(this.width*0.8)
-      if (x + width + lineHeight*1 + paddingX> this.width) {
-        this.graphics.fillRect(x, y, this.width - x - paddingX, lineHeight)
-        x = paddingX
-        y += lineHeight*1.5
-        if(y + lineHeight*3.2 > this.height + this.y ) {
-          max = true
+    let localWidth = ((this.width-paddingX*2)/cols)
+    let baseX = paddingX
+    for (var i = 0; i < cols; i++) {
+      let base = i*localWidth
+      let max = false
+      let x = paddingX
+      let y = this.y
+      while (!max) {
+        let width = this.nextRandom(localWidth*0.8)
+        if (x + width + lineHeight*1 + paddingX> localWidth) {
+          this.graphics.fillRect(x + base + baseX, y, localWidth - x - paddingX, lineHeight)
+          x = paddingX
+          y += lineHeight*1.5
+          if(y + lineHeight*3.2 > this.height + this.y ) {
+            max = true
+          }
+        } else {
+          this.graphics.fillRect(x + base + baseX, y, width, lineHeight)
+          x += width + lineHeight*1
         }
-      } else {
-        this.graphics.fillRect(x, y, width, lineHeight)
-        x += width + lineHeight*1
+        if (max) {
+          this.graphics.fillRect(x + base + baseX, y, width, lineHeight)
+        }
+        
       }
-      if (max) {
-        this.graphics.fillRect(x, y, width, lineHeight)
-      }
-      
     }
   }
 
