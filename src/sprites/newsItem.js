@@ -57,8 +57,8 @@ export default class NewsItem {
   drawClip () {
     this.graphics.clear()
 
-    this.graphics.lineStyle(1, 0x666666, 1)
-    this.graphics.fillStyle(0xefeedc, 1)
+    this.graphics.lineStyle(1, 0xc69d7f, 1)
+    this.graphics.fillStyle(0xffe1cb, 1)
     //this.graphics.fillStyle(0xe7d1a8, 1)
     let paddingNews = {x: 0.02, y: 0.01}
     this.graphics.fillRect(0, 0, this.clipDimensions.width, this.clipDimensions.height)
@@ -78,7 +78,7 @@ export default class NewsItem {
       this.clipDimensions.width - this.ratio*paddingNews.x*3
     )
     this.headlineBitmap.setOrigin(0.5, 0)
-    this.headlineBitmap.setTint(0x202020)
+    this.headlineBitmap.setTint(0x3a1a01)
 
     this.leadBitmap = this.wrapBitmapText(
       this.scene,
@@ -89,7 +89,7 @@ export default class NewsItem {
       this.clipDimensions.width - this.ratio*paddingNews.x*3
     )
     this.leadBitmap.setOrigin(0.5, 0)
-    this.leadBitmap.setTint(0x303030)
+    this.leadBitmap.setTint(0x502709)
 
     this.container.add(this.headlineBitmap)
     this.container.add(this.leadBitmap)

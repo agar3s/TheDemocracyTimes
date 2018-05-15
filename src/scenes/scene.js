@@ -21,7 +21,7 @@ export default class GeneralScene extends Phaser.Scene {
     button.setTint(props.color || 0x62391b)
     button.setData('colors', {
       normal: props.color || 0x62391b,
-      hover: props.hoverColor || 0xa37a5c
+      hover: props.hoverColor || 0xffdabd
     })
     button.setData('onClick', props.onClick)
     button.setOrigin(0.5, 0.5)

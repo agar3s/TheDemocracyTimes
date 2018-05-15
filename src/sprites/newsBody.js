@@ -24,7 +24,7 @@ export default class NewsBody {
   draw (cols) {
     this.graphics.clear()
 
-    this.graphics.fillStyle(0xcfceac, 1)
+    this.graphics.fillStyle(0xe0b799, 1)
 
     let localWidth = ((this.width-paddingX*2)/cols)
     let baseX = paddingX

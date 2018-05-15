@@ -1,5 +1,7 @@
 import 'phaser'
-import {BootScene} from './scenes/boot'
+
+import BootScene from './scenes/boot'
+import {EditScene} from './scenes/edit'
 import {MenuScene} from './scenes/menu'
 
 let config = {
@@ -11,10 +13,11 @@ let config = {
   resolution: 1,
   pixelArt: true,
   canvas: document.getElementById('game'),
-  backgroundColor: 0xffdabd,
+  backgroundColor: 0xa37a5c,
   scene: [
+    BootScene,
     MenuScene,
-    BootScene
+    EditScene
   ]
 }
 

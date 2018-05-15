@@ -1,143 +1,93 @@
-import GeneralScene from './scene'
-import Translation from '../utils/translation'
-import Frontpage from '../sprites/frontpage'
-import NewsItem from '../sprites/newsitem'
 
-class BootScene extends GeneralScene {
-  constructor () {
+export default class BootScene extends Phaser.Scene {
+  constructor (props) {
     super({key: 'bootScene'})
   }
 
-  preload () {
+  preload() {
+    var progressBox = this.add.graphics()
+    var progressBar = this.add.graphics()
+
+    var width = this.cameras.main.width
+    var height = this.cameras.main.height
+    var loadingText = this.make.text({
+      x: width / 2,
+      y: height / 2 - 30,
+      text: 'Printing...',
+      style: {
+        font: '30px monospace',
+        fill: '#ffdabd'
+      }
+    })
+    loadingText.setOrigin(0.5, 0.5)
+
+    var percentText = this.make.text({
+      x: width / 2,
+      y: height / 2 + 25,
+      text: '0%',
+      style: {
+          font: '20px monospace',
+          fill: '#ffdabd'
+      }
+    });
+    percentText.setOrigin(0.5, 0.5)
+
+    var assetText = this.make.text({
+      x: width / 2,
+      y: height / 2 + 65,
+      text: '',
+      style: {
+        font: '18px monospace',
+        fill: '#ffdabd'
+      }
+    })
+    assetText.setOrigin(0.5, 0.5)
+
+    progressBox.fillStyle(0x62391b, 1)
+    progressBox.fillRect(width/2 - 160, height/2, 320, 50)
+
+
+    this.load.on('progress', (value) => {
+      progressBar.clear()
+      progressBar.fillStyle(0x906749, 1)
+      progressBar.fillRect(width/2 + 10 - 160, height/2 + 10, 300 * value, 30)
+      percentText.setText(parseInt(value * 100) + '%')
+    })
+                
+    this.load.on('fileprogress', (file) => {
+      assetText.setText(file.key + ' ready')
+    })
+     
+    this.load.on('complete', () => {
+      progressBar.destroy()
+      progressBox.destroy()
+      loadingText.destroy()
+      percentText.destroy()
+      assetText.destroy()
+      this.scene.start('menuScene')
+    })
+
+    // images
+    this.load.spritesheet('head', 'assets/democrayTimes.png', { frameWidth: 255, frameHeight: 65 })
+    // backgrounds
+    this.load.spritesheet('back', 'assets/backgroundPaper.png', { frameWidth: 320, frameHeight: 180 })
+
+    // HEADLINES
+    this.load.bitmapFont('na28', 'assets/fonts/newsgeek28_0.png', 'assets/fonts/newsgeek28.fnt')
+    this.load.bitmapFont('na22', 'assets/fonts/newsgeek22_0.png', 'assets/fonts/newsgeek22.fnt')
+    this.load.bitmapFont('na18', 'assets/fonts/newsgeek18_0.png', 'assets/fonts/newsgeek18.fnt')
+    this.load.bitmapFont('na16', 'assets/fonts/newsgeek16_0.png', 'assets/fonts/newsgeek16.fnt')
+
+    // lead liners
+    this.load.bitmapFont('small12', 'assets/fonts/small12_0.png', 'assets/fonts/small12.fnt')
+    this.load.bitmapFont('small8', 'assets/fonts/small8_0.png', 'assets/fonts/small8.fnt')
+    this.load.bitmapFont('small10', 'assets/fonts/small10_0.png', 'assets/fonts/small10.fnt')
+
+    // graphics
     this.load.spritesheet('head', 'assets/democrayTimes.png', { frameWidth: 255, frameHeight: 65 })
     this.load.spritesheet('square', 'assets/square.png', { frameWidth: 10, frameHeight: 10 })
     this.load.json('translations', 'assets/text.json')
     this.load.json('formats', 'assets/formats.json')
 
-    // fonts
-
-    // // HEADLINES
-    // this.load.bitmapFont('na28', 'assets/fonts/newsgeek28_0.png', 'assets/fonts/newsgeek28.fnt')
-    // this.load.bitmapFont('na22', 'assets/fonts/newsgeek22_0.png', 'assets/fonts/newsgeek22.fnt')
-    // this.load.bitmapFont('na18', 'assets/fonts/newsgeek18_0.png', 'assets/fonts/newsgeek18.fnt')
-    // this.load.bitmapFont('na16', 'assets/fonts/newsgeek16_0.png', 'assets/fonts/newsgeek16.fnt')
-
-    // // lead liners
-    // this.load.bitmapFont('small12', 'assets/fonts/small12_0.png', 'assets/fonts/small12.fnt')
-    // this.load.bitmapFont('small8', 'assets/fonts/small8_0.png', 'assets/fonts/small8.fnt')
-    // this.load.bitmapFont('small10', 'assets/fonts/small10_0.png', 'assets/fonts/small10.fnt')
-
-
   }
-
-  create () {
-    super.create()
-    
-    // check layout
-    var graphics = this.add.graphics()
-    graphics.lineStyle(1, 0x666666, 1)
-    graphics.fillStyle(0x111111, 1)
-    
-    // desktop
-    graphics.fillRect(
-      this.screenBounds.paddingLateral,
-      this.screenBounds.paddingVertical,
-      this.screenBounds.width - this.screenBounds.paddingLateral*2,
-      this.screenBounds.height - this.screenBounds.paddingVertical*2
-    )
-
-    this.frontpage = new Frontpage({scene: this, screenBounds: this.screenBounds})
-    
-    let width = 3
-    let height = 4
-    let header = 0.5
-    let ratio = (this.screenBounds.height - this.screenBounds.paddingVertical*2)/5
-
-    // news basic distribution
-    let formats = this.cache.json.get('formats')
-
-    // news to publish
-    let preloadedStyles = ['main-a', 'small-a', 'small-a', 'main-b']
-    let newsData = [
-      {
-        headline: 'Banquetes para todos',
-        lead: 'El popular millonario Andy Montana ofrece banquetes de caridad en las zonas mas pobres de la ciudad.',
-        tags: ['Social', 'Andy Montana', 'Mafia', 'Caridad'],
-        by: 'Jhonatan Ross',
-        pics: ['1']
-      },
-      {
-        headline: 'Continua la huelga en Soups & Pastas',
-        lead: 'Tercer dia de huelga, se estiman perdidas por 1000 dolares.',
-        tags: ['Actualidad', 'Soups & Pastas', 'Partido laborista', 'Huelgas'],
-        by: 'Lloyd Moore',
-        pics: []
-      },
-      {
-        headline: 'Annette Gray cantará en el South Hall',
-        lead: 'La famosa cantante se presentará este 5 de Mayo con la banda Underground Boys.',
-        tags: ['Cultura y arte', 'Annette Gray', 'Underground Boys'],
-        by: 'Victor Griffin',
-        pics: []
-      },
-      {
-        headline: '5a carrera Ernest Jones por los veteranos',
-        lead: 'La ciudad se prepara para el evento que reunira fondos para los veteranos de la gran guerra.',
-        tags: ['Deportes', 'Ernest Jones', 'ciudad'],
-        by: 'Victor Griffin',
-        pics: []
-      },
-    ]
-    newsData.sort(()=>{
-      return Math.random()<0.5
-    })
-    for (let i = 0; i < 4; i++) {
-      new NewsItem({formats, scene: this, screenBounds: this.screenBounds, ratio}, newsData[i])
-    }
-
-    this.input.on('dragstart', (pointer, gameObject) => {
-      let currentIndex = this.children.list.indexOf(gameObject)
-      if (currentIndex !== -1 && currentIndex < this.children.list.length - 1) {
-          this.children.list.splice(currentIndex, 1)
-          this.children.list.push(gameObject)
-      }
-    }, this)
-
-    this.input.on('drag', (pointer, container, dragX, dragY) => {
-      container.x = dragX
-      container.y = dragY
-      if(container.getData('type') === 'newsitem') {
-        let rect = new Phaser.Geom.Rectangle(container.x, container.y, 1.5*ratio, 2*ratio)
-        let inside = this.frontpage.checkItem(pointer)
-        if (inside) {
-          container.setAlpha(0.6)
-        } else {
-          container.setAlpha(1)
-        }
-      }
-    })
-
-    this.input.on('dragend', (pointer, container) => {
-      if(container.getData('type') === 'newsitem') {
-        this.frontpage.attachItem(container.getData('item'))
-        container.setAlpha(1)
-      }
-    }, this)
-
-  }
-
-  update (time, dt) {
-
-  }
-
-  getText(val) {
-    return this.translations.translate(val)
-  }
-
-
-
-}
-
-export {
-  BootScene
 }

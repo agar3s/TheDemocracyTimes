@@ -6,7 +6,7 @@ export default class Frontpage {
     let screenBounds = config.screenBounds
     // check layout
     var graphics = scene.add.graphics()
-    graphics.lineStyle(1, 0x666666, 1)
+    graphics.lineStyle(1, 0xc69d7f, 1)
     graphics.fillStyle(0x111111, 1)
     
     let width = 3
@@ -20,7 +20,7 @@ export default class Frontpage {
     paddingLeft = ~~paddingLeft
 
     // front page
-    graphics.fillStyle(0xefeedc, 1)
+    graphics.fillStyle(0xffe1cb, 1)
     //graphics.fillStyle(0xe7d1a8, 1)
     graphics.fillRect(paddingLeft-10, paddingTop-10, width * ratio + 20, (height + header) * ratio + 20)
     console.log(paddingLeft-10, paddingTop-10, width * ratio + 20, (height + header) * ratio + 20)
@@ -31,7 +31,7 @@ export default class Frontpage {
     logo.setOrigin(0.5, 0)
     let widthScale = ((width*0.6)*ratio)/255
     logo.setScale(widthScale)
-    logo.setTint(0x3f3f3f)
+    logo.setTint(0x5f3618)
     console.log('ratio', ratio)
     graphics.beginPath()
     graphics.moveTo(paddingLeft, paddingTop+header*ratio - ratio/14)
@@ -96,9 +96,9 @@ export default class Frontpage {
     for (var i = 0; i < this.newspaces.length; i++) {
       let space = this.newspaces[i]
       if (space.hover) {
-        this.layoutGraphics.lineStyle(2, 0x22aa22, 1)
+        this.layoutGraphics.lineStyle(2, 0xffffff, 1)
       } else {
-        this.layoutGraphics.lineStyle(1, 0x2222bb, 0.4)
+        this.layoutGraphics.lineStyle(1, 0xebc2a4, 0.4)
       }
       let rect = space.rect
       this.layoutGraphics.strokeRect(rect.x, rect.y, rect.width, rect.height)
