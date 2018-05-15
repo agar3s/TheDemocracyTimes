@@ -1,14 +1,14 @@
+import GeneralScene from './scene'
 import Translation from '../utils/translation'
 import Frontpage from '../sprites/frontpage'
 import NewsItem from '../sprites/newsitem'
 
-class BootScene extends Phaser.Scene {
+class BootScene extends GeneralScene {
   constructor () {
     super({key: 'bootScene'})
   }
 
   preload () {
-    this.load.spritesheet('logo', 'assets/logo.png', { frameWidth: 770, frameHeight: 291 })
     this.load.spritesheet('head', 'assets/democrayTimes.png', { frameWidth: 255, frameHeight: 65 })
     this.load.spritesheet('square', 'assets/square.png', { frameWidth: 10, frameHeight: 10 })
     this.load.json('translations', 'assets/text.json')
@@ -16,29 +16,22 @@ class BootScene extends Phaser.Scene {
 
     // fonts
 
-    // HEADLINES
-    this.load.bitmapFont('na28', 'assets/fonts/newsgeek28_0.png', 'assets/fonts/newsgeek28.fnt')
-    this.load.bitmapFont('na22', 'assets/fonts/newsgeek22_0.png', 'assets/fonts/newsgeek22.fnt')
-    this.load.bitmapFont('na18', 'assets/fonts/newsgeek18_0.png', 'assets/fonts/newsgeek18.fnt')
-    this.load.bitmapFont('na16', 'assets/fonts/newsgeek16_0.png', 'assets/fonts/newsgeek16.fnt')
+    // // HEADLINES
+    // this.load.bitmapFont('na28', 'assets/fonts/newsgeek28_0.png', 'assets/fonts/newsgeek28.fnt')
+    // this.load.bitmapFont('na22', 'assets/fonts/newsgeek22_0.png', 'assets/fonts/newsgeek22.fnt')
+    // this.load.bitmapFont('na18', 'assets/fonts/newsgeek18_0.png', 'assets/fonts/newsgeek18.fnt')
+    // this.load.bitmapFont('na16', 'assets/fonts/newsgeek16_0.png', 'assets/fonts/newsgeek16.fnt')
 
-    // lead liners
-    this.load.bitmapFont('small12', 'assets/fonts/small12_0.png', 'assets/fonts/small12.fnt')
-    this.load.bitmapFont('small8', 'assets/fonts/small8_0.png', 'assets/fonts/small8.fnt')
-    this.load.bitmapFont('small10', 'assets/fonts/small10_0.png', 'assets/fonts/small10.fnt')
+    // // lead liners
+    // this.load.bitmapFont('small12', 'assets/fonts/small12_0.png', 'assets/fonts/small12.fnt')
+    // this.load.bitmapFont('small8', 'assets/fonts/small8_0.png', 'assets/fonts/small8.fnt')
+    // this.load.bitmapFont('small10', 'assets/fonts/small10_0.png', 'assets/fonts/small10.fnt')
 
 
   }
 
   create () {
-    this.translations = new Translation(this.cache, 'translations')
-
-    let screenBounds = {
-      width: 1280,
-      height: 720,
-      paddingLateral: 10,
-      paddingVertical: 10
-    }
+    super.create()
     
     // check layout
     var graphics = this.add.graphics()
@@ -47,18 +40,18 @@ class BootScene extends Phaser.Scene {
     
     // desktop
     graphics.fillRect(
-      screenBounds.paddingLateral,
-      screenBounds.paddingVertical,
-      screenBounds.width - screenBounds.paddingLateral*2,
-      screenBounds.height - screenBounds.paddingVertical*2
+      this.screenBounds.paddingLateral,
+      this.screenBounds.paddingVertical,
+      this.screenBounds.width - this.screenBounds.paddingLateral*2,
+      this.screenBounds.height - this.screenBounds.paddingVertical*2
     )
 
-    this.frontpage = new Frontpage({scene: this, screenBounds})
+    this.frontpage = new Frontpage({scene: this, screenBounds: this.screenBounds})
     
     let width = 3
     let height = 4
     let header = 0.5
-    let ratio = (screenBounds.height - screenBounds.paddingVertical*2)/5
+    let ratio = (this.screenBounds.height - this.screenBounds.paddingVertical*2)/5
 
     // news basic distribution
     let formats = this.cache.json.get('formats')
@@ -99,7 +92,7 @@ class BootScene extends Phaser.Scene {
       return Math.random()<0.5
     })
     for (let i = 0; i < 4; i++) {
-      new NewsItem({formats, scene: this, screenBounds, ratio}, newsData[i])
+      new NewsItem({formats, scene: this, screenBounds: this.screenBounds, ratio}, newsData[i])
     }
 
     this.input.on('dragstart', (pointer, gameObject) => {

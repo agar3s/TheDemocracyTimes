@@ -1,5 +1,6 @@
 import 'phaser'
 import {BootScene} from './scenes/boot'
+import {MenuScene} from './scenes/menu'
 
 let config = {
   type: Phaser.AUTO,
@@ -10,8 +11,9 @@ let config = {
   resolution: 1,
   pixelArt: true,
   canvas: document.getElementById('game'),
-  backgroundColor: 0xffffee,
+  backgroundColor: 0xffdabd,
   scene: [
+    MenuScene,
     BootScene
   ]
 }
