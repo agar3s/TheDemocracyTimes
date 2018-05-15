@@ -70,25 +70,29 @@ class BootScene extends Phaser.Scene {
         headline: 'Banquetes para todos',
         lead: 'El popular millonario Andy Montana ofrece banquetes de caridad en las zonas mas pobres de la ciudad.',
         tags: ['Social', 'Andy Montana', 'Mafia', 'Caridad'],
-        by: 'Jhonatan Ross'
+        by: 'Jhonatan Ross',
+        pics: ['1']
       },
       {
         headline: 'Continua la huelga en Soups & Pastas',
         lead: 'Tercer dia de huelga, se estiman perdidas por 1000 dolares.',
         tags: ['Actualidad', 'Soups & Pastas', 'Partido laborista', 'Huelgas'],
-        by: 'Lloyd Moore'
+        by: 'Lloyd Moore',
+        pics: []
       },
       {
         headline: 'Annette Gray cantará en el South Hall',
         lead: 'La famosa cantante se presentará este 5 de Mayo con la banda Underground Boys.',
         tags: ['Cultura y arte', 'Annette Gray', 'Underground Boys'],
-        by: 'Victor Griffin'
+        by: 'Victor Griffin',
+        pics: []
       },
       {
         headline: '5a carrera Ernest Jones por los veteranos',
         lead: 'La ciudad se prepara para el evento que reunira fondos para los veteranos de la gran guerra.',
         tags: ['Deportes', 'Ernest Jones', 'ciudad'],
-        by: 'Victor Griffin'
+        by: 'Victor Griffin',
+        pics: []
       },
     ]
     newsData.sort(()=>{

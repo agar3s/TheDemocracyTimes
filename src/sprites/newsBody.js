@@ -10,12 +10,15 @@ export default class NewsBody {
     this.x = 0
     this.y = 0
     this.seed = Math.random().toString()
+    this.pics = false
   }
 
   setupBounds(props) {
     this.width = props.width
     this.y = props.y
     this.height = props.height - props.y
+    this.pics = props.pics
+    console.log(props)
   }
 
   draw (cols) {
@@ -25,11 +28,18 @@ export default class NewsBody {
 
     let localWidth = ((this.width-paddingX*2)/cols)
     let baseX = paddingX
+    let pics = false || !this.pics
     for (var i = 0; i < cols; i++) {
       let base = i*localWidth
       let max = false
       let x = paddingX
       let y = this.y
+      if (!pics) {
+        pics = true
+        let picSize = localWidth - paddingX*2
+        this.graphics.fillRect(x + base + baseX, y, picSize, picSize)
+        y = this.y + picSize + lineHeight*1.5
+      }
       while (!max) {
         let width = this.nextRandom(localWidth*0.8)
         if (x + width + lineHeight*1 + paddingX> localWidth) {

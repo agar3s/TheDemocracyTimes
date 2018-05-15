@@ -20,7 +20,8 @@ export default class NewsItem {
       height: format.height * this.ratio,
       headlineFont: format.headlineFont,
       leadFont: format.leadFont,
-      columns: format.columns
+      columns: format.columns,
+      pics: format.pics
     }
 
     this.geometry = new Phaser.Geom.Rectangle(
@@ -96,7 +97,8 @@ export default class NewsItem {
     this.body.setupBounds({
       y: this.headlineBitmap.height + this.leadBitmap.height + this.ratio*0.15,
       width: this.clipDimensions.width,
-      height: this.clipDimensions.height
+      height: this.clipDimensions.height,
+      pics: this.clipDimensions.pics
     })
     this.body.draw(this.clipDimensions.columns)
   }
@@ -132,6 +134,7 @@ export default class NewsItem {
     this.clipDimensions.headlineFont = format.headlineFont
     this.clipDimensions.leadFont = format.leadFont
     this.clipDimensions.columns = format.columns
+    this.clipDimensions.pics = format.pics
     this.headlineBitmap.destroy()
     this.leadBitmap.destroy()
     this.drawClip()
