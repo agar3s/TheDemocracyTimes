@@ -89,6 +89,9 @@ export default class BootScene extends Phaser.Scene {
     this.load.bitmapFont('small12', 'assets/fonts/small12_0.png', 'assets/fonts/small12.fnt')
     this.load.bitmapFont('small8', 'assets/fonts/small8_0.png', 'assets/fonts/small8.fnt')
     this.load.bitmapFont('small10', 'assets/fonts/small10_0.png', 'assets/fonts/small10.fnt')
+    
+    this.load.bitmapFont('small24', 'assets/fonts/small24_0.png', 'assets/fonts/small24.fnt')
+    this.load.bitmapFont('vtt24', 'assets/fonts/vtt24_0.png', 'assets/fonts/vtt24.fnt')
 
     // graphics
     this.load.spritesheet('head', 'assets/democrayTimes.png', { frameWidth: 255, frameHeight: 65 })
