@@ -69,7 +69,7 @@ export default class NewsItem {
       this.clipDimensions.height
     )
 
-    this.headlineBitmap = this.wrapBitmapText(
+    this.headlineBitmap = NewsItem.WrapBitmapText(
       this.scene,
       this.clipDimensions.width / 2,
       this.ratio*0.05,
@@ -80,7 +80,7 @@ export default class NewsItem {
     this.headlineBitmap.setOrigin(0.5, 0)
     this.headlineBitmap.setTint(0x3a1a01)
 
-    this.leadBitmap = this.wrapBitmapText(
+    this.leadBitmap = NewsItem.WrapBitmapText(
       this.scene,
       this.clipDimensions.width / 2,
       this.ratio*0.1 + this.headlineBitmap.height,
@@ -156,7 +156,7 @@ export default class NewsItem {
     }
   }
   
-  wrapBitmapText (scene, x, y, font, text, maxWidth) {
+  static WrapBitmapText (scene, x, y, font, text, maxWidth) {
     let words = text.split(' ')
     let finalText = ''
     let textBitmap = scene.add.bitmapText(x, y, font, '')
@@ -175,3 +175,5 @@ export default class NewsItem {
     return textBitmap
   }
 }
+
+console.log(NewsItem)

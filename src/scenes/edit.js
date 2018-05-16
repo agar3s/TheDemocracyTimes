@@ -14,19 +14,7 @@ class EditScene extends GeneralScene {
   }
 
   create () {
-    super.create()    
-    // check layout
-    var graphics = this.add.graphics()
-    graphics.lineStyle(1, 0x666666, 1)
-    graphics.fillStyle(0x3a1a01, 1)
-    
-    // desktop
-    graphics.fillRect(
-      this.screenBounds.paddingLateral,
-      this.screenBounds.paddingVertical,
-      this.screenBounds.width - this.screenBounds.paddingLateral*2,
-      this.screenBounds.height - this.screenBounds.paddingVertical*2
-    )
+    super.create()
 
     this.frontpage = new Frontpage({scene: this, screenBounds: this.screenBounds})
     

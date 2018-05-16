@@ -5,9 +5,10 @@ const timeToFade = 220
 export default class GeneralScene extends Phaser.Scene {
   constructor (props) {
     super(props)
+    this.background = 0x3a1a01
   }
 
-  create () {
+  init () {
     this.translations = new Translation(this.cache, 'translations')
     this.screenBounds = {
       width: 1280,
@@ -16,6 +17,9 @@ export default class GeneralScene extends Phaser.Scene {
       paddingVertical: 10
     }
 
+  }
+
+  create () {
     this.input.on('pointerdown', (pointer, gameObject) => {
       if (gameObject.length > 0) {
         let object = gameObject[0]
@@ -37,6 +41,18 @@ export default class GeneralScene extends Phaser.Scene {
       }
     })
     this.cameras.main.fadeIn(timeToFade)
+
+    // check layout
+    var graphics = this.add.graphics()
+    graphics.fillStyle(this.background, 1)
+    
+    // desktop
+    graphics.fillRect(
+      this.screenBounds.paddingLateral,
+      this.screenBounds.paddingVertical,
+      this.screenBounds.width - this.screenBounds.paddingLateral*2,
+      this.screenBounds.height - this.screenBounds.paddingVertical*2
+    )
   }
 
   createButton (props) {

@@ -64,7 +64,14 @@ export default class BootScene extends Phaser.Scene {
       loadingText.destroy()
       percentText.destroy()
       assetText.destroy()
-      this.scene.start('menuScene')
+
+
+
+
+      this.scene.start('monologueScene')
+
+
+
     })
 
     // images
