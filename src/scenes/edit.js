@@ -97,15 +97,15 @@ class EditScene extends GeneralScene {
 
 
     let next = this.createButton({
-      x: this.screenBounds.width - this.screenBounds.paddingLateral,
-      y: this.screenBounds.height - this.screenBounds.paddingVertical,
-      font: 'na28',
-      text: 'Continue',
+      x: this.screenBounds.width + this.screenBounds.paddingVertical*2,
+      y: this.screenBounds.height - this.screenBounds.paddingVertical*2,
+      font: 'na22',
+      text: 'Ready to Print',
       onClick: () => {
         this.changeToScene('publishScene')
       },
-      color: 0xffffff,
-      scale: 1.4
+      scale: 1.4,
+      color: 0xc69d7f
     })
     next.setOrigin(1, 1)
   }

@@ -25,7 +25,7 @@ class MenuScene extends GeneralScene {
       font: 'na28',
       text: 'Start',
       onClick: () => {
-        this.changeToScene('monologueScene')
+        this.changeToScene('cinematicScene')
       },
       scale: 1.6
     })

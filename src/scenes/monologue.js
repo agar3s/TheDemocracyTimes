@@ -1,5 +1,4 @@
 import GeneralScene from './scene.js'
-
 import NewsItem from '../sprites/newsItem'
 
 class MonologueScene extends GeneralScene {
@@ -46,21 +45,6 @@ class MonologueScene extends GeneralScene {
     )
     content.setOrigin(0.5, 0.5)
     content.setTint(0xc69d7f)
-
-
-    // this should display the newspaper sold in the last day...
-    let results = NewsItem.WrapBitmapText(
-      this,
-      this.cameras.main.width - 100,
-      this.cameras.main.height/4 + 320,
-      'vtt24',
-`The last newspaper sold 1032 units...
-                           that\'s ok.`,
-      this.cameras.main.width - 200
-    )
-
-    results.setOrigin(1, 0.5)
-    results.setTint(0xc69d7f)
 
   }
 

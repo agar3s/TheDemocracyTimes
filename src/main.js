@@ -2,6 +2,7 @@ import 'phaser'
 
 import BootScene from './scenes/boot'
 import {MenuScene} from './scenes/menu'
+import {CinematicScene} from './scenes/cinematic'
 import {MonologueScene} from './scenes/monologue'
 import {OfficeScene} from './scenes/office'
 import {EditScene} from './scenes/edit'
@@ -19,6 +20,7 @@ let config = {
   backgroundColor: 0xa37a5c,
   scene: [
     BootScene,
+    CinematicScene,
     MenuScene,
     MonologueScene,
     OfficeScene,
@@ -27,7 +29,7 @@ let config = {
   ]
 }
 
-let game = new Phaser.Game(config)
+window.game = new Phaser.Game(config)
 
 document.getElementById('game').focus()
 window.focus()

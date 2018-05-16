@@ -68,7 +68,7 @@ export default class BootScene extends Phaser.Scene {
 
 
 
-      this.scene.start('monologueScene')
+      this.scene.start('menuScene')
 
 
 
@@ -78,6 +78,7 @@ export default class BootScene extends Phaser.Scene {
     this.load.spritesheet('head', 'assets/democrayTimes.png', { frameWidth: 255, frameHeight: 65 })
     // backgrounds
     this.load.spritesheet('back', 'assets/backgroundPaper.png', { frameWidth: 320, frameHeight: 180 })
+    this.load.spritesheet('office', 'assets/office.png', { frameWidth: 320, frameHeight: 180 })
 
     // HEADLINES
     this.load.bitmapFont('na28', 'assets/fonts/newsgeek28_0.png', 'assets/fonts/newsgeek28.fnt')
@@ -95,7 +96,16 @@ export default class BootScene extends Phaser.Scene {
 
     // graphics
     this.load.spritesheet('head', 'assets/democrayTimes.png', { frameWidth: 255, frameHeight: 65 })
-    this.load.spritesheet('square', 'assets/square.png', { frameWidth: 10, frameHeight: 10 })
+    this.load.spritesheet('reporter1', 'assets/reporter1.png', { frameWidth: 40, frameHeight: 87 })
+    this.load.spritesheet('frank', 'assets/frank.png', { frameWidth: 53, frameHeight: 101 })
+    this.load.spritesheet('desktop', 'assets/desktop.png', { frameWidth: 320, frameHeight: 51 })
+
+
+    // comic strips
+    this.load.spritesheet('strip1', 'assets/strip/strip1_sepia2.png', { frameWidth: 446, frameHeight: 360 })
+    this.load.spritesheet('strip2', 'assets/strip/strip2_sepia1.png', { frameWidth: 446, frameHeight: 360 })
+
+    // json
     this.load.json('translations', 'assets/text.json')
     this.load.json('formats', 'assets/formats.json')
 
