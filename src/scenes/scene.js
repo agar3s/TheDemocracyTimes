@@ -34,13 +34,13 @@ export default class GeneralScene extends Phaser.Scene {
     this.input.on('pointerover', (pointer, gameObject) => {
       let object = gameObject[0]
       if(object.getData('type') === 'button'){
-        object.setTint(object.getData('colors').hover)
+        object.getData('onHover')()
       }
     })
     this.input.on('pointerout', (pointer, gameObject) => {
       let object = gameObject[0]
       if(object.getData('type') === 'button'){
-        object.setTint(object.getData('colors').normal)
+        object.getData('onOut')()
       }
     })
     this.cameras.main.fadeIn(timeToFade)
@@ -66,6 +66,12 @@ export default class GeneralScene extends Phaser.Scene {
       hover: props.hoverColor || 0xffdabd
     })
     button.setData('onClick', props.onClick)
+    button.setData('onHover', () => {
+      button.setTint(props.hoverColor || 0xffdabd)
+    })
+    button.setData('onOut', () => {
+      button.setTint(props.color || 0x62391b)
+    })
     button.setData('type', 'button')
     button.setOrigin(0.5, 0.5)
 

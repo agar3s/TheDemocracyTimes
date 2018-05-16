@@ -70,7 +70,7 @@ export default class BootScene extends Phaser.Scene {
 
 
 
-      this.scene.start('monologueScene')
+      this.scene.start('editScene')
 
 
 
@@ -102,10 +102,18 @@ export default class BootScene extends Phaser.Scene {
     this.load.spritesheet('frank', 'assets/frank.png', { frameWidth: 53, frameHeight: 101 })
     this.load.spritesheet('desktop', 'assets/desktop.png', { frameWidth: 320, frameHeight: 51 })
 
+    // mini layouts
+    this.load.spritesheet('layout01', 'assets/layouts/01.png', { frameWidth: 88, frameHeight: 127 })
+    this.load.spritesheet('layout02', 'assets/layouts/02.png', { frameWidth: 88, frameHeight: 127 })
+    this.load.spritesheet('layout03', 'assets/layouts/03.png', { frameWidth: 88, frameHeight: 127 })
+    this.load.spritesheet('layout04', 'assets/layouts/04.png', { frameWidth: 88, frameHeight: 127 })
+    this.load.spritesheet('layout05', 'assets/layouts/05.png', { frameWidth: 88, frameHeight: 127 })
+
 
     // comic strips
     this.load.spritesheet('strip1', 'assets/strip/strip1_sepia2.png', { frameWidth: 446, frameHeight: 360 })
     this.load.spritesheet('strip2', 'assets/strip/strip2_sepia1.png', { frameWidth: 446, frameHeight: 360 })
+    this.load.spritesheet('strip3', 'assets/strip/strip3_sepia.png', { frameWidth: 446, frameHeight: 360 })
 
     // json
     this.load.json('translations', 'assets/text.json')

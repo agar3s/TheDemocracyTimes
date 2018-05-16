@@ -17,7 +17,15 @@ class CinematicScene extends GeneralScene {
       {
         text: 'After 20 years working as a journalist, the newspaper for I worked closed like many others that broke as a result of the 29\'s crisis.',
         image: 'strip2'
-      }
+      },
+      {
+        text: 'Frank es un sujeto inteligente y tiene inversiones en diferentes negocios, él no perdio dinero.\nCuando dijo que no podria encontrar alguien mas confiable que yo para dirigir este periodico, no pude sentirme mas halagado.',
+        image: 'strip3'
+      },
+      {
+        text: 'Ha sido una gran oportunidad para informar de manera independiente la realidad que la ciudad y el país afronta, por eso es que amo venir aquí dia a dia.',
+        image: 'strip3'
+      },
     ]
     this.currentStripIndex = 0
   }

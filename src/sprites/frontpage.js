@@ -1,64 +1,106 @@
 
 export default class Frontpage {
   constructor (config) {
-    let scene = config.scene
+    this.scene = config.scene
     let screenBounds = config.screenBounds
-    let layouts = config.layouts
+    this.layouts = config.layouts
     // check layout
-    var graphics = scene.add.graphics()
+    var graphics = this.scene.add.graphics()
     graphics.lineStyle(1, 0xc69d7f, 1)
     graphics.fillStyle(0x111111, 1)
     
     let width = 3
     let height = 4
-    let header = 0.4
-    let ratio = (screenBounds.height - screenBounds.paddingVertical*2)/5
+    this.header = 0.4
+    this.ratio = (screenBounds.height - screenBounds.paddingVertical*2)/5
 
-    let paddingTop = ((screenBounds.height - screenBounds.paddingVertical*2) - (height + header) * ratio)/2 + screenBounds.paddingVertical
-    let paddingLeft = (screenBounds.width - screenBounds.paddingLateral)/2 - (width * ratio)
-    paddingTop = ~~paddingTop
-    paddingLeft = ~~paddingLeft
+    this.paddingTop = ((screenBounds.height - screenBounds.paddingVertical*2) - (height + this.header) * this.ratio)/2 + screenBounds.paddingVertical
+    this.paddingLeft = (screenBounds.width - screenBounds.paddingLateral)/2 - (width * this.ratio)
+    this.paddingTop = ~~this.paddingTop
+    this.paddingLeft = ~~this.paddingLeft
 
     // front page
     graphics.fillStyle(0xffe1cb, 1)
     //graphics.fillStyle(0xe7d1a8, 1)
-    graphics.fillRect(paddingLeft-10, paddingTop-10, width * ratio + 20, (height + header) * ratio + 20)
-    graphics.strokeRect(paddingLeft, paddingTop, width * ratio, (height + header) * ratio)
+    graphics.fillRect(this.paddingLeft-10, this.paddingTop-10, width * this.ratio + 20, (height + this.header) * this.ratio + 20)
+    graphics.strokeRect(this.paddingLeft, this.paddingTop, width * this.ratio, (height + this.header) * this.ratio)
     
-    // header
-    let logo = scene.add.sprite(paddingLeft+width*ratio*0.5, paddingTop + 5, 'head')
+    // this.header
+    let logo = this.scene.add.sprite(this.paddingLeft+width*this.ratio*0.5, this.paddingTop + 5, 'head')
     logo.setOrigin(0.5, 0)
-    let widthScale = ((width*0.6)*ratio)/255
+    let widthScale = ((width*0.6)*this.ratio)/255
     logo.setScale(widthScale)
     logo.setTint(0x5f3618)
     graphics.beginPath()
-    graphics.moveTo(paddingLeft, paddingTop+header*ratio - ratio/14)
-    graphics.lineTo(width*ratio + paddingLeft, paddingTop+header*ratio - ratio/14)
-    graphics.moveTo(paddingLeft, paddingTop+header*ratio - ratio/35)
-    graphics.lineTo(width*ratio + paddingLeft, paddingTop+header*ratio - ratio/35)
+    graphics.moveTo(this.paddingLeft, this.paddingTop+this.header*this.ratio - this.ratio/14)
+    graphics.lineTo(width*this.ratio + this.paddingLeft, this.paddingTop+this.header*this.ratio - this.ratio/14)
+    graphics.moveTo(this.paddingLeft, this.paddingTop+this.header*this.ratio - this.ratio/35)
+    graphics.lineTo(width*this.ratio + this.paddingLeft, this.paddingTop+this.header*this.ratio - this.ratio/35)
     graphics.strokePath()
 
 
     // grid layout
-    graphics.lineStyle(0.5, 0x226622, 0.05)
+    graphics.lineStyle(0.5, 0x226622, 0.08)
     for (var j = 0; j < 8; j++) {
       for (var i = 0; i < 6; i++) {
-        graphics.strokeRect(paddingLeft + i*ratio*0.5, paddingTop + (j+header*2)*ratio*0.5, ratio*0.5, ratio*0.5)
+        graphics.strokeRect(this.paddingLeft + i*this.ratio*0.5, this.paddingTop + (j+this.header*2)*this.ratio*0.5, this.ratio*0.5, this.ratio*0.5)
       }
     }
 
     // specific layout
-    this.layout = layouts['02']
+    this.layoutGraphics = this.scene.add.graphics()
+    this.loadLayout('02')
+
+    let layoutOptions = ['01', '02', '03', '04', '05']
+    this.setLayoutOptions(layoutOptions)
+
+  }
+
+  setLayoutOptions (options) {
+    this.layoutButtons = []
+    for (var i = 0; i < options.length; i++) {
+      let key = options[i]
+      let button = this.scene.add.sprite(70, 100 + i*120, `layout${key}`)
+      button.setScale(0.8)
+      button.setAlpha(0.6)
+      button.setInteractive()
+      button.setData('type', 'button')
+      button.setData('selected', false)
+      button.setData('onHover', ()=>{
+        console.log(button.getData('selected'))
+        if (button.getData('selected')) return
+        button.setAlpha(0.8).setScale(0.85)
+      })
+      button.setData('onOut', () => {
+        if (button.getData('selected')) return
+        button.setAlpha(0.6).setScale(0.8)
+      })
+      button.setData('onClick', () => {
+        this.loadLayout(key, i)
+        for (var i = 0; i < this.layoutButtons.length; i++) {
+          let otherButton = this.layoutButtons[i]
+          otherButton.setAlpha(0.6).setScale(0.8)
+          otherButton.setData('selected', false)
+        }
+        button.setScale(0.9).setAlpha(1)
+        button.setData('selected', true)
+      })
+      this.layoutButtons.push(button)
+    }
+  }
+
+
+  loadLayout(key) {
+    this.layout = this.layouts[key]
     this.newspaces = []
-    this.layoutGraphics = scene.add.graphics()
     for (var i = 0; i < this.layout.length; i++) {
       let clip = this.layout[i]
       let space = {
         rect: new Phaser.Geom.Rectangle(
-          paddingLeft + clip.i*ratio,
-          paddingTop + (clip.j+header)*ratio,
-          clip.w*ratio,
-          clip.h*ratio
+          this.paddingLeft + clip.i*this.ratio,
+          this.paddingTop + (clip.j+this.header)*this.ratio,
+          clip.w*this.ratio,
+          clip.h*this.ratio
         ),
         hover: false,
         filled: false,
@@ -86,16 +128,18 @@ export default class Frontpage {
 
   drawLayout () {
     this.layoutGraphics.clear()
+    let drawOnTop = {x:0, y:0, width:0, height:0}
     for (var i = 0; i < this.newspaces.length; i++) {
       let space = this.newspaces[i]
-      if (space.hover) {
-        this.layoutGraphics.lineStyle(2, 0xffffff, 1)
-      } else {
-        this.layoutGraphics.lineStyle(1, 0xebc2a4, 0.4)
-      }
       let rect = space.rect
+      if (space.hover) {
+        drawOnTop = rect
+      }
+      this.layoutGraphics.lineStyle(1, 0x502709, 1)
       this.layoutGraphics.strokeRect(rect.x, rect.y, rect.width, rect.height)
     }
+    this.layoutGraphics.lineStyle(2, 0xffffff, 1)
+    this.layoutGraphics.strokeRect(drawOnTop.x+2, drawOnTop.y+2, drawOnTop.width-4, drawOnTop.height-4)
   }
 
   attachItem (newsItemContainer) {
@@ -112,6 +156,8 @@ export default class Frontpage {
     }
     newsItemContainer.fitTo()
   }
+
+
 
 
   update () {
