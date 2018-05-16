@@ -1,6 +1,7 @@
 {
-	"8-11-1932": {
+	"08-11-1932": {
 		"date": {"day": 8, "month": 11, "year": 1932},
+		"dateString": "November 08th 1932",
 		"monologue": "A new day, a new story to tell.",
 		"dialogue": {
 			"character": "Frank",
@@ -97,6 +98,98 @@
 				"exclusivity": 0.6
 			}
 		],
-		"next": ["8-11-1932"]
+		"next": ["15-11-1932"]
+	},
+	"15-11-1932": {
+		"date": {"day": 15, "month": 11, "year": 1932},
+		"dateString": "November 15th 1932",
+		"monologue": "Yes we are going well with this text, I hope that someday I have something to tell you",
+		"dialogue": {
+			"character": "Jhon",
+			"start": {
+				"text": "That woman... she said that her name is Charlie?",
+				"options": [
+					{
+						"text": "Yes she speaks in the name of Andy Montana.",
+						"then": "A"
+					}
+				]
+			},
+			"A": {
+				"text": "I know it! it's very clever from Andy to put a woman in charge of his public relations",
+				"options": [
+					{
+						"text": "It's true, nobody suspects that woman has that power.",
+						"then": "B"
+					},
+					{
+						"text": "Also she seems very clever, maybe more than Montana.",
+						"then": "C"
+					}
+				]
+			},
+			"B": {
+				"text": "So, I think is a good idea to follow her for more clues about this \"millionaire\".",
+				"options": [
+					{
+						"text": "Be carefoul."
+					}
+				]
+			},
+			"C": {
+				"text": "Huh! Do you think? be carefoul Benjamin, that woman could be very dangerous.",
+				"options": [
+					{"text": "That's ok. Let's back to work."}
+				]
+			}
+		},
+		"news": [
+			{
+				"headline": "Free food for everyoneX2!",
+				"lead": "B The popular millionaire Andy Montana offers charity banquets in the poorest areas of the city.",
+				"tags": ["social", "andy montana", "mafia", "charity"],
+				"by": "Jhonatan Ross",
+				"popularity": 0.2,
+				"relevancy": 0.4,
+				"exclusivity": 0.6
+			},
+			{
+				"headline": "B The strike continues on Soup & Pastas",
+				"lead": "B Third day of strike, estimated losses for 100 dollars.",
+				"tags": ["present", "soup & pastas", "labour party", "strikes"],
+				"by": "Lloyd Moore",
+				"popularity": 0.2,
+				"relevancy": 0.4,
+				"exclusivity": 0.6
+			},
+			{
+				"headline": "B Annette Gray will sing at the South Hall",
+				"lead": "B The famous singer will perform this May 5th with the band Underground Boys.",
+		        "tags": ["culture and arts", "annette gray", "undeground boys"],
+        		"by": "Victor Griffin",
+				"popularity": 0.2,
+				"relevancy": 0.4,
+				"exclusivity": 0.6
+			},
+			{
+				"headline": "B Ernest Jones the 5th race for veterans",
+				"lead": "B The city is preparing for the event that will raise funds for veterans of the Great War.",
+		        "tags": ["sports", "ernest jones", "city"],
+    			"by": "Victor Griffin",
+				"popularity": 0.2,
+				"relevancy": 0.4,
+				"exclusivity": 0.6
+			},
+			{
+				"headline": "B Marta Robinson's store house was robbed",
+				"lead": "B Yesterday around 200 dollars in merchandise were stolen from the popular store.",
+		        "tags": ["sports", "ernest jones", "city"],
+    			"by": "Lloyd More",
+				"popularity": 0.2,
+				"relevancy": 0.4,
+				"exclusivity": 0.6
+			}
+		],
+		"next": ["08-11-1932"]
 	}
 }

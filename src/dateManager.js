@@ -2,7 +2,7 @@
 class DateManager {
   constructor (cache) {
     this.dates = cache.json.get('dates')
-    this.setDate({day: 8, month: 11, year: 1932})
+    this.setDate("08-11-1932")
   }
 
   getMonologue() {
@@ -10,12 +10,12 @@ class DateManager {
   }
 
   getDate () {
-    return "November 08th 1932"
+    return this.data.dateString
   }
 
   setDate(date) {
-    this.currentDate = date
-    this.data = this.dates[`${this.currentDate.day}-${this.currentDate.month}-${this.currentDate.year}`]
+    this.data = this.dates[date]
+    this.currentDate = this.data.date
   }
 
   getDialogue() {
@@ -24,6 +24,11 @@ class DateManager {
 
   getNews() {
     return this.data.news
+  }
+
+  nextDay() {
+    let nextDay = this.data.next[0]
+    this.setDate(nextDay)
   }
 }
 

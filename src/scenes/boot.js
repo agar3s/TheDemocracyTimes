@@ -70,7 +70,7 @@ export default class BootScene extends Phaser.Scene {
 
 
 
-      this.scene.start('editScene')
+      this.scene.start('monologueScene')
 
 
 
