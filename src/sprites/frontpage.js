@@ -48,11 +48,12 @@ export default class Frontpage {
     }
 
     // specific layout
+    this.newspaces = []
     this.layoutGraphics = this.scene.add.graphics()
-    this.loadLayout('02')
 
     let layoutOptions = ['01', '02', '03', '04', '05']
     this.setLayoutOptions(layoutOptions)
+    this.loadLayout('02')
 
   }
 
@@ -67,7 +68,6 @@ export default class Frontpage {
       button.setData('type', 'button')
       button.setData('selected', false)
       button.setData('onHover', ()=>{
-        console.log(button.getData('selected'))
         if (button.getData('selected')) return
         button.setAlpha(0.8).setScale(0.85)
       })
@@ -76,6 +76,7 @@ export default class Frontpage {
         button.setAlpha(0.6).setScale(0.8)
       })
       button.setData('onClick', () => {
+        if (button.getData('selected')) return
         this.loadLayout(key, i)
         for (var i = 0; i < this.layoutButtons.length; i++) {
           let otherButton = this.layoutButtons[i]
@@ -92,6 +93,19 @@ export default class Frontpage {
 
   loadLayout(key) {
     this.layout = this.layouts[key]
+    this.layoutButtons.forEach((button) => {
+      if(button.texture.key!==`layout${key}`) return
+      button.setScale(0.9).setAlpha(1).setData('selected', true)
+    })
+
+    // if newspaces is not empty save the newsItemContainer
+    let oldNews = this.newspaces.map((space) => {
+      let newsItemContainer = space.filled
+      if(!newsItemContainer) return
+      newsItemContainer.resetPosition()
+      return newsItemContainer
+    })
+
     this.newspaces = []
     for (var i = 0; i < this.layout.length; i++) {
       let clip = this.layout[i]
@@ -103,12 +117,25 @@ export default class Frontpage {
           clip.h*this.ratio
         ),
         hover: false,
-        filled: false,
+        filled: undefined,
         format: `${clip.w}x${clip.h}`
       }
       this.newspaces.push(space)
     }
     this.drawLayout()
+
+    // fit the old news if possible into new layout
+    oldNews = oldNews.filter((element)=>!!element)
+    for (var i = 0; i < this.newspaces.length && i<oldNews.length; i++) {
+      let newsItemContainer = oldNews[i]
+      let space = this.newspaces[i]
+      newsItemContainer.fitTo(space, i)
+      newsItemContainer.addOnRemove(() => {
+        delete space.filled
+      })
+      space.filled = newsItemContainer
+    }
+
   }
 
   checkItem (point) {
@@ -148,9 +175,9 @@ export default class Frontpage {
       if (space.hover && !space.filled) {
         newsItemContainer.fitTo(space, i)
         newsItemContainer.addOnRemove(() => {
-          space.filled = false
+          delete space.filled
         })
-        space.filled = true
+        space.filled = newsItemContainer
         return
       }
     }

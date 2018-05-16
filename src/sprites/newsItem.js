@@ -24,9 +24,14 @@ export default class NewsItem {
       pics: format.pics
     }
 
+    this.getRandomCoords = () => {
+      return {
+        x: screenBounds.paddingLateral + screenBounds.width/2 + ~~((screenBounds.width/2 -screenBounds.paddingLateral - this.clipDimensions.width)*Math.random()),
+        y: screenBounds.paddingVertical + ~~((screenBounds.height - this.clipDimensions.height)*Math.random())
+      }
+    }
     this.geometry = new Phaser.Geom.Rectangle(
-      screenBounds.paddingLateral + screenBounds.width/2 + ~~((screenBounds.width/2 -screenBounds.paddingLateral - this.clipDimensions.width)*Math.random()),
-      screenBounds.paddingVertical + ~~((screenBounds.height - this.clipDimensions.height)*Math.random()),
+      this.getRandomCoords().x, this.getRandomCoords().y,
       format.width * this.ratio,
       format.height * this.ratio
     )
@@ -107,6 +112,13 @@ export default class NewsItem {
 
   }
 
+  resetPosition() {
+    this.fitTo()
+    let coords = this.getRandomCoords()
+    this.container.x = coords.x
+    this.container.y = coords.y
+  }
+
   fitTo (space, i) {
     if(this.layoutIndex === i) return 
     let format = {}
@@ -139,6 +151,7 @@ export default class NewsItem {
     this.leadBitmap.destroy()
     this.drawClip()
   }
+
 
   /**
   * when a newsItem is removed from layout
