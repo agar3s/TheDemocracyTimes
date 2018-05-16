@@ -1,8 +1,11 @@
 import 'phaser'
 
 import BootScene from './scenes/boot'
-import {EditScene} from './scenes/edit'
 import {MenuScene} from './scenes/menu'
+import {MonologueScene} from './scenes/monologue'
+import {OfficeScene} from './scenes/office'
+import {EditScene} from './scenes/edit'
+import {PublishScene} from './scenes/publish'
 
 let config = {
   type: Phaser.AUTO,
@@ -17,7 +20,10 @@ let config = {
   scene: [
     BootScene,
     MenuScene,
-    EditScene
+    MonologueScene,
+    OfficeScene,
+    EditScene,
+    PublishScene
   ]
 }
 

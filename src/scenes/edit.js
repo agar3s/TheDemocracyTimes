@@ -106,6 +106,20 @@ class EditScene extends GeneralScene {
       }
     }, this)
 
+
+
+    let next = this.createButton({
+      x: this.screenBounds.width - this.screenBounds.paddingLateral,
+      y: this.screenBounds.height - this.screenBounds.paddingVertical,
+      font: 'na28',
+      text: 'Continue',
+      onClick: () => {
+        this.changeToScene('publishScene')
+      },
+      color: 0xffffff,
+      scale: 1.4
+    })
+    next.setOrigin(1, 1)
   }
 
   update (time, dt) {
@@ -114,6 +128,10 @@ class EditScene extends GeneralScene {
 
   getText(val) {
     return this.translations.translate(val)
+  }
+
+  destroy () {
+    console.log('destroy on edit called')
   }
 
 

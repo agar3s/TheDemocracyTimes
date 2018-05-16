@@ -18,7 +18,6 @@ export default class NewsBody {
     this.y = props.y
     this.height = props.height - props.y
     this.pics = props.pics
-    console.log(props)
   }
 
   draw (cols) {

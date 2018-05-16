@@ -1,7 +1,6 @@
 
 export default class Frontpage {
   constructor (config) {
-    console.log('called', config)
     let scene = config.scene
     let screenBounds = config.screenBounds
     // check layout
@@ -23,7 +22,6 @@ export default class Frontpage {
     graphics.fillStyle(0xffe1cb, 1)
     //graphics.fillStyle(0xe7d1a8, 1)
     graphics.fillRect(paddingLeft-10, paddingTop-10, width * ratio + 20, (height + header) * ratio + 20)
-    console.log(paddingLeft-10, paddingTop-10, width * ratio + 20, (height + header) * ratio + 20)
     graphics.strokeRect(paddingLeft, paddingTop, width * ratio, (height + header) * ratio)
     
     // header
@@ -32,7 +30,6 @@ export default class Frontpage {
     let widthScale = ((width*0.6)*ratio)/255
     logo.setScale(widthScale)
     logo.setTint(0x5f3618)
-    console.log('ratio', ratio)
     graphics.beginPath()
     graphics.moveTo(paddingLeft, paddingTop+header*ratio - ratio/14)
     graphics.lineTo(width*ratio + paddingLeft, paddingTop+header*ratio - ratio/14)

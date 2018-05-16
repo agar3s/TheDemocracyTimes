@@ -25,7 +25,7 @@ class MenuScene extends GeneralScene {
       font: 'na28',
       text: 'Start',
       onClick: () => {
-        this.scene.start('editScene')
+        this.changeToScene('monologueScene')
       },
       scale: 1.6
     })
@@ -38,22 +38,6 @@ class MenuScene extends GeneralScene {
       onClick: () => {
       },
       scale: 1.6
-    })
-
-
-    this.input.on('pointerdown', (pointer, gameObject) => {
-      if (gameObject.length > 0) {
-        gameObject[0].getData('onClick')()
-      }
-    })
-
-    this.input.on('pointerover', (pointer, gameObject) => {
-      let button = gameObject[0]
-      button.setTint(button.getData('colors').hover)
-    })
-    this.input.on('pointerout', (pointer, gameObject) => {
-      let button = gameObject[0]
-      button.setTint(button.getData('colors').normal)
     })
 
   }
