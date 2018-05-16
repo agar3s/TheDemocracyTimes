@@ -3,6 +3,7 @@ export default class Frontpage {
   constructor (config) {
     let scene = config.scene
     let screenBounds = config.screenBounds
+    let layouts = config.layouts
     // check layout
     var graphics = scene.add.graphics()
     graphics.lineStyle(1, 0xc69d7f, 1)
@@ -47,12 +48,7 @@ export default class Frontpage {
     }
 
     // specific layout
-    this.layout = [
-      {i: 0, j: 0, w: 2, h: 2.5},
-      {i: 2, j: 0, w: 1, h: 2.5},
-      {i: 0, j: 2.5, w: 2, h: 1.5},
-      {i: 2, j: 2.5, w: 1, h: 1.5}
-    ]
+    this.layout = layouts['02']
     this.newspaces = []
     this.layoutGraphics = scene.add.graphics()
     for (var i = 0; i < this.layout.length; i++) {

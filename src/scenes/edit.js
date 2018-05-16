@@ -16,7 +16,11 @@ class EditScene extends GeneralScene {
   create () {
     super.create()
 
-    this.frontpage = new Frontpage({scene: this, screenBounds: this.screenBounds})
+    this.frontpage = new Frontpage({
+      scene: this,
+      screenBounds: this.screenBounds,
+      layouts: this.layouts
+    })
     
     let width = 3
     let height = 4

@@ -86,6 +86,15 @@
 				"popularity": 0.2,
 				"relevancy": 0.4,
 				"exclusivity": 0.6
+			},
+			{
+				"headline": "Marta Robinson's store house was robbed",
+				"lead": "Yesterday around 200 dollars in merchandise were stolen from the popular store.",
+		        "tags": ["sports", "ernest jones", "city"],
+    			"by": "Lloyd More",
+				"popularity": 0.2,
+				"relevancy": 0.4,
+				"exclusivity": 0.6
 			}
 		],
 		"next": ["8-11-1932"]

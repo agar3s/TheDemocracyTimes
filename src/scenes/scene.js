@@ -12,6 +12,7 @@ export default class GeneralScene extends Phaser.Scene {
   init () {
     this.translations = new Translation(this.cache, 'translations')
     this.dateManager = getDateManager(this.cache)
+    this.layouts = this.cache.json.get('layouts')
     this.screenBounds = {
       width: 1280,
       height: 720,

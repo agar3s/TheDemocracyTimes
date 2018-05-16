@@ -111,6 +111,7 @@ export default class BootScene extends Phaser.Scene {
     this.load.json('translations', 'assets/text.json')
     this.load.json('formats', 'assets/formats.json')
     this.load.json('dates', 'assets/dates.json')
+    this.load.json('layouts', 'assets/layouts.json')
 
   }
 }
