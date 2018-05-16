@@ -12,7 +12,7 @@ class OfficeScene extends GeneralScene {
     let background = this.add.sprite(this.screenBounds.width/2, this.screenBounds.height/2, 'office')
     background.setScale(4)
 
-    let next = this.createButton({
+    this.next = this.createButton({
       x: this.screenBounds.width + this.screenBounds.paddingVertical*2,
       y: this.screenBounds.height - this.screenBounds.paddingVertical*2,
       font: 'na22',
@@ -23,7 +23,8 @@ class OfficeScene extends GeneralScene {
       scale: 1.4,
       color: 0xc69d7f
     })
-    next.setOrigin(1, 1)
+    this.next.setOrigin(1, 1)
+    this.next.setAlpha(0)
 
     let reporter1 = this.add.sprite(86*4, 67*4, 'reporter1')
     reporter1.setScale(4)
@@ -49,21 +50,29 @@ class OfficeScene extends GeneralScene {
       this.screenBounds.width - this.screenBounds.paddingLateral*12,
       150
     )
+    this.dialogueLineY = 0
+    this.dialogue = this.dateManager.getDialogue()
+    this.setDialogue('start')
+    
+    //
 
-    this.loadDialogue(`Frank: Hi Ben, how is your day?`)
+  }
 
-    this.answers = [
-      'Not bad, but this story with Mr Mallone is turning complicated.',
-      'Ok',
-      'Fantastic'
-    ]
+  setDialogue(key) {
+    if(!key) {
+      this.children.bringToTop(this.next)
+      this.next.setAlpha(1)
+      return
+    }
+    this.keyDialogue = key
+    this.loadDialogue(`${this.dialogue.character}: ${this.dialogue[this.keyDialogue].text}`)
+    this.dialogueLineY = this.dialogueBitmap.y + this.dialogueBitmap.height + 10
+
+    this.answers = this.dialogue[this.keyDialogue].options
     this.answerOptions = []
     this.time.delayedCall(1000, () => {
       this.loadOptions()
     }, [], this)
-    //
-
-    this.children.bringToTop(next)
   }
 
   loadOptions() {
@@ -71,15 +80,15 @@ class OfficeScene extends GeneralScene {
       let answerBox = NewsItem.WrapBitmapText(
         this,
         this.screenBounds.paddingLateral*8,
-        this.cameras.main.height*0.7 + (this.screenBounds.paddingLateral+10) * (i+1) + 25,
+        this.dialogueLineY,
         'vtt24',
-        `> ${this.answers[i]}`,
-        this.cameras.main.width
+        `> ${this.answers[i].text}`,
+        this.screenBounds.width - this.screenBounds.paddingLateral*16
       )
       answerBox.setOrigin(0, 0)
       answerBox.setTint(0xc69d7f)
       answerBox.setData('onClick', () => {
-        this.selectOption(i)
+        this.selectOption(this.answers[i])
       })
       answerBox.setData('type', 'button')
       answerBox.setInteractive(new Phaser.Geom.Rectangle(0, 0, answerBox.width, answerBox.height), Phaser.Geom.Rectangle.Contains)
@@ -88,36 +97,38 @@ class OfficeScene extends GeneralScene {
         hover: 0xffdabd
       })
 
+      this.dialogueLineY += answerBox.height*0.75
+
       this.answerOptions.push(answerBox)
     }
   }
 
-  selectOption(optionIndex) {
-    console.log('index, ', optionIndex)
+  selectOption(answerObject) {
+    console.log('answer, ', answerObject)
     for (var i = this.answerOptions.length-1; i >= 0; i--) {
       this.answerOptions[i].destroy()
       this.answerOptions.splice(i, 1)
     }
-    this.loadDialogue(`Frank: Hi Ben, how is your day?\nBen: ${this.answers[optionIndex]}`)
-    this.time.delayedCall(2000, () => {
-      this.loadDialogue('Frank: I\'m going to the point, the newspaper is not selling well.')
-    }, [], this)
+    this.loadDialogue(`${this.dialogue.character}: ${this.dialogue[this.keyDialogue].text}\nBen: ${answerObject.text}`)
+
+    // load a new dialogue if is neccesary
+    this.setDialogue(answerObject.then)
   }
 
   loadDialogue (text) {
-    if(this.dialogue) {
-      this.dialogue.destroy()
+    if(this.dialogueBitmap) {
+      this.dialogueBitmap.destroy()
     }
-    this.dialogue = NewsItem.WrapBitmapText(
+    this.dialogueBitmap = NewsItem.WrapBitmapText(
       this,
       this.screenBounds.paddingLateral*8,
       this.cameras.main.height*0.7 + this.screenBounds.paddingLateral,
       'vtt24',
       text,
-      this.cameras.main.width
+      this.screenBounds.width - this.screenBounds.paddingLateral*16
     )
-    this.dialogue.setTint(0xc69d7f)
-    this.dialogue.setTint(0xc69d7f)
+    this.dialogueBitmap.setTint(0xc69d7f)
+    this.dialogueBitmap.setTint(0xc69d7f)
   }
 
   update () {

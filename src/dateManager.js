@@ -17,6 +17,14 @@ class DateManager {
     this.currentDate = date
     this.data = this.dates[`${this.currentDate.day}-${this.currentDate.month}-${this.currentDate.year}`]
   }
+
+  getDialogue() {
+    return this.data.dialogue
+  }
+
+  getNews() {
+    return this.data.news
+  }
 }
 
 let dateManager

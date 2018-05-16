@@ -5,7 +5,7 @@
 		"dialogue": {
 			"character": "Frank",
 			"start": {
-				"text": "I know what are you thinking,\nthat I'm going to sell the newspaper.",
+				"text": "I know what are you thinking. That I'm going to sell the newspaper.",
 				"options": [
 					{
 						"text": "you are right, and I think is not correct",
@@ -18,7 +18,7 @@
 				]
 			},
 			"A": {
-				"text": "Have you take a look to the sales Ben?\nWe are in red numbers for so long.",
+				"text": "Have you take a look to the sales Ben? We are in red numbers for so long.",
 				"options": [
 					{
 						"text": "We are working in a good story, just give us one month more.",
