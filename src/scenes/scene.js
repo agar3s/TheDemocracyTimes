@@ -1,4 +1,5 @@
 import Translation from '../utils/translation'
+import {getDateManager} from '../dateManager'
 
 const timeToFade = 220
 
@@ -10,6 +11,7 @@ export default class GeneralScene extends Phaser.Scene {
 
   init () {
     this.translations = new Translation(this.cache, 'translations')
+    this.dateManager = getDateManager(this.cache)
     this.screenBounds = {
       width: 1280,
       height: 720,

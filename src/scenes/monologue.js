@@ -27,7 +27,7 @@ class MonologueScene extends GeneralScene {
       this.cameras.main.width/2,
       this.cameras.main.height/4,
       'na28',
-      'May 23th 1932',
+      this.dateManager.getDate(),
       this.cameras.main.width
     )
 
@@ -40,7 +40,7 @@ class MonologueScene extends GeneralScene {
       this.cameras.main.width/2,
       this.cameras.main.height/4 + 120,
       'vtt24',
-      this.translations.translate('23-05-32-monologue'),
+      this.dateManager.getMonologue(),
       this.cameras.main.width - 200
     )
     content.setOrigin(0.5, 0.5)

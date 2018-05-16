@@ -4,14 +4,12 @@ import GeneralScene from './scene.js'
 class MenuScene extends GeneralScene {
   constructor () {
     super({key: 'menuScene'})
+    this.background = 0xffe1cb
   }
 
   create () {
     super.create()
 
-
-    let background = this.add.sprite(this.screenBounds.width/2, this.screenBounds.height/2, 'back')
-    background.setScale(4)
 
     let logo = this.add.sprite(640, 240, 'head')
     logo.setOrigin(0.5, 0.5)
@@ -27,6 +25,7 @@ class MenuScene extends GeneralScene {
       onClick: () => {
         this.changeToScene('cinematicScene')
       },
+      hoverColor: 0xc69d7f,
       scale: 1.6
     })
 
@@ -37,6 +36,7 @@ class MenuScene extends GeneralScene {
       text: 'Language',
       onClick: () => {
       },
+      hoverColor: 0xc69d7f,
       scale: 1.6
     })
 

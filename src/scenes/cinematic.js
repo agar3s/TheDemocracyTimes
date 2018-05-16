@@ -10,8 +10,12 @@ class CinematicScene extends GeneralScene {
         text: 'Hace un año que mi buen amigo Frank y yo fundamos el Democracy Times.',
         image: 'strip1'
       },
+      // {
+      //   text: 'Luego de 20 años de carrera, el periódico para el que trabajaba cerró, otro que como tantos quebró a consecuencia de la crisis del 29.',
+      //   image: 'strip2'
+      // },
       {
-        text: 'Luego de 20 años de carrera, el periodico para el que trabaja cerro, otro que como tantos quebro a consecuencia de la crisis del 29.',
+        text: 'After 20 years working as a journalist, the newspaper for I worked closed like many others that broke as a result of the 29\'s crisis.',
         image: 'strip2'
       }
     ]
@@ -47,7 +51,7 @@ class CinematicScene extends GeneralScene {
     this.text = NewsItem.WrapBitmapText(
       this,
       this.cameras.main.width/2,
-      this.cameras.main.height*0.75,
+      this.cameras.main.height*0.7,
       'vtt24',
       text,
       this.cameras.main.width*0.7

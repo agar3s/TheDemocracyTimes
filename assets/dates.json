@@ -1,0 +1,93 @@
+{
+	"8-11-1932": {
+		"date": {"day": 8, "month": 11, "year": 1932},
+		"monologue": "A new day, a new story to tell.",
+		"dialogue": {
+			"character": "Frank",
+			"start": {
+				"text": "I know what are you thinking,\nthat I'm going to sell the newspaper.",
+				"options": [
+					{
+						"text": "you are right, and I think is not correct",
+						"then": "A"
+					},
+					{
+						"text": "Are you thinking to sell the newspaper?",
+						"then": "B"
+					}
+				]
+			},
+			"A": {
+				"text": "Have you take a look to the sales Ben?\nWe are in red numbers for so long.",
+				"options": [
+					{
+						"text": "We are working in a good story, just give us one month more.",
+						"then": "AEnd"
+					},
+					{
+						"text": "The economy is a little bit difficult this days, but you will se that this newspaper is going to sell a lot.",
+						"then": "AEnd"
+					}
+				]
+			},
+			"B": {
+				"text": "Ben, this is difficult and you know it, but I'm not running this newspaper for charity. We need to make money.",
+				"options": [
+					{
+						"text": "We are working in a good story, just give us one month more.",
+						"then": "AEnd"
+					},
+					{
+						"text": "The economy is a little bit difficult this days, but you will se that this newspaper is going to sell a lot.",
+						"then": "AEnd"
+					}
+				]
+			},
+			"AEnd": {
+				"text": "Ok, you have one month to increase the sales, after that I can't promise you anything.",
+				"options": [
+					{"text": "You will not regret it."}
+				]
+			}
+		},
+		"news": [
+			{
+				"headline": "Free food for everyone!",
+				"lead": "The popular millionaire Andy Montana offers charity banquets in the poorest areas of the city.",
+				"tags": ["social", "andy montana", "mafia", "charity"],
+				"by": "Jhonatan Ross",
+				"popularity": 0.2,
+				"relevancy": 0.4,
+				"exclusivity": 0.6
+			},
+			{
+				"headline": "The strike continues on Soup & Pastas",
+				"lead": "Third day of strike, estimated losses for 100 dollars.",
+				"tags": ["present", "soup & pastas", "labour party", "strikes"],
+				"by": "Lloyd Moore",
+				"popularity": 0.2,
+				"relevancy": 0.4,
+				"exclusivity": 0.6
+			},
+			{
+				"headline": "Annette Gray will sing at the South Hall",
+				"lead": "The famous singer will perform this May 5th with the band Underground Boys.",
+		        "tags": ["culture and arts", "annette gray", "undeground boys"],
+        		"by": "Victor Griffin",
+				"popularity": 0.2,
+				"relevancy": 0.4,
+				"exclusivity": 0.6
+			},
+			{
+				"headline": "Ernest Jones the 5th race for veterans",
+				"lead": "The city is preparing for the event that will raise funds for veterans of the Great War.",
+		        "tags": ["sports", "ernest jones", "city"],
+    			"by": "Victor Griffin",
+				"popularity": 0.2,
+				"relevancy": 0.4,
+				"exclusivity": 0.6
+			}
+		],
+		"next": ["8-11-1932"]
+	}
+}
