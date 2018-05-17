@@ -2,6 +2,8 @@
 class DateManager {
   constructor (cache) {
     this.dates = cache.json.get('dates')
+    this.news = cache.json.get('news')
+    this.dialogues = cache.json.get('dialogues')
     this.setDate("08-11-1932")
   }
 
@@ -19,11 +21,11 @@ class DateManager {
   }
 
   getDialogue() {
-    return this.data.dialogue
+    return this.dialogues[this.data.dialogue]
   }
 
   getNews() {
-    return this.data.news
+    return this.data.news.map(id => this.news[id])
   }
 
   getLayouts() {

@@ -1,0 +1,81 @@
+{
+	"08-11-1932": {
+		"character": "Frank",
+		"start": {
+			"text": "I know what are you thinking. That I'm going to sell the newspaper.",
+			"options": [
+				{
+					"text": "you are right, and I think is not correct",
+					"then": "A"
+				},
+				{
+					"text": "Are you thinking to sell the newspaper?",
+					"then": "B"
+				}
+			]
+		},
+		"A": {
+			"text": "Have you take a look to the sales Ben? We are in red numbers for so long.",
+			"options": [
+				{
+					"text": "We are working in a good story, just give us one month more.",
+					"then": "AEnd"
+				},
+				{
+					"text": "The economy is a little bit difficult this days, but you will se that this newspaper is going to sell a lot.",
+					"then": "AEnd"
+				}
+			]
+		},
+		"B": {
+			"text": "Ben, this is difficult and you know it, but I'm not running this newspaper for charity. We need to make money.",
+			"options": [
+				{
+					"text": "We are working in a good story, just give us one month more.",
+					"then": "AEnd"
+				},
+				{
+					"text": "The economy is a little bit difficult this days, but you will se that this newspaper is going to sell a lot.",
+					"then": "AEnd"
+				}
+			]
+		},
+		"AEnd": {
+			"text": "Ok, you have one month to increase the sales, after that I can't promise you anything.",
+			"options": [{"text": "You will not regret it."}]
+		}
+	},
+	"15-11-1932": {
+		"character": "Jhon",
+		"start": {
+			"text": "That woman... she said that her name is Charlie?",
+			"options": [
+				{
+					"text": "Yes she speaks in the name of Andy Montana.",
+					"then": "A"
+				}
+			]
+		},
+		"A": {
+			"text": "I know it! it's very clever from Andy to put a woman in charge of his public relations",
+			"options": [
+				{
+					"text": "It's true, nobody suspects that woman has that power.",
+					"then": "B"
+				},
+				{
+					"text": "Also she seems very clever, maybe more than Montana.",
+					"then": "C"
+				}
+			]
+		},
+		"B": {
+			"text": "So, I think is a good idea to follow her for more clues about this \"millionaire\".",
+			"options": [{"text": "Be carefoul."}]
+		},
+		"C": {
+			"text": "Huh! Do you think? be carefoul Benjamin, that woman could be very dangerous.",
+			"options": [{"text": "That's ok. Let's back to work."}]
+		}
+	}
+}
