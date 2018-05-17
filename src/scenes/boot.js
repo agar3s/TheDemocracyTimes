@@ -70,8 +70,8 @@ export default class BootScene extends Phaser.Scene {
 
 
 
-      this.scene.start('editScene')
-
+      this.scene.start('menuScene')
+      
 
 
     })
@@ -114,6 +114,7 @@ export default class BootScene extends Phaser.Scene {
     this.load.spritesheet('strip1', 'assets/strip/strip1_sepia2.png', { frameWidth: 446, frameHeight: 360 })
     this.load.spritesheet('strip2', 'assets/strip/strip2_sepia1.png', { frameWidth: 446, frameHeight: 360 })
     this.load.spritesheet('strip3', 'assets/strip/strip3_sepia.png', { frameWidth: 446, frameHeight: 360 })
+    this.load.spritesheet('strip4', 'assets/strip/strip4_sepia.png', { frameWidth: 446, frameHeight: 360 })
 
     // json
     this.load.json('translations', 'assets/text.json')

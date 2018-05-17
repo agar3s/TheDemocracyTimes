@@ -1,5 +1,5 @@
 import GeneralScene from './scene.js'
-
+import NewsItem from '../sprites/newsItem'
 
 class MenuScene extends GeneralScene {
   constructor () {
@@ -39,6 +39,28 @@ class MenuScene extends GeneralScene {
       hoverColor: 0xc69d7f,
       scale: 1.6
     })
+
+    let subtitle = NewsItem.WrapBitmapText(
+      this,
+      this.cameras.main.width/2,
+      this.cameras.main.height*0.48,
+      'na22',
+      'Adventure Game Jam 2018 Version',
+      this.cameras.main.width
+    )
+    subtitle.setOrigin(0.5, 0.5)
+    subtitle.setTint(0x62391b)
+
+    let agar3s = NewsItem.WrapBitmapText(
+      this,
+      this.cameras.main.width/2,
+      this.cameras.main.height*0.95,
+      'na16',
+      'Made by Agar3s',
+      this.cameras.main.width
+    )
+    agar3s.setOrigin(0.5, 1)
+    agar3s.setTint(0x62391b)
 
   }
 

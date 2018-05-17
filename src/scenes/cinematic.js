@@ -24,7 +24,7 @@ class CinematicScene extends GeneralScene {
       },
       {
         text: 'Ha sido una gran oportunidad para informar de manera independiente la realidad que la ciudad y el país afronta, por eso es que amo venir aquí dia a dia.',
-        image: 'strip3'
+        image: 'strip4'
       },
     ]
     this.currentStripIndex = 0
