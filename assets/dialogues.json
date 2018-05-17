@@ -7,6 +7,10 @@
 				{
 					"text": "yes, we don't have enough news for today, are you working on something we can publish now?",
 					"then": "A"
+				},
+				{
+					"text": "give me another option",
+					"then": "B"
 				}
 			]
 		},
@@ -15,6 +19,14 @@
 			"options": [
 				{
 					"text": "excellent, I can believe what is happening to this country..."
+				}
+			]
+		},
+		"B": {
+			"text": "I'm afraid that there is no more options Ben...",
+			"options": [
+				{
+					"text": "let's see"
 				}
 			]
 		}

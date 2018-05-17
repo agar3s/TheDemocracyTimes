@@ -1,10 +1,12 @@
+import {getStatusManager} from './statusManager'
 
 class DateManager {
   constructor (cache) {
     this.dates = cache.json.get('dates')
     this.news = cache.json.get('news')
     this.dialogues = cache.json.get('dialogues')
-    this.setDate("27-02-1933")
+    this.statusManager = getStatusManager()
+    this.setDate("16-02-1933")
   }
 
   getMonologue() {
@@ -25,18 +27,27 @@ class DateManager {
   }
 
   getNews() {
-    return this.data.news.map((id) => {
+    let status = this.statusManager
+    let newsLocked = this.data.newsLocked
+
+    let news = this.data.news.map(id=>id)
+    if (newsLocked) {
+      news = news.concat(newsLocked[status.endDialogue])
+    }
+    return news.map((id) => {
       let newsItem = this.news[id]
       newsItem.id = id
       return newsItem
     })
+
   }
 
   getLayouts() {
     return this.data.layouts
   }
 
-  nextDay(status) {
+  nextDay() {
+    let status = this.statusManager
     let rules = this.data.nextRules
     let nextDay = rules.default
     if (rules.hasOwnProperty('news')) {

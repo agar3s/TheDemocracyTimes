@@ -138,7 +138,6 @@ export default class NewsItem {
       rectangle = space.rect
       this.score = space.score
     }
-    console.log('score', this.score)
     this.notifyRemoved()
     this.layoutIndex = i
     this.geometry = rectangle
@@ -147,8 +146,6 @@ export default class NewsItem {
     this.container.y = rectangle.y
     this.clipDimensions.width = format.width * this.ratio
     this.clipDimensions.height = format.height * this.ratio
-    //console.log(space.format)
-    //console.log(format.headlineFont)
     this.clipDimensions.headlineFont = format.headlineFont
     this.clipDimensions.leadFont = format.leadFont
     this.clipDimensions.columns = format.columns
@@ -195,4 +192,3 @@ export default class NewsItem {
   }
 }
 
-console.log(NewsItem)

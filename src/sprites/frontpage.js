@@ -217,7 +217,6 @@ export default class Frontpage {
       }
     }
     total = exc + rel + pop
-    console.log('sum', exc+rel+pop)
     return total
   }
 

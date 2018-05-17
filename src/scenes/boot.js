@@ -66,8 +66,6 @@ export default class BootScene extends Phaser.Scene {
       assetText.destroy()
       
       this.cache.bitmapFont.entries.get('vtt24').data.lineHeight = 22
-      console.log(this.cache.bitmapFont.entries.get('vtt24').data.lineHeight)
-
 
 
       this.scene.start('officeScene')

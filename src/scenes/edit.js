@@ -76,10 +76,6 @@ class EditScene extends GeneralScene {
     return this.translations.translate(val)
   }
 
-  destroy () {
-    console.log('destroy on edit called')
-  }
-
   registerEvents(ratio) {
     this.input.on('dragstart', (pointer, gameObject) => {
       let currentIndex = this.children.list.indexOf(gameObject)

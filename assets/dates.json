@@ -5,9 +5,13 @@
 		"title": "the call",
 		"monologue": "Something excepcional just happened, I can't believe it",
 		"dialogue": "16-02-1933",
-		"news": ["001", "002", "003", "004", "005"],
+		"news": ["001", "002", "003"],
 		"layouts": ["02", "01","03","04","05"],
-		"nextRules": {"default":"20-02-1933"}
+		"nextRules": {"default":"20-02-1933"},
+		"newsLocked": {
+			"A": ["004"],
+			"B": ["005", "006"]
+		}
 	},
 	"20-02-1933": {
 		"date": {"day": 20, "month": 2, "year": 1933},

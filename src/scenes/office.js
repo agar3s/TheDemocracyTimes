@@ -49,7 +49,6 @@ class OfficeScene extends GeneralScene {
       screenBounds: this.screenBounds,
       dialogueData: this.dialogueData,
       endListener: (key) => {
-        console.log(key)
         this.children.bringToTop(this.next)
         this.statusManager.setEndDialogue(key)
         this.next.setAlpha(1)

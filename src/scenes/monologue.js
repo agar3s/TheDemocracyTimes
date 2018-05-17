@@ -52,13 +52,6 @@ class MonologueScene extends GeneralScene {
 
   }
 
-  destroy() {
-    console.log('destroy this scene')
-  }
-  shutdown () {
-    console.log('shutdown this scene')
-  }
-
 }
 export {
   MonologueScene
