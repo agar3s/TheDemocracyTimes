@@ -51,9 +51,9 @@ export default class Frontpage {
     this.newspaces = []
     this.layoutGraphics = this.scene.add.graphics()
 
-    let layoutOptions = ['01', '02', '03', '04', '05']
+    let layoutOptions = config.availableLayouts
     this.setLayoutOptions(layoutOptions)
-    this.loadLayout('02')
+    this.loadLayout(layoutOptions[0])
 
   }
 

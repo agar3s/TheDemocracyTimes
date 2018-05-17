@@ -19,7 +19,8 @@ class EditScene extends GeneralScene {
     this.frontpage = new Frontpage({
       scene: this,
       screenBounds: this.screenBounds,
-      layouts: this.layouts
+      layouts: this.layouts,
+      availableLayouts: this.dateManager.getLayouts()
     })
     
     let width = 3

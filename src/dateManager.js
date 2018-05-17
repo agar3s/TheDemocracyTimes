@@ -26,6 +26,10 @@ class DateManager {
     return this.data.news
   }
 
+  getLayouts() {
+    return this.data.layouts
+  }
+
   nextDay() {
     let nextDay = this.data.next[0]
     this.setDate(nextDay)

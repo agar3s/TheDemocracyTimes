@@ -52,12 +52,14 @@ export default class DialogueDisplay {
       answerBox.setData('onClick', () => {
         this.selectOption(this.answers[i])
       })
+      answerBox.setData('onHover', () => {
+        answerBox.setTint(0xffdabd)
+      })
+      answerBox.setData('onOut', () => {
+        answerBox.setTint(0xc69d7f)
+      })
       answerBox.setData('type', 'button')
       answerBox.setInteractive(new Phaser.Geom.Rectangle(0, 0, answerBox.width, answerBox.height), Phaser.Geom.Rectangle.Contains)
-      answerBox.setData('colors', {
-        normal: 0xc69d7f,
-        hover: 0xffdabd
-      })
 
       this.dialogueLineY += answerBox.height*0.75
 
