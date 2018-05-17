@@ -57,35 +57,35 @@
 				"lead": "The popular millionaire Andy Montana offers charity banquets in the poorest areas of the city.",
 				"tags": ["social", "andy montana", "mafia", "charity"],
 				"by": "Jhonatan Ross",
-				"popularity": 0.2,
-				"relevancy": 0.4,
-				"exclusivity": 0.6
+				"popularity": 0.6,
+				"relevancy": 0.3,
+				"exclusivity": 0.1
 			},
 			{
 				"headline": "The strike continues on Soup & Pastas",
 				"lead": "Third day of strike, estimated losses for 100 dollars.",
 				"tags": ["present", "soup & pastas", "labour party", "strikes"],
 				"by": "Lloyd Moore",
-				"popularity": 0.2,
-				"relevancy": 0.4,
-				"exclusivity": 0.6
+				"popularity": 0.6,
+				"relevancy": 0.1,
+				"exclusivity": 0.3
 			},
 			{
 				"headline": "Annette Gray will sing at the South Hall",
 				"lead": "The famous singer will perform this May 5th with the band Underground Boys.",
 		        "tags": ["culture and arts", "annette gray", "undeground boys"],
         		"by": "Victor Griffin",
-				"popularity": 0.2,
-				"relevancy": 0.4,
-				"exclusivity": 0.6
+				"popularity": 0.3,
+				"relevancy": 0.6,
+				"exclusivity": 0.1
 			},
 			{
 				"headline": "Ernest Jones the 5th race for veterans",
 				"lead": "The city is preparing for the event that will raise funds for veterans of the Great War.",
 		        "tags": ["sports", "ernest jones", "city"],
     			"by": "Victor Griffin",
-				"popularity": 0.2,
-				"relevancy": 0.4,
+				"popularity": 0.1,
+				"relevancy": 0.3,
 				"exclusivity": 0.6
 			},
 			{
@@ -93,12 +93,12 @@
 				"lead": "Yesterday around 200 dollars in merchandise were stolen from the popular store.",
 		        "tags": ["sports", "ernest jones", "city"],
     			"by": "Lloyd More",
-				"popularity": 0.2,
-				"relevancy": 0.4,
-				"exclusivity": 0.6
+				"popularity": 0.1,
+				"relevancy": 0.1,
+				"exclusivity": 0.1
 			}
 		],
-		"layouts": ["02", "03"],
+		"layouts": ["01","02", "03","04","05"],
 		"next": ["15-11-1932"]
 	},
 	"15-11-1932": {

@@ -16,21 +16,12 @@ class EditScene extends GeneralScene {
   create () {
     super.create()
 
-    this.frontpage = new Frontpage({
-      scene: this,
-      screenBounds: this.screenBounds,
-      layouts: this.layouts,
-      availableLayouts: this.dateManager.getLayouts()
-    })
-    
     let width = 3
     let height = 4
     let header = 0.5
     let ratio = (this.screenBounds.height - this.screenBounds.paddingVertical*2)/5
-
-    this.registerEvents(ratio)
-
-    let next = this.createButton({
+    
+    this.next = this.createButton({
       x: this.screenBounds.width + this.screenBounds.paddingVertical*2,
       y: this.screenBounds.height - this.screenBounds.paddingVertical*2,
       font: 'na22',
@@ -41,7 +32,19 @@ class EditScene extends GeneralScene {
       scale: 1.4,
       color: 0xc69d7f
     })
-    next.setOrigin(1, 1)
+    this.next.setOrigin(1, 1)
+    this.next.setAlpha(0)
+
+    this.frontpage = new Frontpage({
+      scene: this,
+      screenBounds: this.screenBounds,
+      layouts: this.layouts,
+      availableLayouts: this.dateManager.getLayouts()
+    })
+    
+
+    this.registerEvents(ratio)
+
 
     // news to publish
     // news basic distribution

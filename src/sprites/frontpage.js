@@ -40,6 +40,7 @@ export default class Frontpage {
 
 
     // grid layout
+    this.newsAttached = 0
     graphics.lineStyle(0.5, 0x226622, 0.08)
     for (var j = 0; j < 8; j++) {
       for (var i = 0; i < 6; i++) {
@@ -118,7 +119,11 @@ export default class Frontpage {
         ),
         hover: false,
         filled: undefined,
-        format: `${clip.w}x${clip.h}`
+        format: `${clip.w}x${clip.h}`,
+        relevance: clip.rel,
+        exclusivity: clip.exc,
+        popularity: clip.pop,
+        relevancy: clip.rel
       }
       this.newspaces.push(space)
     }
@@ -131,11 +136,12 @@ export default class Frontpage {
       let space = this.newspaces[i]
       newsItemContainer.fitTo(space, i)
       newsItemContainer.addOnRemove(() => {
+        this.setNewsAttached(this.newsAttached - 1)
         delete space.filled
       })
       space.filled = newsItemContainer
     }
-
+    this.setNewsAttached(i)
   }
 
   checkItem (point) {
@@ -175,15 +181,45 @@ export default class Frontpage {
       if (space.hover && !space.filled) {
         newsItemContainer.fitTo(space, i)
         newsItemContainer.addOnRemove(() => {
+          this.setNewsAttached(this.newsAttached - 1)
           delete space.filled
         })
         space.filled = newsItemContainer
+        this.setNewsAttached(this.newsAttached + 1)
         return
       }
     }
     newsItemContainer.fitTo()
   }
 
+  setNewsAttached(value) {
+    this.newsAttached = value
+    if (this.newsAttached === this.newspaces.length) {
+      this.scene.next.setAlpha(1)
+      this.calculateStats()
+    } else {
+      this.scene.next.setAlpha(0)
+    }
+  }
+
+  calculateStats() {
+    let total = 0
+    let exc = 0
+    let pop = 0
+    let rel = 0
+    for (var i = 0; i < this.newspaces.length; i++) {
+      let space = this.newspaces[i]
+      if (space.filled) {
+        exc += space.filled.exclusivity * space.exclusivity
+        pop += space.filled.popularity * space.popularity
+        rel += space.filled.relevancy * space.relevancy
+      }
+    }
+    total = (exc+rel)*pop
+    console.log('sum', exc+rel+pop)
+    //console.log('mult', exc*rel*pop)
+    //console.log('total', (exc+rel+pop)*exc*rel*pop)
+  }
 
 
 

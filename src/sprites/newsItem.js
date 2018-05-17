@@ -14,6 +14,9 @@ export default class NewsItem {
     this.headline = newsData.headline
     this.lead = newsData.lead
     this.outside = true
+    this.exclusivity = newsData.exclusivity
+    this.popularity = newsData.popularity
+    this.relevancy = newsData.relevancy
 
     this.clipDimensions = {
       width: format.width * this.ratio,
