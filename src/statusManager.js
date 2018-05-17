@@ -1,8 +1,8 @@
 
 class StatusManager {
-  constructor () {
-    this.news = {}
-    this.endDialogue = ''
+  constructor (previousStatus = {}) {
+    this.news = previousStatus.news || {}
+    this.endDialogue = previousStatus.endDialogue || ''
   }
 
   setPublication (frontPageData) {

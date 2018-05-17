@@ -23,6 +23,7 @@ class MenuScene extends GeneralScene {
       font: 'na28',
       text: 'Start',
       onClick: () => {
+        this.dateManager.setDate('16-02-1933')
         this.changeToScene('cinematicScene')
       },
       hoverColor: 0xc69d7f,
@@ -39,6 +40,7 @@ class MenuScene extends GeneralScene {
       hoverColor: 0xc69d7f,
       scale: 1.6
     })
+    language.setAlpha(0)
 
     let subtitle = NewsItem.WrapBitmapText(
       this,

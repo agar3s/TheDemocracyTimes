@@ -54,6 +54,13 @@
 		"dialogue": "06-03-1933",
 		"news": ["006", "007", "008", "009", "010"],
 		"layouts": ["01", "02", "03"],
-		"nextRules": {"default":"16-02-1933"}
+		"nextRules": {"default":"end01"}
+	},
+	"end01": {
+		"date": {"day": 16, "month": 3, "year": 1933},
+		"title": "The last hero",
+		"conclusion": "One week later I given noticed about the dead of Jhonathan.\nI knew it, and I tried to convice him about that mistake.\nNow he is dead... this city... this country only goes down, we are dammned.",
+		"number": "ending 2 of 9",
+		"end": true
 	}
 }

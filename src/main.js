@@ -7,6 +7,7 @@ import {MonologueScene} from './scenes/monologue'
 import {OfficeScene} from './scenes/office'
 import {EditScene} from './scenes/edit'
 import {PublishScene} from './scenes/publish'
+import {EndingScene} from './scenes/ending'
 
 let config = {
   type: Phaser.AUTO,
@@ -25,7 +26,8 @@ let config = {
     MonologueScene,
     OfficeScene,
     EditScene,
-    PublishScene
+    PublishScene,
+    EndingScene
   ]
 }
 

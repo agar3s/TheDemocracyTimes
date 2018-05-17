@@ -14,8 +14,12 @@ class PublishScene extends GeneralScene {
       font: 'na22',
       text: 'Continue',
       onClick: () => {
-        this.dateManager.nextDay(this.statusManager)
-        this.changeToScene('monologueScene')
+        this.dateManager.nextDay()
+        if(this.dateManager.isGameOver()) {
+          this.changeToScene('endingScene')
+        } else {
+          this.changeToScene('monologueScene')
+        }
       },
       scale: 1.4,
       color: 0xc69d7f
