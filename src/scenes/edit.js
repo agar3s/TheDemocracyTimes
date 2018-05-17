@@ -27,6 +27,7 @@ class EditScene extends GeneralScene {
       font: 'na22',
       text: 'Ready to Print',
       onClick: () => {
+        this.saveFrontPage()
         this.changeToScene('publishScene')
       },
       scale: 1.4,
@@ -52,10 +53,19 @@ class EditScene extends GeneralScene {
     let newsData = this.dateManager.getNews()
 
     newsData.sort(()=> Math.random()<0.5)
+    this.newsItems = []
 
     for (let i = 0; i < newsData.length; i++) {
-      new NewsItem({formats, scene: this, screenBounds: this.screenBounds, ratio}, newsData[i])
+      this.newsItems.push(new NewsItem({formats, scene: this, screenBounds: this.screenBounds, ratio}, newsData[i]))
     }
+  }
+
+  saveFrontPage() {
+    let news = {}
+    this.newsItems.forEach((newsItemContainer)=>{
+      news[newsItemContainer.id] = {score: newsItemContainer.score}
+    })
+    this.statusManager.setPublication(news)
   }
 
   update (time, dt) {

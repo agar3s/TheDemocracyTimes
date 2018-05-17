@@ -45,7 +45,7 @@
 		"exclusivity": 0.1
 	},
 	"006": {
-		"headline": "B-Free food for everyone!",
+		"headline": "006 B-Free food for everyone!",
 		"lead": "B-The popular millionaire Andy Montana offers charity banquets in the poorest areas of the city.",
 		"tags": ["social", "andy montana", "mafia", "charity"],
 		"by": "Jhonatan Ross",
@@ -54,7 +54,7 @@
 		"exclusivity": 0.1
 	},
 	"007": {
-		"headline": "C-The strike continues on Soup & Pastas",
+		"headline": "007 C-The strike continues on Soup & Pastas",
 		"lead": "C-Third day of strike, estimated losses for 100 dollars.",
 		"tags": ["present", "soup & pastas", "labour party", "strikes"],
 		"by": "Lloyd Moore",
@@ -63,7 +63,7 @@
 		"exclusivity": 0.3
 	},
 	"008": {
-		"headline": "D-Annette Gray will sing at the South Hall",
+		"headline": "008 D-Annette Gray will sing at the South Hall",
 		"lead": "D-The famous singer will perform this May 5th with the band Underground Boys.",
 	    "tags": ["culture and arts", "annette gray", "undeground boys"],
 		"by": "Victor Griffin",
@@ -72,7 +72,7 @@
 		"exclusivity": 0.1
 	},
 	"009": {
-		"headline": "E-Ernest Jones the 5th race for veterans",
+		"headline": "009 E-Ernest Jones the 5th race for veterans",
 		"lead": "E-The city is preparing for the event that will raise funds for veterans of the Great War.",
 	    "tags": ["sports", "ernest jones", "city"],
 		"by": "Victor Griffin",
@@ -81,7 +81,7 @@
 		"exclusivity": 0.6
 	},
 	"010": {
-		"headline": "F-Marta Robinson's store house was robbed",
+		"headline": "010 F-Marta Robinson's store house was robbed",
 		"lead": "F-Yesterday around 200 dollars in merchandise were stolen from the popular store.",
 	    "tags": ["sports", "ernest jones", "city"],
 		"by": "Lloyd More",

@@ -1,81 +1,103 @@
 {
-	"08-11-1932": {
-		"character": "Frank",
-		"start": {
-			"text": "I know what are you thinking. That I'm going to sell the newspaper.",
-			"options": [
-				{
-					"text": "you are right, and I think is not correct",
-					"then": "A"
-				},
-				{
-					"text": "Are you thinking to sell the newspaper?",
-					"then": "B"
-				}
-			]
-		},
-		"A": {
-			"text": "Have you take a look to the sales Ben? We are in red numbers for so long.",
-			"options": [
-				{
-					"text": "We are working in a good story, just give us one month more.",
-					"then": "AEnd"
-				},
-				{
-					"text": "The economy is a little bit difficult this days, but you will se that this newspaper is going to sell a lot.",
-					"then": "AEnd"
-				}
-			]
-		},
-		"B": {
-			"text": "Ben, this is difficult and you know it, but I'm not running this newspaper for charity. We need to make money.",
-			"options": [
-				{
-					"text": "We are working in a good story, just give us one month more.",
-					"then": "AEnd"
-				},
-				{
-					"text": "The economy is a little bit difficult this days, but you will se that this newspaper is going to sell a lot.",
-					"then": "AEnd"
-				}
-			]
-		},
-		"AEnd": {
-			"text": "Ok, you have one month to increase the sales, after that I can't promise you anything.",
-			"options": [{"text": "You will not regret it."}]
-		}
-	},
-	"15-11-1932": {
+	"16-02-1933":{
 		"character": "Jhon",
 		"start": {
-			"text": "That woman... she said that her name is Charlie?",
+			"text": "do you call me?",
 			"options": [
 				{
-					"text": "Yes she speaks in the name of Andy Montana.",
+					"text": "yes, we don't have enough news for today, are you working on something we can publish now?",
 					"then": "A"
 				}
 			]
 		},
 		"A": {
-			"text": "I know it! it's very clever from Andy to put a woman in charge of his public relations",
+			"text": "yes, I have a lot of info about this people, let me work on that.",
 			"options": [
 				{
-					"text": "It's true, nobody suspects that woman has that power.",
-					"then": "B"
+					"text": "excellent, I can believe what is happening to this country..."
+				}
+			]
+		}
+	},
+	"20-02-1933": {
+		"character": "Frank",
+		"start": {
+			"text": "What are you going to do with this mafia thing?",
+			"options": [
+				{
+					"text": "I need to write about it"
+				}
+			]
+		}
+	},
+	"27-02-1933": {
+		"character": "Evan",
+		"start": {
+			"text": "We need your collaboration Mr Brown",
+			"options": [
+				{
+					"text": "you suppose to know more about this topic than us",
+					"then": "A"
 				},
 				{
-					"text": "Also she seems very clever, maybe more than Montana.",
-					"then": "C"
+					"text": "what can we do for the goverment",
+					"then": "B"
 				}
 			]
 		},
-		"B": {
-			"text": "So, I think is a good idea to follow her for more clues about this \"millionaire\".",
-			"options": [{"text": "Be carefoul."}]
+		"A": {
+			"text": "It's true, but in this city nobody trust us",
+			"options": [
+				{
+					"text": "asdkasdklasjdkasd",
+					"then": "AA"
+				},
+				{
+					"text": "asdkasldkasldklsd",
+					"then": "AB"
+				}
+			]	
 		},
-		"C": {
-			"text": "Huh! Do you think? be carefoul Benjamin, that woman could be very dangerous.",
-			"options": [{"text": "That's ok. Let's back to work."}]
+		"B": {
+			"text": "asdasdsakdl",
+			"options": [
+				{
+					"text": "asdkasldkasl",
+					"then": "BA"
+				},
+				{
+					"text": "adlas;dla;sdlas;dlas;dl",
+					"then": "BB"
+				}
+			]	
+		},
+		"AA": {
+			"text": "woaksdosa option AA",
+			"options": [{"text":"sorry mr Evan"}]
+		},
+		"AB": {
+			"text": "option AB",
+			"options": [{"text":"sorry mr Evan"}]
+		},
+		"BA": {
+			"text": "option BA",
+			"options": [{"text":"sorry mr Evan"}]
+		},
+		"BB": {
+			"text": "option BB",
+			"options": [{"text":"sorry mr Evan"}]
+		}
+	},
+	"06-03-1933": {
+		"character": "Charlie",
+		"type": "cinematic",
+		"start": {
+			"text": "darling, I really love to work with you",
+			"options": [
+				{
+					"text": "this is the end"
+				}
+			]
 		}
 	}
 }

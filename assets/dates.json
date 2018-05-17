@@ -1,20 +1,55 @@
 {
-	"08-11-1932": {
-		"date": {"day": 8, "month": 11, "year": 1932},
-		"dateString": "November 08th 1932",
-		"monologue": "A new day, a new story to tell.",
-		"dialogue": "08-11-192",
+	"16-02-1933": {
+		"date": {"day": 16, "month": 2, "year": 1933},
+		"dateString": "February 16th 1933",
+		"title": "the call",
+		"monologue": "Something excepcional just happened, I can't believe it",
+		"dialogue": "16-02-1933",
 		"news": ["001", "002", "003", "004", "005"],
-		"layouts": ["01","02", "03","04","05"],
-		"next": ["15-11-1932"]
+		"layouts": ["02", "01","03","04","05"],
+		"nextRules": {"default":"20-02-1933"}
 	},
-	"15-11-1932": {
-		"date": {"day": 15, "month": 11, "year": 1932},
-		"dateString": "November 15th 1932",
-		"monologue": "Yes we are going well with this text, I hope that someday I have something to tell you",
-		"dialogue": "15-11-1932",
+	"20-02-1933": {
+		"date": {"day": 20, "month": 2, "year": 1933},
+		"dateString": "February 20th 1933",
+		"title": "the punishement",
+		"monologue": "Jhon was beaten for some gangster two days ago...",
+		"dialogue": "20-02-1933",
 		"news": ["006", "007", "008", "009", "010"],
-		"layouts": ["01", "02", "03", "04", "05"],
-		"next": ["08-11-1932"]
+		"layouts": ["01", "02", "03"],
+		"nextRules": {
+			"news": {
+				"010": {"scoreGt": 0, "next":"27-02-1933"}
+			},
+			"default": "06-03-1933"
+		}
+	},
+	"27-02-1933": {
+		"date": {"day": 27, "month": 2, "year": 1933},
+		"dateString": "February 27th 1933",
+		"title": "the agent",
+		"monologue": "we release that information about tony, now a man is standing out of the building, he said that we want to talk with us about this mafia thing we are publishing. He said is an agent of the BOI.",
+		"dialogue": "27-02-1933",
+		"news": ["006", "007", "008", "009", "010"],
+		"layouts": ["01", "02", "03"],
+		"nextRules": {
+			"endDialogue": {
+				"AA": "16-02-1933",
+				"AB": "20-02-1933",
+				"BA": "27-02-1933",
+				"BB": "06-03-1933"
+			},
+			"default":"16-02-1933"
+		}
+	},
+	"06-03-1933": {
+		"date": {"day": 6, "month": 3, "year": 1933},
+		"dateString": "March 06th 1933",
+		"title": "I appreciate your silence",
+		"monologue": "she said, we appreciate your silence darling.",
+		"dialogue": "06-03-1933",
+		"news": ["006", "007", "008", "009", "010"],
+		"layouts": ["01", "02", "03"],
+		"nextRules": {"default":"16-02-1933"}
 	}
 }

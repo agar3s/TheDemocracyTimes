@@ -14,7 +14,7 @@ class PublishScene extends GeneralScene {
       font: 'na22',
       text: 'Continue',
       onClick: () => {
-        this.dateManager.nextDay()
+        this.dateManager.nextDay(this.statusManager)
         this.changeToScene('monologueScene')
       },
       scale: 1.4,

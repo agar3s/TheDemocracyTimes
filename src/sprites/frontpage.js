@@ -123,7 +123,8 @@ export default class Frontpage {
         relevance: clip.rel,
         exclusivity: clip.exc,
         popularity: clip.pop,
-        relevancy: clip.rel
+        relevancy: clip.rel,
+        score: clip.score
       }
       this.newspaces.push(space)
     }
@@ -215,12 +216,10 @@ export default class Frontpage {
         rel += space.filled.relevancy * space.relevancy
       }
     }
-    total = (exc+rel)*pop
+    total = exc + rel + pop
     console.log('sum', exc+rel+pop)
-    //console.log('mult', exc*rel*pop)
-    //console.log('total', (exc+rel+pop)*exc*rel*pop)
+    return total
   }
-
 
 
   update () {

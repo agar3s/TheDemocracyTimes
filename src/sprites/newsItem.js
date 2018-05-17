@@ -11,12 +11,13 @@ export default class NewsItem {
     this.formats = config.formats
     let format = this.formats['clip']
 
+    this.id = newsData.id
     this.headline = newsData.headline
     this.lead = newsData.lead
-    this.outside = true
     this.exclusivity = newsData.exclusivity
     this.popularity = newsData.popularity
     this.relevancy = newsData.relevancy
+    this.score = 0
 
     this.clipDimensions = {
       width: format.width * this.ratio,
@@ -131,11 +132,13 @@ export default class NewsItem {
       rectangle.x = this.container.x
       rectangle.y = this.container.y
       format = this.formats['clip']
+      this.score = 0
     } else {
       format = this.formats[space.format]
       rectangle = space.rect
+      this.score = space.score
     }
-
+    console.log('score', this.score)
     this.notifyRemoved()
     this.layoutIndex = i
     this.geometry = rectangle
