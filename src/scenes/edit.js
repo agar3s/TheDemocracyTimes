@@ -28,7 +28,7 @@ class EditScene extends GeneralScene {
       text: 'Ready to Print',
       onClick: () => {
         this.saveFrontPage()
-        this.changeToScene('publishScene')
+        this.changeToScene('resultsScene')
       },
       scale: 1.4,
       color: 0xc69d7f
@@ -65,7 +65,7 @@ class EditScene extends GeneralScene {
     this.newsItems.forEach((newsItemContainer)=>{
       news[newsItemContainer.id] = {score: newsItemContainer.score}
     })
-    this.statusManager.setPublication(news)
+    this.statusManager.setPublication(news, this.frontpage.calculateStats())
   }
 
   update (time, dt) {

@@ -120,10 +120,9 @@ export default class Frontpage {
         hover: false,
         filled: undefined,
         format: `${clip.w}x${clip.h}`,
-        relevance: clip.rel,
+        relevancy: clip.rel,
         exclusivity: clip.exc,
         popularity: clip.pop,
-        relevancy: clip.rel,
         score: clip.score
       }
       this.newspaces.push(space)
@@ -217,7 +216,11 @@ export default class Frontpage {
       }
     }
     total = exc + rel + pop
-    return total
+    return {
+      exclusivity: exc,
+      relevancy: rel,
+      popularity: pop
+    }
   }
 
 

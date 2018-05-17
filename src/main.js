@@ -6,7 +6,7 @@ import {CinematicScene} from './scenes/cinematic'
 import {MonologueScene} from './scenes/monologue'
 import {OfficeScene} from './scenes/office'
 import {EditScene} from './scenes/edit'
-import {PublishScene} from './scenes/publish'
+import {ResultsScene} from './scenes/results'
 import {EndingScene} from './scenes/ending'
 
 let config = {
@@ -26,7 +26,7 @@ let config = {
     MonologueScene,
     OfficeScene,
     EditScene,
-    PublishScene,
+    ResultsScene,
     EndingScene
   ]
 }
