@@ -1,12 +1,15 @@
 
 class StatusManager {
   constructor (previousStatus = {}) {
+    console.log('a new statusManager has been initialized')
     this.news = previousStatus.news || {}
     this.endDialogue = previousStatus.endDialogue || ''
     this.lastPublicationStats = {}
 
     this.companyStats = {
-      capital: 500
+      capital: 225,
+      printing: 4000,
+      advertising: 35 
     }
   }
 
@@ -22,24 +25,48 @@ class StatusManager {
   }
 
   getSalesReport () {
-    let total = this.lastPublicationStats.exclusivity +this.lastPublicationStats.relevancy +this.lastPublicationStats.popularity
-    console.log(total)
-    let sold = (total||0) * 1800
-    return {
-      printed: 2500,  // based on previous sold
-      sold: sold,
-      sales: sold*0.05,
-      advertising: 40, // based on total of previous sold
-      total: sold*0.05 + 40,
-      employees: -(4*30 + 1*20),
-      printing: -(2500*0.01), // based on how many there are intervals
-      office: -50, //fixed
-      costs: -(4*30 + 1*20 + 2500*0.01 + 50),
-      capital: this.companyStats.capital, // previous
-      revenue: (sold*0.05 + 40)-(4*30 + 1*20 + 2500*0.01 + 50),
-      newCapital: this.companyStats.capital + (sold*0.05 + 40)-(4*30 + 1*20 + 2500*0.01 + 50)
+    let score = this.lastPublicationStats.exclusivity +this.lastPublicationStats.relevancy +this.lastPublicationStats.popularity
+    console.log(score)
+
+    let sold = (score||0) * 1525
+    let overSold = sold > this.companyStats.printing 
+    if (overSold) {
+      sold = ~~(2500*0.9999)
     }
-    this.companyStats.capital += (sold*0.05 + 40)-(4*30 + 1*20 + 2500*0.01 + 50)
+    let sales = sold*0.05
+    let total = sales + this.companyStats.advertising
+    
+    let impresionCosts = -this.companyStats.printing*0.01 
+    let employees = -(4*30 + 1*20)
+    let office = -50
+    let costs = employees+impresionCosts+office
+    let results = {
+      printed: this.companyStats.printing,  // based on previous sold
+      sold: sold,
+      sales: sales,
+      advertising: this.companyStats.advertising, // based on total of previous sold
+      total: total,
+      employees: employees,
+      printing: impresionCosts, // based on how many there are intervals
+      office: office, //fixed
+      costs: costs,
+      capital: this.companyStats.capital, // previous
+      revenue: total + costs,
+      newCapital: this.companyStats.capital + total + costs
+    }
+    this.companyStats.capital += total + costs
+
+    console.log(this.companyStats)
+    this.companyStats.advertising = parseFloat((sold*1.2/100).toFixed(2))
+
+    if (overSold) {
+      this.companyStats.advertising += 10
+      this.companyStats.printing += 500
+    } else if(sold +800 < this.companyStats.printing){
+      this.companyStats.printing -= 500
+    }
+
+    return results
   }
 
 
