@@ -74,7 +74,7 @@ class MenuScene extends GeneralScene {
   }
 
   startNewGame() {
-    this.dateManager.setDate('16-02-1933')
+    this.dateManager.setDate('06-02-1933')
     this.statusManager.resetStats()
   }
 

@@ -1,115 +1,402 @@
 {
+	"06-02-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"13-02-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
 	"16-02-1933":{
 		"character": "Jhon",
 		"start": {
-			"text": "do you call me?",
-			"options": [
-				{
-					"text": "yes, we don't have enough news for today, are you working on something we can publish now?",
-					"then": "A"
-				},
-				{
-					"text": "give me another option",
-					"then": "B"
-				}
-			]
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
 		},
 		"A": {
-			"text": "yes, I have a lot of info about this people, let me work on that.",
-			"options": [
-				{
-					"text": "excellent, I can believe what is happening to this country..."
-				}
-			]
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
 		},
 		"B": {
-			"text": "I'm afraid that there is no more options Ben...",
-			"options": [
-				{
-					"text": "let's see"
-				}
-			]
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
 		}
 	},
-	"20-02-1933": {
-		"character": "Frank",
+	"20-02-1933":{
+		"character": "Jhon",
 		"start": {
-			"text": "What are you going to do with this mafia thing?",
-			"options": [
-				{
-					"text": "I need to write about it"
-				}
-			]
-		}
-	},
-	"27-02-1933": {
-		"character": "Evan",
-		"start": {
-			"text": "We need your collaboration Mr Brown",
-			"options": [
-				{
-					"text": "you suppose to know more about this topic than us",
-					"then": "A"
-				},
-				{
-					"text": "what can we do for the goverment",
-					"then": "B"
-				}
-			]
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
 		},
 		"A": {
-			"text": "It's true, but in this city nobody trust us",
-			"options": [
-				{
-					"text": "asdkasdklasjdkasd",
-					"then": "AA"
-				},
-				{
-					"text": "asdkasldkasldklsd",
-					"then": "AB"
-				}
-			]	
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
 		},
 		"B": {
-			"text": "asdasdsakdl",
-			"options": [
-				{
-					"text": "asdkasldkasl",
-					"then": "BA"
-				},
-				{
-					"text": "adlas;dla;sdlas;dlas;dl",
-					"then": "BB"
-				}
-			]	
-		},
-		"AA": {
-			"text": "woaksdosa option AA",
-			"options": [{"text":"sorry mr Evan"}]
-		},
-		"AB": {
-			"text": "option AB",
-			"options": [{"text":"sorry mr Evan"}]
-		},
-		"BA": {
-			"text": "option BA",
-			"options": [{"text":"sorry mr Evan"}]
-		},
-		"BB": {
-			"text": "option BB",
-			"options": [{"text":"sorry mr Evan"}]
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
 		}
 	},
-	"06-03-1933": {
-		"character": "Charlie",
-		"type": "cinematic",
+	"13-03-1933":{
+		"character": "Jhon",
 		"start": {
-			"text": "darling, I really love to work with you",
-			"options": [
-				{
-					"text": "this is the end"
-				}
-			]
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"20-02-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"13-04-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"17-04-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"27-03-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"24-04-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"03-04-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"01-05-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"29-05-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"05-06-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"12-06-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"sample":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
 		}
 	}
 }
