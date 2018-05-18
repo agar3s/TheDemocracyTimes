@@ -7,7 +7,7 @@ class DateManager {
     this.dialogues = cache.json.get('dialogues')
     this.statusManager = getStatusManager()
     //this.setDate("06-02-1933")
-    this.setDate("16-02-1933")
+    this.setDate("20-03-1933")
   }
 
   getMonologue() {
@@ -57,14 +57,17 @@ class DateManager {
       Object.keys(rules.news).forEach((newID) => {
         let rule = rules.news[newID]
         let newsItem = status.news[newID]
-        if(rule.hasOwnProperty('scoreGt') && newsItem.score > rule.scoreGt) {
+        if(newsItem && rule.hasOwnProperty('scoreGt') && newsItem.score > rule.scoreGt) {
           nextDay = rule.next
         }
       })
     }
     
     if (rules.hasOwnProperty('endDialogue')) {
-      nextDay = rules.endDialogue[status.endDialogue]
+      let anotherDay = rules.endDialogue[status.endDialogue]
+      if(anotherDay){
+        nextDay = anotherDay
+      }
     }
 
     if(status.companyStats.capital < 0) {

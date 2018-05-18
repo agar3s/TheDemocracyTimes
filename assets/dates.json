@@ -44,7 +44,7 @@
 		"dateString": "February 20th 1933",
 		"title": "The punishement",
 		"code": "AAAA",
-		"monologue": "Two days ago Jhonatan was beaten by the Montana's bullies",
+		"monologue": "Two days ago Jhonatan was beaten by the Montana's bullies outside of his home, he found a way to arrive to the hospital.\n\nI visited him yesterday, he looks like shit but the doctors and nurses were taking care of him and he will recover.\n\nWhen I tried to pay the costs of the hospital I discovered that all the bills were already paid...\nby Andy Montana.",
 		"dialogue": "20-02-1933",
 		"news": ["001", "002", "003", "004"],
 		"layouts": ["02"],
@@ -60,14 +60,13 @@
 		"dateString": "March 13th 1933",
 		"title": "The Agent",
 		"code": "AAAAA",
-		"monologue": "fake data",
+		"monologue": "Jhonatan is still at the hospital, he will recover soon. \"I want to go back to work, to unmask this criminals once for all\" he said.\n\nWhen I was entering to the building a man identified as \"Agent Evans\" stoped me at the front, he want to talk with me about this Montana issue.\n\nI don't know if we can trust this man.",
 		"dialogue": "13-03-1933",
 		"news": ["001", "002", "003", "004"],
 		"layouts": ["02"],
 		"nextRules": {
 			"endDialogue": {
-				"A": "03-04-1933",
-				"B": "03-04-1933"
+				"E": "03-04-1933"
 			},
 			"default":"20-03-1933"
 		},
@@ -78,16 +77,20 @@
 		"dateString": "March 20th 1933",
 		"title": "Sabotage",
 		"code": "AAAAAA",
-		"monologue": "fake data",
+		"monologue": "Jhonatan will be leaving the hospital in a few days, I'm worried about his safety and this Mr Evans is not going to make the thing easy for us...",
 		"dialogue": "20-03-1933",
-		"news": ["001", "002", "003", "004"],
+		"news": ["001", "002", "003", "006"],
 		"layouts": ["02"],
+		"newsLocked": {
+			"C": ["004"],
+			"D": ["005"]
+		},
 		"nextRules": {
 			"news": {
-				"001": {"scoreGt": 0, "next":"27-03-1933"},
-				"001": {"scoreGt": 0, "next":"end07"}
+				"004": {"scoreGt": 0, "next":"10-04-1933"},
+				"005": {"scoreGt": 0, "next":"27-03-1933"}
 			},
-			"default":"10-04-1933"
+			"default":"end07"
 		}
 	},
 	"10-04-1933": {

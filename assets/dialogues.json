@@ -48,7 +48,7 @@
 		}
 	},
 	"16-02-1933":{
-		"character": "Charlie",
+		"character": "WomanPhone",
 		"start": {
 			"text": "Mr Brown, its a shame that you regret our gift and also you publish that ugly things about our business.",
 			"options": [{
@@ -86,77 +86,143 @@
 		}
 	},
 	"20-02-1933":{
-		"character": "Jhon",
+		"character": "Charlie",
 		"start": {
-			"text": "sample text",
+			"text": "let me introduce myself, some people know me as \"Charlie the pretty\"",
 			"options": [{
-				"text": "option A",
+				"text": "I can see why.",
 				"then": "A"
 				}, {
-				"text": "option B",
+				"text": "I recognize your voice",
 				"then": "B"
 			}]
 		},
 		"A": {
-			"text": "option A",
+			"text": "Thanks darling, I hope the old Jhonatan is soon feeling well enough to come back to the office.",
 			"options": [{
-				"text": "end option A"
+				"text": "Why your boss paid for the hospital expenses?",
+				"then": "D"
 			}]
 		},
 		"B": {
-			"text": "option B",
+			"text": "Yes, we talked by telephone four days ago. I warning you dear.",
 			"options": [{
-				"text": "end option B"
+				"text": "That was a threat, not a warning...",
+				"then": "C"
+			},{
+				"text": "Trying to kill a reporter is not a warning.",
+				"then": "D"
+			}
+		]
+		},
+		"C": {
+			"text": "Call it as you want, but I told you about there would be consequences.",
+			"options": [{
+				"text": "You almost killed one of the best well known reporters in the city.",
+				"then": "D"
+			}]
+		},
+		"D": {
+			"text": "These stupid bullies, the idea was scare him a little, not trying to kill him...\nIt was a mistake. That's why the dear Andy take care of all the costs of the hospital.\nDarling, we don't want more fake news about our business ok?",
+			"options": [{
+				"text": "We're doing our jobs.",
+				"then": "E"
+			}]
+		},
+		"E": {
+			"text": "Do it well then, bye darling.",
+			"options": [{
+				"text": "..."
 			}]
 		}
 	},
 	"13-03-1933":{
-		"character": "Jhon",
+		"character": "Evans",
 		"start": {
-			"text": "sample text",
+			"text": "I read the news you published about Montana, you declared war at him.",
 			"options": [{
-				"text": "option A",
+				"text": "Jhonatan is the man behind the story, his investigation is worth to be told.",
 				"then": "A"
-				}, {
-				"text": "option B",
-				"then": "B"
 			}]
 		},
 		"A": {
-			"text": "option A",
+			"text": "And we at the \"Bureau of Investigation\" know about it, we want you to collaborate with us in this case.",
 			"options": [{
-				"text": "end option A"
+				"text": "What kind of collaboration are you looking for?",
+				"then": "B"
+			},{
+				"text": "Sorry Mr Evans but after the assesination of Mr Roosvelt I don't want to be involved with any goverment institution.",
+				"then":"E"
 			}]
 		},
 		"B": {
-			"text": "option B",
+			"text": "We've been following this case for some months, but we need more proves to put Andy behind bars. We only need to work together.",
 			"options": [{
-				"text": "end option B"
+				"text": "Count with us",
+				"then":"C"
+			}, {
+				"text": "I think you can put us in more danger if they discovered this \"collaboration\" as you called.",
+				"then":"D"
+			}]
+		},
+		"C": {
+			"text": "Thanks Mr Brown, I'll contact you soon.",
+			"options": [{
+				"text": "Good bye"
+			}]
+		},
+		"D": {
+			"text": "I appreciate your concern, take a time to think about it, and I'll contact you later when Mr Ross will return to work.",
+			"options": [{
+				"text": "Thanks..."
+			}]
+		},
+		"E": {
+			"text": "We already found the guilty and put him behind bars.\nThe new goverment only wants to guarantee the order for all the Americans.",
+			"options": [{
+				"text": "I appreciate your efforts, but leave us work by ourselves. Have a good day Mr Evans."
 			}]
 		}
 	},
-	"20-02-1933":{
-		"character": "Jhon",
+	"20-03-1933":{
+		"character": "Charlie",
 		"start": {
-			"text": "sample text",
+			"text": "Hi Darling, we know that a BOI agent contacted you looking for an alliance against us.\nYou know that you can't attack us again, right?",
 			"options": [{
-				"text": "option A",
+				"text": "Your methods can intimidate someone weak, but we will not fall in to your threats.",
 				"then": "A"
 				}, {
-				"text": "option B",
+				"text": "We haven't talk again and I don't want to be involved between them and you.",
 				"then": "B"
 			}]
 		},
 		"A": {
-			"text": "option A",
+			"text": "Maybe if I come a little closer?",
 			"options": [{
-				"text": "end option A"
+				"text": "Get away from me.",
+				"then": "C"
 			}]
 		},
 		"B": {
-			"text": "option B",
+			"text": "You are already involved in it. We write a small note that you can publish to help us to distract this guy for a while.",
 			"options": [{
-				"text": "end option B"
+				"text": "Give it to me, I'll take a look.",
+				"then": "D"
+			},{
+				"text": "I'll not publish lies in the Democracy Times, go away!",
+				"then": "C"
+			}]
+		},
+		"C": {
+			"text": "You don't have to be rude!, I'm seriously worried about you.",
+			"options": [{
+				"text": "Have a good day Charlie."
+			}]
+		},
+		"D": {
+			"text": "Clever boy, that is the attitude I found sexy in a man.",
+			"options": [{
+				"text": "I hope we don't need to see you again."
 			}]
 		}
 	},
