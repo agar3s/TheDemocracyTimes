@@ -16,6 +16,7 @@ class MenuScene extends GeneralScene {
     logo.setScale(4)
     logo.setTint(0x62391b)
     this.backgroundMusic = this.sound.add('amazingBackgroundMusic')
+    this.backgroundMusic.volume = 0.2
     this.backgroundMusic.play()
 
     let start = this.createButton({

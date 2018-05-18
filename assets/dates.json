@@ -1,73 +1,314 @@
 {
+	"end00": {
+		"date": {"day": 1, "month": 1, "year": 1933},
+		"title": "Bankruptcy",
+		"conclusion": "I'm too old for this job, Frank was right the newspaper can't continue...",
+		"number": "ending 1 of 9",
+		"end": true
+	},
 	"16-02-1933": {
 		"date": {"day": 16, "month": 2, "year": 1933},
 		"dateString": "February 16th 1933",
-		"title": "the call",
-		"monologue": "Something excepcional just happened, I can't believe it",
+		"title": "A gangster story",
+		"code": "A",
+		"monologue": "fake data",
 		"dialogue": "16-02-1933",
-		"news": ["001", "002", "003"],
-		"layouts": ["02", "01","03","04","05"],
-		"nextRules": {"default":"20-02-1933"},
-		"newsLocked": {
-			"A": ["004"],
-			"B": ["005", "006"]
-		}
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {"default":"13-02-1933"}
+	},
+	"13-02-1933": {
+		"date": {"day": 13, "month": 2, "year": 1933},
+		"dateString": "February 13th 1933",
+		"title": "The package",
+		"code": "AA",
+		"monologue": "fake data",
+		"dialogue": "13-02-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {"default":"16-02-1933"}
+	},
+	"16-02-1933": {
+		"date": {"day": 16, "month": 2, "year": 1933},
+		"dateString": "February 16th 1933",
+		"title": "The call",
+		"code": "AAA",
+		"monologue": "fake data",
+		"dialogue": "16-02-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {"default":"20-02-1933"}
 	},
 	"20-02-1933": {
 		"date": {"day": 20, "month": 2, "year": 1933},
 		"dateString": "February 20th 1933",
-		"title": "the punishement",
-		"monologue": "Jhon was beaten for some gangster two days ago...",
+		"title": "The punishement",
+		"code": "AAAA",
+		"monologue": "fake data",
 		"dialogue": "20-02-1933",
-		"news": ["006", "007", "008", "009", "010"],
-		"layouts": ["01", "02", "03"],
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
 		"nextRules": {
 			"news": {
-				"010": {"scoreGt": 0, "next":"27-02-1933"}
+				"00?": {"scoreGt": 0, "next":"end11"}
 			},
-			"default": "06-03-1933"
+			"default": "13-03-1933"
 		}
 	},
-	"27-02-1933": {
-		"date": {"day": 27, "month": 2, "year": 1933},
-		"dateString": "February 27th 1933",
-		"title": "the agent",
-		"monologue": "we release that information about tony, now a man is standing out of the building, he said that we want to talk with us about this mafia thing we are publishing. He said is an agent of the BOI.",
-		"dialogue": "27-02-1933",
-		"news": ["006", "007", "008", "009", "010"],
-		"layouts": ["01", "02", "03"],
+	"13-03-1933": {
+		"date": {"day": 13, "month": 3, "year": 1933},
+		"dateString": "March 13th 1933",
+		"title": "The Agent",
+		"code": "AAAAA",
+		"monologue": "fake data",
+		"dialogue": "13-03-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
 		"nextRules": {
 			"endDialogue": {
-				"AA": "16-02-1933",
-				"AB": "20-02-1933",
-				"BA": "27-02-1933",
-				"BB": "06-03-1933"
+				"001?": "03-04-1933",
+				"002?": "03-04-1933"
 			},
-			"default":"16-02-1933"
+			"default":"20-03-1933"
+		},
+		"comment": "en esta las noticias deben cambiar dependiendo de lo que se discuta"
+	},
+	"20-03-1933": {
+		"date": {"day": 20, "month": 3, "year": 1933},
+		"dateString": "March 20th 1933",
+		"title": "Sabotage",
+		"code": "AAAAAA",
+		"monologue": "fake data",
+		"dialogue": "20-03-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {
+			"news": {
+				"00?": {"scoreGt": 0, "next":"27-03-1933"},
+				"00?": {"scoreGt": 0, "next":"end07"}
+			},
+			"default":"10-04-1933"
 		}
 	},
-	"06-03-1933": {
-		"date": {"day": 6, "month": 3, "year": 1933},
-		"dateString": "March 06th 1933",
-		"title": "I appreciate your silence",
-		"monologue": "she said, we appreciate your silence darling.",
-		"dialogue": "06-03-1933",
-		"news": ["006", "007", "008", "009", "010"],
-		"layouts": ["01", "02", "03"],
-		"nextRules": {"default":"end01"}
+	"10-04-1933": {
+		"date": {"day": 10, "month": 4, "year": 1933},
+		"dateString": "April 10th 1933",
+		"title": "The Witness",
+		"code": "AAAAAAA",
+		"monologue": "fake data",
+		"dialogue": "10-04-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {
+			"endDialogue": {
+				"001?": "end03",
+				"002?": "end03"
+			},
+			"default":"17-04-1933"
+		}
+	},
+	"17-04-1933": {
+		"date": {"day": 17, "month": 4, "year": 1933},
+		"dateString": "April 17th 1933",
+		"title": "The Murder",
+		"code": "AAAAAAAA",
+		"monologue": "fake data",
+		"dialogue": "17-04-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {
+			"endDialogue": {
+				"001?": "end02",
+				"002?": "end02"
+			},
+			"default":"end01"
+		}
 	},
 	"end01": {
-		"date": {"day": 16, "month": 3, "year": 1933},
-		"title": "The last hero",
-		"conclusion": "One week later I given noticed about the dead of Jhonathan.\nI knew it, and I tried to convice him about that mistake.\nNow he is dead... this city... this country only goes down, we are dammned.",
-		"number": "ending 2 of 9",
+		"date": {"day": 21, "month": 4, "year": 1933},
+		"title": "Justice",
+		"code": "AAAAAAAAA",
+		"conclusion": "fake data",
+		"number": "ending 2 of ENDINGS",
 		"end": true
 	},
-	"end00": {
-		"date": {"day": 16, "month": 3, "year": 1933},
-		"title": "Bankruptcy",
-		"conclusion": "I'm too old for this job, Frank was right the newspaper can't continue...",
-		"number": "ending 1 of 9",
+	"end02": {
+		"date": {"day": 19, "month": 4, "year": 1933},
+		"title": "Traitor",
+		"code": "AAAAAAAAB",
+		"conclusion": "fake data",
+		"number": "ending 3 of ENDINGS",
+		"end": true
+	},
+	"end03": {
+		"date": {"day": 15, "month": 4, "year": 1933},
+		"title": "Passing out",
+		"code": "AAAAAAAB",
+		"conclusion": "fake data",
+		"number": "ending 4 of ENDINGS",
+		"end": true
+	},
+	"27-03-1933": {
+		"date": {"day": 27, "month": 3, "year": 1933},
+		"dateString": "March 27th 1933",
+		"title": "Confrontation",
+		"code": "AAAAAAB",
+		"monologue": "fake data",
+		"dialogue": "27-03-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {
+			"endDialogue": {
+				"001?": "24-04-1933",
+				"002?": "24-04-1933"
+			},
+			"default":"end04"
+		}
+	},
+	"end04": {
+		"date": {"day": 30, "month": 3, "year": 1933},
+		"title": "Mafia business",
+		"code": "AAAAAABA",
+		"conclusion": "fake data",
+		"number": "ending 5 of ENDINGS",
+		"end": true
+	},
+	"24-04-1933": {
+		"date": {"day": 24, "month": 4, "year": 1933},
+		"dateString": "April 24th 1933",
+		"title": "Quiting",
+		"code": "AAAAAABB",
+		"monologue": "fake data",
+		"dialogue": "24-04-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {
+			"news": {
+				"00?": {"scoreGt": 0, "next":"end06"}
+			},
+			"default":"end05"
+		}
+	},
+	"end05": {
+		"date": {"day": 25, "month": 4, "year": 1933},
+		"title": "Coward",
+		"code": "AAAAAABBA",
+		"conclusion": "fake data",
+		"number": "ending 6 of ENDINGS",
+		"end": true
+	},
+	"end06": {
+		"date": {"day": 28, "month": 4, "year": 1933},
+		"title": "open ending",
+		"code": "AAAAAABBB",
+		"conclusion": "fake data",
+		"number": "ending 7 of ENDINGS",
+		"end": true
+	},
+	"end07": {
+		"date": {"day": 21, "month": 4, "year": 1933},
+		"title": "Coward 2?",
+		"code": "AAAAAAC",
+		"conclusion": "fake data",
+		"number": "ending 8 of ENDINGS",
+		"end": true
+	},
+	"03-04-1933": {
+		"date": {"day": 3, "month": 4, "year": 1933},
+		"dateString": "April 3rd 1933",
+		"title": "We are not the enemy",
+		"code": "AAAAAB",
+		"monologue": "fake data",
+		"dialogue": "03-04-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {"default":"01-05-1933"}
+	},
+	"01-05-1933": {
+		"date": {"day": 1, "month": 5, "year": 1933},
+		"dateString": "May 1st 1933",
+		"title": "These are not our values",
+		"code": "AAAAABA",
+		"monologue": "fake data",
+		"dialogue": "01-05-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {"default":"29-05-1933"}
+	},
+	"29-05-1933": {
+		"date": {"day": 29, "month": 5, "year": 1933},
+		"dateString": "May 1st 1933",
+		"title": "Dear Senator",
+		"code": "AAAAABAA",
+		"monologue": "fake data",
+		"dialogue": "29-05-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {
+			"news": {
+				"00?": {"scoreGt": 0, "next":"12-06-1933"}
+			},
+			"default":"05-06-1933"
+		}
+	},
+	"05-06-1933": {
+		"date": {"day": 29, "month": 5, "year": 1933},
+		"dateString": "June 5th 1933",
+		"title": "I am sorry",
+		"code": "AAAAABAAA",
+		"monologue": "fake data",
+		"dialogue": "05-06-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {
+			"endDialogue": {
+				"001?": "end09",
+				"002?": "end09"
+			},
+			"default":"end08"
+		}
+	},
+	"end08": {
+		"date": {"day": 7, "month": 6, "year": 1933},
+		"title": "leaving the dream",
+		"code": "AAAAABAAAA",
+		"conclusion": "fake data",
+		"number": "ending 9 of ENDINGS",
+		"end": true
+	},
+	"end09": {
+		"date": {"day": 7, "month": 6, "year": 1933},
+		"title": "open ending?2",
+		"code": "AAAAABAAAB",
+		"conclusion": "fake data",
+		"number": "ending 10 of ENDINGS",
+		"end": true
+	},
+	"12-06-1933": {
+		"date": {"day": 29, "month": 5, "year": 1933},
+		"dateString": "June 12th 1933",
+		"title": "incrimination",
+		"code": "AAAAABAAB",
+		"monologue": "fake data",
+		"dialogue": "12-06-1933",
+		"news": ["001", "002", "003", "004"],
+		"layouts": ["02"],
+		"nextRules": {"default":"end10"}
+	},
+	"end10": {
+		"date": {"day": 30, "month": 6, "year": 1933},
+		"title": "Failure the mob",
+		"code": "AAAAABAABA",
+		"conclusion": "fake data",
+		"number": "ending 11 of ENDINGS",
+		"end": true
+	},
+	"end11": {
+		"date": {"day": 30, "month": 6, "year": 1933},
+		"title": "I appreciate your silence",
+		"code": "AAAAB",
+		"conclusion": "fake data",
+		"number": "ending 12 of ENDINGS",
 		"end": true
 	}
 }
