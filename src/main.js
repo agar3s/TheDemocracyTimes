@@ -15,7 +15,7 @@ let config = {
   width: 1280,
   height: 720,
   scaleMode: 1,
-  resolution: 1,
+  resolution: 1/window.devicePixelRatio,
   pixelArt: true,
   canvas: document.getElementById('game'),
   backgroundColor: 0xa37a5c,
@@ -37,6 +37,7 @@ document.getElementById('game').focus()
 window.focus()
 
 
-document.getElementById('fullScreen').onclick= () => {
-  window['game'][game.device.fullscreen.request]()
+document.getElementById('fullScreen').onclick = () => {
+  console.log('fullscreen')
+  window['game']['canvas'][game.device.fullscreen.request]();
 }

@@ -15,7 +15,8 @@ class MenuScene extends GeneralScene {
     logo.setOrigin(0.5, 0.5)
     logo.setScale(4)
     logo.setTint(0x62391b)
-
+    this.backgroundMusic = this.sound.add('amazingBackgroundMusic')
+    this.backgroundMusic.play()
 
     let start = this.createButton({
       x: 640,
@@ -23,6 +24,7 @@ class MenuScene extends GeneralScene {
       font: 'na28',
       text: 'Start',
       onClick: () => {
+        console.log(game, game.sound, game.sound.usingWebAudio)
         this.startNewGame()
         this.changeToScene('cinematicScene')
       },

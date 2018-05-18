@@ -122,5 +122,8 @@ export default class BootScene extends Phaser.Scene {
     this.load.json('news', 'assets/news.json')
     this.load.json('dialogues', 'assets/dialogues.json')
 
+    // audio
+    this.load.audio('amazingBackgroundMusic', '../assets/sounds/WalkingAlong.ogg')
+
   }
 }
