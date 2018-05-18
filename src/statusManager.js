@@ -28,10 +28,10 @@ class StatusManager {
     let score = this.lastPublicationStats.exclusivity +this.lastPublicationStats.relevancy +this.lastPublicationStats.popularity
     console.log(score)
 
-    let sold = (score||0) * 1525
+    let sold = (score||0) * 1450
     let overSold = sold > this.companyStats.printing 
     if (overSold) {
-      sold = ~~(2500*0.9999)
+      sold = ~~(this.companyStats.printing*0.9999)
     }
     let sales = sold*0.05
     let total = sales + this.companyStats.advertising
