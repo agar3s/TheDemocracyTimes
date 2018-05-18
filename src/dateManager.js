@@ -50,6 +50,8 @@ class DateManager {
     let status = this.statusManager
     let rules = this.data.nextRules
     let nextDay = rules.default
+
+
     if (rules.hasOwnProperty('news')) {
       Object.keys(rules.news).forEach((newID) => {
         let rule = rules.news[newID]
@@ -59,8 +61,13 @@ class DateManager {
         }
       })
     }
+    
     if (rules.hasOwnProperty('endDialogue')) {
       nextDay = rules.endDialogue[status.endDialogue]
+    }
+
+    if(status.companyStats.capital < 0) {
+      nextDay = 'end00'
     }
     this.setDate(nextDay)
   }

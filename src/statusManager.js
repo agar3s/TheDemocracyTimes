@@ -1,16 +1,22 @@
 
 class StatusManager {
   constructor (previousStatus = {}) {
-    console.log('a new statusManager has been initialized')
-    this.news = previousStatus.news || {}
-    this.endDialogue = previousStatus.endDialogue || ''
-    this.lastPublicationStats = {}
+    this.resetStats()
+    this.news = previousStatus.news || this.news
+    this.endDialogue = previousStatus.endDialogue || this.endDialogue
+    this.lastPublicationStats = previousStatus || this.lastPublicationStats
+    this.companyStats = previousStatus.companyStats || this.companyStats
+  }
 
+  resetStats () {
     this.companyStats = {
       capital: 225,
       printing: 4000,
       advertising: 35 
     }
+    this.news = {}
+    this.endDialogue = ''
+    this.lastPublicationStats = {}
   }
 
   setPublication (frontPageData, frontPageStats) {
@@ -26,7 +32,6 @@ class StatusManager {
 
   getSalesReport () {
     let score = this.lastPublicationStats.exclusivity +this.lastPublicationStats.relevancy +this.lastPublicationStats.popularity
-    console.log(score)
 
     let sold = (score||0) * 1450
     let overSold = sold > this.companyStats.printing 
@@ -56,7 +61,6 @@ class StatusManager {
     }
     this.companyStats.capital += total + costs
 
-    console.log(this.companyStats)
     this.companyStats.advertising = parseFloat((sold*1.2/100).toFixed(2))
 
     if (overSold) {

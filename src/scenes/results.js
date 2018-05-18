@@ -26,6 +26,7 @@ class ResultsScene extends GeneralScene {
     })
 
     next.setOrigin(1, 1)
+    next.setAlpha(0)
 
 
     let title = NewsItem.WrapBitmapText(
@@ -43,25 +44,27 @@ class ResultsScene extends GeneralScene {
     let report = this.statusManager.getSalesReport()
 
     this.displayStats('Newspapers printed:', `${report.printed.toFixed(0)}`, this.cameras.main.height*0.2, 1)
-    this.displayStats('Newspapers sold:', `${report.sold.toFixed(0)}`, this.cameras.main.height*0.2+25, 2)
+    this.displayStats('Newspapers sold:', `${report.sold.toFixed(0)}`, this.cameras.main.height*0.2+25, 1.6)
 
-    this.displayStats('Income =====================', '', this.cameras.main.height*0.2+75, 3)
-    this.displayStats('Sales', `${report.sales.toFixed(2)} usd`, this.cameras.main.height*0.2+100, 3)
-    this.displayStats('Advertising', `${report.advertising.toFixed(2)} usd`, this.cameras.main.height*0.2+125, 4)
-    this.displayStats('Total', `${report.total.toFixed(2)} usd`, this.cameras.main.height*0.2+150, 5)
+    this.displayStats('Income =====================', '', this.cameras.main.height*0.2+75, 2.2)
+    this.displayStats('Sales', `${report.sales.toFixed(2)} usd`, this.cameras.main.height*0.2+100, 2.2)
+    this.displayStats('Advertising', `${report.advertising.toFixed(2)} usd`, this.cameras.main.height*0.2+125, 2.8)
+    this.displayStats('Total', `${report.total.toFixed(2)} usd`, this.cameras.main.height*0.2+150, 3.4)
     
-    this.displayStats('Costs ======================', '', this.cameras.main.height*0.2+200, 6)
-    this.displayStats('Employees', `${report.employees.toFixed(2)} usd`, this.cameras.main.height*0.2+225, 6)
-    this.displayStats('Printing', `${report.printing.toFixed(2)} usd`, this.cameras.main.height*0.2+250, 7)
-    this.displayStats('Office', `${report.office.toFixed(2)} usd`, this.cameras.main.height*0.2+275, 8)
-    this.displayStats('Costs', `${report.costs.toFixed(2)} usd`, this.cameras.main.height*0.2+300, 9)
+    this.displayStats('Costs ======================', '', this.cameras.main.height*0.2+200, 4)
+    this.displayStats('Employees', `${report.employees.toFixed(2)} usd`, this.cameras.main.height*0.2+225, 4)
+    this.displayStats('Printing', `${report.printing.toFixed(2)} usd`, this.cameras.main.height*0.2+250, 4.6)
+    this.displayStats('Office', `${report.office.toFixed(2)} usd`, this.cameras.main.height*0.2+275, 5.2)
+    this.displayStats('Costs', `${report.costs.toFixed(2)} usd`, this.cameras.main.height*0.2+300, 5.8)
 
-    this.displayStats('Capital', `${report.capital.toFixed(2)} usd`, this.cameras.main.height*0.2+350, 10)
-    this.displayStats('Revenue', `${report.revenue.toFixed(2)} usd`, this.cameras.main.height*0.2+375, 11)
-    this.displayStats('New Capital', `${report.newCapital.toFixed(2)} usd`, this.cameras.main.height*0.2+400, 12)
+    this.displayStats('Capital', `${report.capital.toFixed(2)} usd`, this.cameras.main.height*0.2+350, 6.4)
+    this.displayStats('Revenue', `${report.revenue.toFixed(2)} usd`, this.cameras.main.height*0.2+375, 7)
+    this.displayStats('New Capital', `${report.newCapital.toFixed(2)} usd`, this.cameras.main.height*0.2+400, 7.6)
 
 
-    
+    this.time.delayedCall(9000, () => {
+      next.setAlpha(1)
+    })
   }
 
   update () {

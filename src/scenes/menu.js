@@ -23,7 +23,7 @@ class MenuScene extends GeneralScene {
       font: 'na28',
       text: 'Start',
       onClick: () => {
-        this.dateManager.setDate('16-02-1933')
+        this.startNewGame()
         this.changeToScene('cinematicScene')
       },
       hoverColor: 0xc69d7f,
@@ -68,6 +68,11 @@ class MenuScene extends GeneralScene {
 
   update () {
 
+  }
+
+  startNewGame() {
+    this.dateManager.setDate('16-02-1933')
+    this.statusManager.resetStats()
   }
 
 }

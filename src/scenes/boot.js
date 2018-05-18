@@ -68,7 +68,7 @@ export default class BootScene extends Phaser.Scene {
       this.cache.bitmapFont.entries.get('vtt24').data.lineHeight = 22
 
 
-      this.scene.start('officeScene')
+      this.scene.start('menuScene')
 
 
 

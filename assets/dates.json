@@ -62,5 +62,12 @@
 		"conclusion": "One week later I given noticed about the dead of Jhonathan.\nI knew it, and I tried to convice him about that mistake.\nNow he is dead... this city... this country only goes down, we are dammned.",
 		"number": "ending 2 of 9",
 		"end": true
+	},
+	"end00": {
+		"date": {"day": 16, "month": 3, "year": 1933},
+		"title": "Bankruptcy",
+		"conclusion": "I'm too old for this job, Frank was right the newspaper can't continue...",
+		"number": "ending 1 of 9",
+		"end": true
 	}
 }
