@@ -1,76 +1,87 @@
 {
 	"06-02-1933":{
-		"character": "Jhon",
+		"character": "Frank",
 		"start": {
-			"text": "sample text",
+			"text": "We need to talk Ben.",
 			"options": [{
-				"text": "option A",
+				"text": "Sure, tell me.",
 				"then": "A"
-				}, {
-				"text": "option B",
-				"then": "B"
 			}]
 		},
 		"A": {
-			"text": "option A",
+			"text": "The business is not doing so well, I'm afraid if we don't increase the sales, we should close.",
 			"options": [{
-				"text": "end option A"
+				"text": "That doesn't sound good. Give us some time, Jhonatan is working on a big story",
+				"then": "B"
 			}]
 		},
 		"B": {
-			"text": "option B",
+			"text": "A new story huh? We need something big like in your old good days.",
 			"options": [{
-				"text": "end option B"
+				"text": "I'm still in the good days my friend."
 			}]
 		}
 	},
 	"13-02-1933":{
 		"character": "Jhon",
 		"start": {
-			"text": "sample text",
+			"text": "What are you going to do with the money?",
 			"options": [{
-				"text": "option A",
+				"text": "I'll put it back in one of that restaurants.",
 				"then": "A"
 				}, {
-				"text": "option B",
+				"text": "We are running out of money, we can take some dollars to save the newspaper.",
 				"then": "B"
 			}]
 		},
 		"A": {
-			"text": "option A",
+			"text": "Let Betty do that for you, she will not draw suspicion.",
 			"options": [{
-				"text": "end option A"
+				"text": "You're right, it's better to focus on tomorrow's frontpage."
 			}]
 		},
 		"B": {
-			"text": "option B",
+			"text": "Are you kidding, right?",
 			"options": [{
-				"text": "end option B"
+				"text": "Hahaha, obviously. Betty can return the money to Mr Montana."
 			}]
 		}
 	},
 	"16-02-1933":{
-		"character": "Jhon",
+		"character": "Charlie",
 		"start": {
-			"text": "sample text",
+			"text": "Mr Brown, its a shame that you regret our gift and also you publish that ugly things about our business.",
 			"options": [{
-				"text": "option A",
-				"then": "A"
-				}, {
-				"text": "option B",
+				"text": "We are not afraid of you",
 				"then": "B"
 			}]
 		},
-		"A": {
-			"text": "option A",
+		"B": {
+			"text": "You should..., for your own good, moderate your language.",
 			"options": [{
-				"text": "end option A"
+				"text": "Bye",
+				"then": "C"
 			}]
 		},
-		"B": {
-			"text": "option B",
+		"C": {
+			"character": "Jhonatan",
+			"text": "what do you need?",
 			"options": [{
-				"text": "end option B"
+				"text": "We don't have enough news ready to publish today, do you have something about Mr Montana?",
+				"then": "D"
+			}]
+		},
+		"D": {
+			"text": "Yes, I'll finish a note for you right now.",
+			"options": [{
+				"text": "Thanks, the murder of Mr Roosvelt and this Montana thing...",
+				"then": "E"
+			}]
+		},
+		"E": {
+			"text": "That's true, we haven't these \"happy days\" back.",
+			"options": [{
+				"text": "No, unfortunately..."
 			}]
 		}
 	},
