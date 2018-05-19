@@ -6,6 +6,7 @@ export default class DialogueDisplay {
     this.screenBounds = config.screenBounds
     this.dialogueData = config.dialogueData
     this.endListener = config.endListener
+    this.updateCharacter = config.updateCharacter
 
     this.graphics = this.scene.add.graphics()
     this.graphics.fillStyle(0x4d2406, 0.9)
@@ -27,7 +28,11 @@ export default class DialogueDisplay {
     }
 
     this.keyDialogue = key
-    this.loadDialogue(`${this.dialogueData.character}: ${this.dialogueData[this.keyDialogue].text}`)
+    let dialogue = this.dialogueData[this.keyDialogue]
+    let character = this.dialogueData[this.keyDialogue].character || this.dialogueData.character
+    this.updateCharacter(character)
+    
+    this.loadDialogue(`${character}: ${this.dialogueData[this.keyDialogue].text}`)
     this.dialogueLineY = this.dialogueBitmap.y + this.dialogueBitmap.height + 10
 
     this.answers = this.dialogueData[this.keyDialogue].options

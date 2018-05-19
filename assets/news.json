@@ -1,6 +1,6 @@
 {
 	"001": {
-		"headline": "001 Free food for everyone!",
+		"headline": "Free food for everyone!",
 		"lead": "The popular millionaire Andy Montana offers charity banquets in the poorest areas of the city.",
 		"tags": ["social", "andy montana", "mafia", "charity"],
 		"by": "Jhonatan Ross",
@@ -9,7 +9,7 @@
 		"exclusivity": 0.1
 	},
 	"002": {
-		"headline": "002 The strike continues on Soup & Pastas",
+		"headline": "The strike continues on Soup & Pastas",
 		"lead": "Third day of strike, estimated losses for 100 dollars.",
 		"tags": ["present", "soup & pastas", "labour party", "strikes"],
 		"by": "Lloyd Moore",
@@ -18,7 +18,7 @@
 		"exclusivity": 0.3
 	},
 	"003": {
-		"headline": "003 Annette Gray will sing at the South Hall",
+		"headline": "Annette Gray will sing at the South Hall",
 		"lead": "The famous singer will perform this May 5th with the band Underground Boys.",
 	    "tags": ["culture and arts", "annette gray", "undeground boys"],
 		"by": "Victor Griffin",
@@ -27,7 +27,7 @@
 		"exclusivity": 0.1
 	},
 	"004": {
-		"headline": "004 Ernest Jones the 5th race for veterans",
+		"headline": "Ernest Jones the 5th race for veterans",
 		"lead": "The city is preparing for the event that will raise funds for veterans of the Great War.",
 	    "tags": ["sports", "ernest jones", "city"],
 		"by": "Victor Griffin",
@@ -36,7 +36,7 @@
 		"exclusivity": 0.6
 	},
 	"005": {
-		"headline": "005 Marta Robinson's store house was robbed",
+		"headline": "Marta Robinson's store house was robbed",
 		"lead": "Yesterday around 200 dollars in merchandise were stolen from the popular store.",
 	    "tags": ["sports", "ernest jones", "city"],
 		"by": "Lloyd More",
@@ -45,8 +45,8 @@
 		"exclusivity": 0.1
 	},
 	"006": {
-		"headline": "006 B-Free food for everyone!",
-		"lead": "B-The popular millionaire Andy Montana offers charity banquets in the poorest areas of the city.",
+		"headline": "Suicide pattern",
+		"lead": "Every year in the Unite States, between 15,000 and 20,000 persons commit suicide",
 		"tags": ["social", "andy montana", "mafia", "charity"],
 		"by": "Jhonatan Ross",
 		"popularity": 0.6,
@@ -54,8 +54,8 @@
 		"exclusivity": 0.1
 	},
 	"007": {
-		"headline": "007 C-The strike continues on Soup & Pastas",
-		"lead": "C-Third day of strike, estimated losses for 100 dollars.",
+		"headline": "An index of human missery",
+		"lead": "A student of american affairs was asked recently what he look for signs that the Depression was passing.",
 		"tags": ["present", "soup & pastas", "labour party", "strikes"],
 		"by": "Lloyd Moore",
 		"popularity": 0.6,
@@ -63,8 +63,8 @@
 		"exclusivity": 0.3
 	},
 	"008": {
-		"headline": "008 D-Annette Gray will sing at the South Hall",
-		"lead": "D-The famous singer will perform this May 5th with the band Underground Boys.",
+		"headline": "What is the truth behind the Montana's restaurants?",
+		"lead": "It's well known that the Montana's restaurants are perhaps the best places to eat (and drink?) in the city.",
 	    "tags": ["culture and arts", "annette gray", "undeground boys"],
 		"by": "Victor Griffin",
 		"popularity": 0.3,
@@ -72,18 +72,315 @@
 		"exclusivity": 0.1
 	},
 	"009": {
-		"headline": "009 E-Ernest Jones the 5th race for veterans",
-		"lead": "E-The city is preparing for the event that will raise funds for veterans of the Great War.",
+		"headline": "Franklin D Roosevelt was Killed!",
+		"lead": "During a speach in Miami he was shoot 5 times by Giuseppe Zangara.",
 	    "tags": ["sports", "ernest jones", "city"],
 		"by": "Victor Griffin",
-		"popularity": 0.1,
-		"relevancy": 0.3,
-		"exclusivity": 0.6
+		"popularity": 1.6,
+		"relevancy": 0.9,
+		"exclusivity": 0.2
 	},
 	"010": {
-		"headline": "010 F-Marta Robinson's store house was robbed",
-		"lead": "F-Yesterday around 200 dollars in merchandise were stolen from the popular store.",
-	    "tags": ["sports", "ernest jones", "city"],
+		"headline": "There is an alcohol expenditure behind the Montana's restaurants?",
+		"lead": "All the people know it but nobody speak a word about it.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"011": {
+		"headline": "Chaos in Miami",
+		"lead": "After the shoot, there were riots in all the city, the police try to recover the control.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"012": {
+		"headline": "Possibility of special session is discounted",
+		"lead": "State financial crisis is averted with decision to issues warrants on tax fund",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"013": {
+		"headline": "Riots in Miami",
+		"lead": "More than 30 persons were captured, estimated losses round thousands of dollars.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"014": {
+		"headline": "Bandits take $20,000 in Bank Robbery",
+		"lead": "Floy Hamilton and Companion Sought as suspects",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"015": {
+		"headline": "Minimun of 25 cents is set in first year",
+		"lead": "Forty cents would be paid at end of seven years.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"016": {
+		"headline": "Death Toll Canton raised by new raids",
+		"lead": "At least three new casualties on Hanam Island",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"017": {
+		"headline": "Early Removal of shutdown predicted",
+		"lead": "Smith says Wells to reopen saturdays by late July",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"018": {
+		"headline": "Perry world tennis champion",
+		"lead": "civic reception on his home town",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"019": {
+		"headline": "Money chief issue for world parley",
+		"lead": "Washington believes topic may dominate talks as a result of our embargo",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"020": {
+		"headline": "New Brithish rates affect U.S. goods finished in Canada",
+		"lead": "After April 1, 50 per Cent 'Empire Content' is required for preferential duty.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"021": {
+		"headline": "Miss Jane Hunter opens trade Association's Third Anniversary",
+		"lead": "Set $100,000 goal for Two weeks of cellebration",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"022": {
+		"headline": "Prisoner leaps from 4th floor fleeing police",
+		"lead": "Recaptured by police when his feet stick in mud.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"023": {
+		"headline": "Discrimination warrant given",
+		"lead": "Charging a higher price of admission for colored patrons than he did for white",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"024": {
+		"headline": "Polk county bank robbed",
+		"lead": "1100 taken while cashier is at luncheon on wednesday",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"025": {
+		"headline": "Unidentified girl killed in auto accident",
+		"lead": "intoxicated driver fails to notice stop sign",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"026": {
+		"headline": "Green warns of deflation",
+		"lead": "Will destroy civilization if carried to limit, he declares",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"027": {
+		"headline": "Holly alliance of german fascist and Rome would battle german communism",
+		"lead": "Von Papen's mission to Vatican indicated to be for purpose of pressing solid front to exterminate reds in germany",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"028": {
+		"headline": "Jhonatan Ross killed in a ganster assault",
+		"lead": "ten cars passing by the \"My loved venecia\" restaurant shooting to the people in there.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"029": {
+		"headline": "Convicted in cult murder",
+		"lead": "Kentucky mountaineer is found guilty in death of aged mother",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"030": {
+		"headline": "Aged couple robbed, bound on couch",
+		"lead": "Two white men take $400 war insurance on their son",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"031": {
+		"headline": "Herriot sails for america this morning",
+		"lead": "Hopes Washington conference will end \"world suffering\"",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"032": {
+		"headline": "U.S. Soldiers arrested by japs in china",
+		"lead": "Two american soldiers were arrested monday by japanese military authorities",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"033": {
+		"headline": "??",
+		"lead": "??",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"034": {
+		"headline": "??",
+		"lead": "??",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"035": {
+		"headline": "??",
+		"lead": "??",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"036": {
+		"headline": "??",
+		"lead": "??",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"037": {
+		"headline": "??",
+		"lead": "??",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"038": {
+		"headline": "??",
+		"lead": "??",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"039": {
+		"headline": "??",
+		"lead": "??",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"a01": {
+		"headline": "??",
+		"lead": "??",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"a02": {
+		"headline": "??",
+		"lead": "??",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"a03": {
+		"headline": "??",
+		"lead": "??",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.1,
+		"relevancy": 0.1,
+		"exclusivity": 0.1
+	},
+	"a04": {
+		"headline": "??",
+		"lead": "??",
+		"tags": ["sports", "ernest jones", "city"],
 		"by": "Lloyd More",
 		"popularity": 0.1,
 		"relevancy": 0.1,

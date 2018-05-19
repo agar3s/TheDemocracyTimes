@@ -68,7 +68,7 @@ export default class BootScene extends Phaser.Scene {
       this.cache.bitmapFont.entries.get('vtt24').data.lineHeight = 22
 
 
-      this.scene.start('monologueScene')
+      this.scene.start('officeScene')
 
 
 
@@ -96,8 +96,10 @@ export default class BootScene extends Phaser.Scene {
 
     // graphics
     this.load.spritesheet('head', 'assets/democrayTimes.png', { frameWidth: 255, frameHeight: 65 })
-    this.load.spritesheet('reporter1', 'assets/reporter1.png', { frameWidth: 40, frameHeight: 87 })
-    this.load.spritesheet('frank', 'assets/frank.png', { frameWidth: 53, frameHeight: 101 })
+    this.load.spritesheet('jhonatan', 'assets/jhonatan.png', { frameWidth: 40, frameHeight: 87 })
+    this.load.spritesheet('frank', 'assets/frank.png', { frameWidth: 54, frameHeight: 104 })
+    this.load.spritesheet('evans', 'assets/evans.png', { frameWidth: 55, frameHeight: 104 })
+    this.load.spritesheet('charlie', 'assets/charlie.png', { frameWidth: 63, frameHeight: 100 })
     this.load.spritesheet('desktop', 'assets/desktop.png', { frameWidth: 320, frameHeight: 51 })
 
     // mini layouts

@@ -48,7 +48,7 @@
 		}
 	},
 	"16-02-1933":{
-		"character": "WomanPhone",
+		"character": "Woman at Phone",
 		"start": {
 			"text": "Mr Brown, its a shame that you regret our gift and also you publish that ugly things about our business.",
 			"options": [{
@@ -72,6 +72,7 @@
 			}]
 		},
 		"D": {
+			"character": "Jhonatan",
 			"text": "Yes, I'll finish a note for you right now.",
 			"options": [{
 				"text": "Thanks, the murder of Mr Roosvelt and this Montana thing...",
@@ -79,6 +80,7 @@
 			}]
 		},
 		"E": {
+			"character": "Jhonatan",
 			"text": "That's true, we haven't these \"happy days\" back.",
 			"options": [{
 				"text": "No, unfortunately..."
