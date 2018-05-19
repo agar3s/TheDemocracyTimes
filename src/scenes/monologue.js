@@ -38,12 +38,12 @@ class MonologueScene extends GeneralScene {
     let content = NewsItem.WrapBitmapText(
       this,
       this.cameras.main.width/2,
-      this.cameras.main.height/4 + 120,
+      this.cameras.main.height/4 + 80,
       'vtt24',
       this.dateManager.getMonologue(),
       this.cameras.main.width - 200
     )
-    content.setOrigin(0.5, 0.5)
+    content.setOrigin(0.5, 0)
     content.setTint(0xc69d7f)
 
   }

@@ -7,7 +7,7 @@ class DateManager {
     this.dialogues = cache.json.get('dialogues')
     this.statusManager = getStatusManager()
     //this.setDate("06-02-1933")
-    this.setDate("20-03-1933")
+    this.setDate("20-02-1933")
   }
 
   getMonologue() {

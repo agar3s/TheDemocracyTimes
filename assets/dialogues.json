@@ -226,103 +226,155 @@
 			}]
 		}
 	},
-	"13-04-1933":{
+	"10-04-1933":{
 		"character": "Jhon",
 		"start": {
-			"text": "sample text",
+			"text": "Leave me follow this clue, I can check if this is a trap or a really witness.",
 			"options": [{
-				"text": "option A",
+				"text": "I think is better to inform about this to Mr Evans.",
 				"then": "A"
 				}, {
-				"text": "option B",
+				"text": "What if is a trap?, I'm worried about your safety.",
 				"then": "B"
 			}]
 		},
 		"A": {
-			"text": "option A",
+			"text": "I would prefer not to do it. I don't trust in them, but is your choice.",
 			"options": [{
-				"text": "end option A"
+				"text": "I know it, but I'd hate to end up with you hurt or dead. I'll call him.",
+				"then": "C"
+			},{
+				"text": "I don't trust them either... Go ahead Jhonatan.",
+				"then": "D"
 			}]
 		},
 		"B": {
-			"text": "option B",
+			"text": "I'm an old man Ben, if you have nothing to lose, you can only win.",
 			"options": [{
-				"text": "end option B"
+				"text": "The people can lose a great reporter, I'm not going to let you risk your life.",
+				"then": "C"
+			},{
+				"text": "You brave, brave man. Your reputation precedes you. Go ahead Jhonatan",
+				"then": "D"
+			}]
+		},
+		"C": {
+			"text": "I have a bad feeling about this...",
+			"options": [{
+				"text": "We haven't more options, I'll contact him after finishing the tomorrow's frontpage."
+			}]
+		},
+		"D": {
+			"text": "So, I'll prepare a meeting with Phil. Wish me luck.",
+			"options": [{
+				"text": "Hope you do well."
 			}]
 		}
 	},
 	"17-04-1933":{
-		"character": "Jhon",
+		"character": "Evans",
 		"start": {
-			"text": "sample text",
+			"text": "I'm sorry for your lost, Jhonatan will be remember for his dedicated efforts and commitment to pursue the truth.",
 			"options": [{
-				"text": "option A",
+				"text": "Leave us! someone told Andy about that meeting and I think it was one of your guys.",
 				"then": "A"
 				}, {
-				"text": "option B",
+				"text": "It was my fault, I leaved him to go after it without consulting you.",
 				"then": "B"
 			}]
 		},
 		"A": {
-			"text": "option A",
+			"text": "All the people that works in this case were selected by me, all of them are respectable people. The pigeon is not on our team Mr Brown.",
 			"options": [{
-				"text": "end option A"
+				"text": "I can't trust anybody, no more. Leave me alone.",
+				"then": "C"
+			},{
+				"text": "I don't know what to believe... there is a witness against Tony.",
+				"then": "D"
 			}]
 		},
 		"B": {
-			"text": "option B",
+			"text": "Don't charge you about it, you didn't kill him. It was Tony",
 			"options": [{
-				"text": "end option B"
+				"text": "You are right, we need to stop him now! There is a witness against Tony.",
+				"then": "D"
+			}]
+		},
+		"C":{
+			"text": "We are not the enemy Mr Brown, they are.",
+			"options": [{
+				"text": "Get out of here!"
+			}]
+		},
+		"D":{
+			"text": "We need to talk with him as fast as possible before Tony",
+			"options": [{
+				"text": "I'll give you the information that I have."
 			}]
 		}
 	},
 	"27-03-1933":{
-		"character": "Jhon",
+		"character": "Charlie-phone",
 		"start": {
-			"text": "sample text",
+			"text": "Hi darling, thanks for helping us with that little problem.",
 			"options": [{
-				"text": "option A",
+				"text": "I've done with you, please leave us alone.",
 				"then": "A"
-				}, {
-				"text": "option B",
-				"then": "B"
 			}]
 		},
 		"A": {
-			"text": "option A",
+			"text": "Sure, but you know it looks like Jhonatan hasn't learned the lesson. I know that him continues asking people about our business.",
 			"options": [{
-				"text": "end option A"
+				"text": "I talked with him about put an end to this story, but he don't want to.",
+				"then": "B"
+			}, {
+				"text": "I'll talk with Jhonatan one more time, please don't hurt him.",
+				"then": "C"
 			}]
 		},
 		"B": {
-			"text": "option B",
+			"text": "If you help us with some personal information about him, you don't need to talk with us never again.",
 			"options": [{
-				"text": "end option B"
+				"text": "What are you suggesting? this conversation is over!",
+				"then": "C"
+			}, {
+				"text": "I'm not sure... but he is not going to stop.",
+				"then": "D"
+			}]
+		},
+		"C": {
+			"text": "Ok darling, good bye.",
+			"options": [{
+				"text": "bye"
+			}]
+		},
+		"D": {
+			"text": "Don't tell me more. I'll visit you tomorrow morning.",
+			"options": [{
+				"text": "..."
 			}]
 		}
 	},
 	"24-04-1933":{
-		"character": "Jhon",
+		"character": "Frank",
 		"start": {
-			"text": "sample text",
+			"text": "Without Jhonatan the sales will go down. what are you going to do Ben?",
 			"options": [{
-				"text": "option A",
+				"text": "There is a war between Andy Montana and Phil Romano for the control of the Alcohol business",
 				"then": "A"
-				}, {
-				"text": "option B",
-				"then": "B"
 			}]
 		},
 		"A": {
-			"text": "option A",
+			"text": "And do you think is a good idea to publish that article after all the problems you had?",
 			"options": [{
-				"text": "end option A"
+				"text": "I've been living with fear the last months, maybe is time to face these criminals.",
+				"then": "B"
 			}]
 		},
 		"B": {
-			"text": "option B",
+			"text": "It's your choice Ben, I trust you.",
 			"options": [{
-				"text": "end option B"
+				"text": "thanks, it's time to work."
 			}]
 		}
 	},

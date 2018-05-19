@@ -47,12 +47,12 @@
 		"monologue": "Two days ago Jhonatan was beaten by the Montana's bullies outside of his home, he found a way to arrive to the hospital.\n\nI visited him yesterday, he looks like shit but the doctors and nurses were taking care of him and he will recover.\n\nWhen I tried to pay the costs of the hospital I discovered that all the bills were already paid...\nby Andy Montana.",
 		"dialogue": "20-02-1933",
 		"news": ["001", "002", "003", "004"],
-		"layouts": ["02"],
+		"layouts": ["01"],
 		"nextRules": {
 			"news": {
-				"001": {"scoreGt": 0, "next":"end11"}
+				"001": {"scoreGt": 0, "next":"13-03-1933"}
 			},
-			"default": "13-03-1933"
+			"default": "end11"
 		}
 	},
 	"13-03-1933": {
@@ -66,7 +66,7 @@
 		"layouts": ["02"],
 		"nextRules": {
 			"endDialogue": {
-				"E": "03-04-1933"
+				"XXX": "03-04-1933"
 			},
 			"default":"20-03-1933"
 		},
@@ -98,14 +98,13 @@
 		"dateString": "April 10th 1933",
 		"title": "The Witness",
 		"code": "AAAAAAA",
-		"monologue": "fake data",
+		"monologue": "I haven't received any news from Charlie after her last visit.\nThey are planning to attack us by sure, but with the BOI close to us guarding our ass will be difficult to them.\n\nInstead I got a letter from \"Phil Romano\" another \"business man\", he pledges to have a willing witness who can testify against Tony Montana about his crimes.\n\nYeah, this collaboration is only a manner to put away his competition but we can finish with Tony and Charlie once and for all\n\nIn the other hand this could be a trap they prepare to mislead us...\n\nWho knows?",
 		"dialogue": "10-04-1933",
 		"news": ["001", "002", "003", "004"],
 		"layouts": ["02"],
 		"nextRules": {
 			"endDialogue": {
-				"A": "end03",
-				"B": "end03"
+				"C": "end03"
 			},
 			"default":"17-04-1933"
 		}
@@ -115,14 +114,13 @@
 		"dateString": "April 17th 1933",
 		"title": "The Murder",
 		"code": "AAAAAAAA",
-		"monologue": "fake data",
+		"monologue": "On Wednesday the 20th at 8:00 PM Jhonatan arrived to \"My loved venecia\" a popular restaurant on the italian neighborhood as scheduled, It was Mr Romano indeed the person that waited for him as we can confirm after the police lifted the bodies from the ground.\n\nThey said that it was a retaliation between gangsters, but that's only half the story...\n\nTony knew that Jhonatan will meet Phil in that restaurant at that fucking same time...\nSomebody at the office works for Tony...",
 		"dialogue": "17-04-1933",
 		"news": ["001", "002", "003", "004"],
 		"layouts": ["02"],
 		"nextRules": {
 			"endDialogue": {
-				"A": "end02",
-				"B": "end02"
+				"C": "end02"
 			},
 			"default":"end01"
 		}
@@ -131,24 +129,24 @@
 		"date": {"day": 21, "month": 4, "year": 1933},
 		"title": "Justice",
 		"code": "AAAAAAAAA",
-		"conclusion": "fake data",
-		"number": "ending 2 of 12",
+		"conclusion": "The agent Evans and me worked together and finally we talked with the witness.\nHe was the Montana's business accountant, he modified a lot of documents in order to hide the money from the federals.\n He decided to run away when people used to work for them began to disappear.\n\nHe could testify and finally Tony Montana, Charlie and all his partners were convicted...\n\nYou can finally rest in peace Jhonatan.",
+		"number": "ending 2 of 9",
 		"end": true
 	},
 	"end02": {
 		"date": {"day": 19, "month": 4, "year": 1933},
 		"title": "Traitor",
 		"code": "AAAAAAAAB",
-		"conclusion": "fake data",
-		"number": "ending 3 of 12",
+		"conclusion": "I went out around 3AM as usual, the cold was insufferable, indeed, was it more painful than surprising.\nPerhaps I mistook the cold of the night with the cold of the dagger that pierced me to the hearth.\n\nI failed to Frank, to Jhonatan, to the city...\nI'm so Sorry...",
+		"number": "ending 3 of 9",
 		"end": true
 	},
 	"end03": {
 		"date": {"day": 15, "month": 4, "year": 1933},
-		"title": "Passing out",
+		"title": "Leaving out",
 		"code": "AAAAAAAB",
-		"conclusion": "fake data",
-		"number": "ending 4 of 12",
+		"conclusion": "The Agent Evans was assesinated during a shooting between gangsters, Phil killed him.\n\n\"You have one opportunity to collaborate with us and you decide to expose our business? Nobody in this city could protect your ass, it's time to leave if you want to live.\" he said.\n\nWe closed the newspaper operations until further notice, there is nothing more we can do here.\n\nThis country is doomed to the hell.",
+		"number": "ending 4 of 9",
 		"end": true
 	},
 	"27-03-1933": {
@@ -156,14 +154,13 @@
 		"dateString": "March 27th 1933",
 		"title": "Confrontation",
 		"code": "AAAAAAB",
-		"monologue": "fake data",
+		"monologue": "I know that it wasn't correct, but do you blame a man for try to survive?\nThis people is dangerous and they won't hesitate to kill us if we'll confront them...\n\nThis morning Jhonatan confront me for publish that note:\n - \"What have you done? You know that story was bullshit.\" he said.\n\nI couldn't answer him, he almost get killed and even so... he want to go after them.\nIs a brave man indeed, but he will endanger us all.",
 		"dialogue": "27-03-1933",
 		"news": ["001", "002", "003", "004"],
 		"layouts": ["02"],
 		"nextRules": {
 			"endDialogue": {
-				"A": "24-04-1933",
-				"B": "24-04-1933"
+				"C": "24-04-1933"
 			},
 			"default":"end04"
 		}
@@ -172,8 +169,8 @@
 		"date": {"day": 30, "month": 3, "year": 1933},
 		"title": "Mafia business",
 		"code": "AAAAAABA",
-		"conclusion": "fake data",
-		"number": "ending 5 of 12",
+		"conclusion": "We didn't heard about Jhonatan anymore, he be wipped from the map...\n\nTony offers so much money to Frank for the newspaper that he couldn't resist to it. Now I'm just another employee at the service of Mr Montana...",
+		"number": "ending 5 of 9",
 		"end": true
 	},
 	"24-04-1933": {
@@ -181,9 +178,9 @@
 		"dateString": "April 24th 1933",
 		"title": "Quiting",
 		"code": "AAAAAABB",
-		"monologue": "fake data",
+		"monologue": "Jhonatan quited, he knows that Charlie knows about his investigations.\nI'm sure that he and the agent Evans are working together.\n\n                                                        Am I a coward?",
 		"dialogue": "24-04-1933",
-		"news": ["001", "002", "003", "004"],
+		"news": ["001", "002", "003", "004", "005"],
 		"layouts": ["02"],
 		"nextRules": {
 			"news": {
@@ -196,24 +193,24 @@
 		"date": {"day": 25, "month": 4, "year": 1933},
 		"title": "Coward",
 		"code": "AAAAAABBA",
-		"conclusion": "fake data",
-		"number": "ending 6 of 12",
+		"conclusion": "At the end I haven't the guts to afront them, the fear seized me.\n\nYes I am a coward, I talked with Frank and I leave the office forever.\n\nThere is no country for old men like me.",
+		"number": "ending 6 of 9",
 		"end": true
 	},
 	"end06": {
 		"date": {"day": 28, "month": 4, "year": 1933},
-		"title": "open ending",
+		"title": "They control everything",
 		"code": "AAAAAABBB",
-		"conclusion": "fake data",
-		"number": "ending 7 of 12",
+		"conclusion": "I was in that restaurant drinking a soda after a week of hard work, thinking that maybe I'm not a coward after all.\n\nThen a man sat next to me. \"I'm the detective Mallone\" he said.\"You are doing well informing the people about this gangster problems.\" then he pierced his eyes on me and said: \"Leave the things like this Mr Brown, they control everything, everything...\"",
+		"number": "ending 7 of 9",
 		"end": true
 	},
 	"end07": {
 		"date": {"day": 21, "month": 4, "year": 1933},
-		"title": "Coward 2?",
+		"title": "Look away",
 		"code": "AAAAAAC",
-		"conclusion": "fake data",
-		"number": "ending 8 of 12",
+		"conclusion": "When Jhonatan returned, he was upset at me \"Why aren't you publishing the articles about Montana?\"\n\nHe knows that I preffer to leave that topic away from the newspaper for the safe.\n\nIn this times it's better to keep silence and talk about another things. We are running a business here.\n\nJhonatan leaves the newspaper and start working for another diary... ",
+		"number": "ending 8 of 9",
 		"end": true
 	},
 	"03-04-1933": {
@@ -276,7 +273,7 @@
 		"title": "leaving the dream",
 		"code": "AAAAABAAAA",
 		"conclusion": "fake data",
-		"number": "ending 9 of 12",
+		"number": "ending 9 of 9",
 		"end": true
 	},
 	"end09": {
@@ -284,7 +281,7 @@
 		"title": "open ending?2",
 		"code": "AAAAABAAAB",
 		"conclusion": "fake data",
-		"number": "ending 10 of 12",
+		"number": "ending 10 of 9",
 		"end": true
 	},
 	"12-06-1933": {
@@ -303,15 +300,15 @@
 		"title": "Failure the mob",
 		"code": "AAAAABAABA",
 		"conclusion": "fake data",
-		"number": "ending 11 of 12",
+		"number": "ending 11 of 9",
 		"end": true
 	},
 	"end11": {
 		"date": {"day": 30, "month": 6, "year": 1933},
-		"title": "I appreciate your silence",
+		"title": "Keep in silence",
 		"code": "AAAAB",
-		"conclusion": "fake data",
-		"number": "ending 12 of 12",
+		"conclusion": "I understand the message, it was clear for me that there is no way to get well of this.\n They control the police, they have the money, the guns and the power to silence anyone that faces them...\n\nIs better to focus on more popular things, at the end that is the way to driving sales...",
+		"number": "ending 9 of 9",
 		"end": true
 	}
 }

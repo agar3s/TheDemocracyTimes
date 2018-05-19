@@ -43,7 +43,7 @@ class EndingScene extends GeneralScene {
       this.dateManager.data.conclusion,
       this.cameras.main.width*0.7
     )
-    text.setOrigin(0.5, 0.5)
+    text.setOrigin(0.5, 0)
     text.setTint(0xc69d7f)
 
     let number = NewsItem.WrapBitmapText(
