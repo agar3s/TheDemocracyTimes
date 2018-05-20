@@ -15,10 +15,15 @@ class MenuScene extends GeneralScene {
     logo.setOrigin(0.5, 0.5)
     logo.setScale(4)
     logo.setTint(0x62391b)
-    this.backgroundMusic = this.sound.add('amazingBackgroundMusic')
-    if(this.backgroundMusic) {
-      this.backgroundMusic.volume = 0.2
-      this.backgroundMusic.play()
+    try {
+      this.backgroundMusic = this.sound.add('amazingBackgroundMusic')
+      if(this.backgroundMusic) {
+
+        this.backgroundMusic.play()
+        this.backgroundMusic.volume = 0.2
+      }
+    }catch(exception){
+        console.error(exception)
     }
 
     let start = this.createButton({

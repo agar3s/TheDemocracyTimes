@@ -7,19 +7,19 @@ class CinematicScene extends GeneralScene {
     this.background = 0x160101
     this.introSequence = [
       {
-        text: 'Hace un año que mi buen amigo Frank y yo fundamos el Democracy Times.',
-        image: 'strip1'
-      },
-      {
-        text: 'After 20 years working as a journalist, the newspaper for I worked closed like many others that broke as a result of the 29\'s crisis.',
+        text: 'After 20 years working as a journalist, the newspaper I used to work closed like many others that broke as a result of the 29\'s crisis.',
         image: 'strip2'
       },
       {
-        text: 'Frank es un sujeto inteligente y tiene inversiones en diferentes negocios, él no perdio dinero.\nCuando dijo que no podria encontrar alguien mas confiable que yo para dirigir este periodico, no pude sentirme mas halagado.',
+        text: 'My good Friend Frank come with the idea to start a newspaper. So He and me founded the "Democracy Times" in May 28th 1932.',
+        image: 'strip1'
+      },
+      {
+        text: 'Frank is a smart guy and he has diversified inversions, he didn\'t lose money.\n I was flattered and honored when he said he could not find someone better than me to manage this newspaper',
         image: 'strip3'
       },
       {
-        text: 'Ha sido una gran oportunidad para informar de manera independiente la realidad que la ciudad y el país afronta, por eso es que amo venir aquí dia a dia.',
+        text: 'It has been a great opportunity to independently inform the reality that the city and the country is facing, that\'s why I love coming here day by day.',
         image: 'strip4'
       },
     ]
@@ -28,7 +28,8 @@ class CinematicScene extends GeneralScene {
 
   create () {
     super.create()
-    let next = this.createButton({
+    this.currentStripIndex = 0
+    this.nextButton = this.createButton({
       x: this.screenBounds.width + this.screenBounds.paddingVertical*2,
       y: this.screenBounds.height - this.screenBounds.paddingVertical*2,
       font: 'na22',
@@ -40,11 +41,14 @@ class CinematicScene extends GeneralScene {
       scale: 1.4,
       color: 0xc69d7f
     })
-    next.setOrigin(1, 1)
+    this.nextButton.setOrigin(1, 1)
+    this.nextButton.setAlpha(0)
 
     let strip = this.introSequence[this.currentStripIndex]
     this.setStrip(strip.text, strip.image)
-
+    setTimeout(()=>{
+      this.nextButton.setAlpha(1)
+    }, 300)
   }
 
   setStrip(text, image) {
@@ -73,11 +77,13 @@ class CinematicScene extends GeneralScene {
       this.changeToScene('monologueScene')
       return
     }
+    this.nextButton.setAlpha(0)
     this.cameras.main.fadeOut(220)
     this.time.delayedCall(220, () => {
       this.cameras.main.fadeIn(220)
       let strip = this.introSequence[this.currentStripIndex]
       this.setStrip(strip.text, strip.image)
+      this.nextButton.setAlpha(1)
     }, [], this)
 
   }

@@ -36,7 +36,7 @@ class StatusManager {
     let sold = (score||0) * 1450
     let overSold = sold > this.companyStats.printing 
     if (overSold) {
-      sold = ~~(this.companyStats.printing*0.9999)
+      sold = ~~(this.companyStats.printing*0.99)
     }
     let sales = sold*0.05
     let total = sales + this.companyStats.advertising

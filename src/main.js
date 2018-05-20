@@ -41,3 +41,4 @@ document.getElementById('fullScreen').onclick = () => {
   console.log('fullscreen')
   window['game']['canvas'][game.device.fullscreen.request]()
 }
+
