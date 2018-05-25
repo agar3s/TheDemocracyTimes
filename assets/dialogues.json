@@ -90,9 +90,9 @@
 	"20-02-1933":{
 		"character": "Charlie",
 		"start": {
-			"text": "let me introduce myself, some people know me as \"Charlie the pretty\"",
+			"text": "let me introduce myself, some people know me as \"Charlie the pretty\". I speak in the name of Andy Montana.",
 			"options": [{
-				"text": "I can see why.",
+				"text": "I can see they call you pretty...",
 				"then": "A"
 				}, {
 				"text": "I recognize your voice",
@@ -141,7 +141,7 @@
 	"13-03-1933":{
 		"character": "Evans",
 		"start": {
-			"text": "I read the news you published about Montana, you declared war at him.",
+			"text": "I read the news you published about Montana, you actually declared war at him.",
 			"options": [{
 				"text": "Jhonatan is the man behind the story, his investigation is worth to be told.",
 				"then": "A"
@@ -158,9 +158,9 @@
 			}]
 		},
 		"B": {
-			"text": "We've been following this case for some months, but we need more proves to put Andy behind bars. We only need to work together.",
+			"text": "We've been following this case for some months, but we need more proves to put Andy behind bars. We just need to work together.",
 			"options": [{
-				"text": "Count with us",
+				"text": "Count on us",
 				"then":"C"
 			}, {
 				"text": "I think you can put us in more danger if they discovered this \"collaboration\" as you called.",
@@ -263,7 +263,7 @@
 		"C": {
 			"text": "I have a bad feeling about this...",
 			"options": [{
-				"text": "We haven't more options, I'll contact him after finishing the tomorrow's frontpage."
+				"text": "We haven't more options, I'll contact him after finishing tomorrow's frontpage."
 			}]
 		},
 		"D": {

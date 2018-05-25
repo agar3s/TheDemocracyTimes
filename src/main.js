@@ -15,7 +15,7 @@ let config = {
   width: 1280,
   height: 720,
   scaleMode: 1,
-  resolution: 1/window.devicePixelRatio,
+  resolution: 1,
   pixelArt: true,
   canvas: document.getElementById('game'),
   backgroundColor: 0xa37a5c,

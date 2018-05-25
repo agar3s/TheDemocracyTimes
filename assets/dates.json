@@ -4,6 +4,7 @@
 		"title": "Bankruptcy",
 		"conclusion": "I'm too old for this job, Frank was right the newspaper can't continue...",
 		"number": "ending 1 of 9",
+		"key": "1",
 		"end": true
 	},
 	"06-02-1933": {
@@ -98,7 +99,7 @@
 		"dateString": "April 10th 1933",
 		"title": "The Witness",
 		"code": "AAAAAAA",
-		"monologue": "I haven't received any news from Charlie after her last visit.\nThey are planning to attack us by sure, but with the BOI close to us guarding our ass will be difficult to them.\n\nInstead I got a letter from \"Phil Romano\" another \"business man\", he pledges to have a willing witness who can testify against Tony Montana about his crimes.\n\nYeah, this collaboration is only a manner to put away his competition but we can finish with Tony and Charlie once and for all\n\nIn the other hand this could be a trap they prepare to mislead us...\n\nWho knows?",
+		"monologue": "I haven't received any news from Charlie after her last visit.\nThey are planning to attack us for sure, but with the BOI close to us guarding our ass will be difficult to them.\n\nInstead I got a letter from \"Phil Romano\" another \"business man\", he pledges to have a willing witness who can testify against Tony Montana about his crimes.\n\nYeah, this collaboration is only a manner to put away his competition but we can finish with Tony and Charlie once and for all\n\nIn the other hand this could be a trap they prepare to mislead us...\n\nWho knows?",
 		"dialogue": "10-04-1933",
 		"news": ["024", "025", "026", "027"],
 		"layouts": ["02", "01", "03", "04"],
@@ -131,6 +132,7 @@
 		"code": "AAAAAAAAA",
 		"conclusion": "The agent Evans and me worked together and finally we talked with the witness.\nHe was the Montana's business accountant, he modified a lot of documents in order to hide the money from the federals.\n He decided to run away when people used to work for them began to disappear.\n\nHe could testify and finally Tony Montana, Charlie and all his partners were convicted...\n\nYou can finally rest in peace Jhonatan.",
 		"number": "ending 2 of 9",
+		"key": "2",
 		"end": true
 	},
 	"end02": {
@@ -139,6 +141,7 @@
 		"code": "AAAAAAAAB",
 		"conclusion": "I went out around 3AM as usual, the cold was insufferable, indeed, was it more painful than surprising.\nPerhaps I mistook the cold of the night with the cold of the dagger that pierced me to the hearth.\n\nI failed to Frank, to Jhonatan, to the city...\nI'm so Sorry...",
 		"number": "ending 3 of 9",
+		"key": "3",
 		"end": true
 	},
 	"end03": {
@@ -147,6 +150,7 @@
 		"code": "AAAAAAAB",
 		"conclusion": "The Agent Evans was assesinated during a shooting between gangsters, Phil killed him.\n\n\"You have one opportunity to collaborate with us and you decide to expose our business? Nobody in this city could protect your ass, it's time to leave if you want to live.\" he said.\n\nWe closed the newspaper operations until further notice, there is nothing more we can do here.\n\nThis country is doomed to the hell.",
 		"number": "ending 4 of 9",
+		"key": "4",
 		"end": true
 	},
 	"27-03-1933": {
@@ -171,6 +175,7 @@
 		"code": "AAAAAABA",
 		"conclusion": "We didn't heard about Jhonatan anymore, he be wipped from the map...\n\nTony offers so much money to Frank for the newspaper that he couldn't resist to it. Now I'm just another employee at the service of Mr Montana...",
 		"number": "ending 5 of 9",
+		"key": "5",
 		"end": true
 	},
 	"24-04-1933": {
@@ -195,14 +200,16 @@
 		"code": "AAAAAABBA",
 		"conclusion": "At the end I haven't the guts to afront them, the fear seized me.\n\nYes I am a coward, I talked with Frank and I leave the office forever.\n\nThere is no country for old men like me.",
 		"number": "ending 6 of 9",
+		"key": "6",
 		"end": true
 	},
 	"end06": {
 		"date": {"day": 28, "month": 4, "year": 1933},
 		"title": "They control everything",
 		"code": "AAAAAABBB",
-		"conclusion": "I was in that restaurant drinking a soda after a week of hard work, thinking that maybe I'm not a coward after all.\n\nThen a man sat next to me. \"I'm the detective Mallone\" he said.\"You are doing well informing the people about this gangster problems.\" then he pierced his eyes on me and said: \"Leave the things like this Mr Brown, they control everything, everything...\"",
+		"conclusion": "I was in that restaurant drinking a soda after a week of hard work, thinking that maybe I'm not a coward after all.\n\nThen a man sat next to me. \"I'm the detective Mallone\" he said.\"You are doing well informing the people about this gangster problems.\" then he pierced his eyes on me and said: \"But you must to leave it be Mr Brown, they control everything, everything...\"",
 		"number": "ending 7 of 9",
+		"key": "7",
 		"end": true
 	},
 	"end07": {
@@ -211,6 +218,7 @@
 		"code": "AAAAAAC",
 		"conclusion": "When Jhonatan returned, he was upset at me \"Why aren't you publishing the articles about Montana?\"\n\nHe knows that I preffer to leave that topic away from the newspaper for the safe.\n\nIn this times it's better to keep silence and talk about another things. We are running a business here.\n\nJhonatan leaves the newspaper and start working for another diary... ",
 		"number": "ending 8 of 9",
+		"key": "8",
 		"end": true
 	},
 	"03-04-1933": {
@@ -274,6 +282,7 @@
 		"code": "AAAAABAAAA",
 		"conclusion": "fake data",
 		"number": "ending 9 of 9",
+		"key": "9",
 		"end": true
 	},
 	"end09": {
@@ -309,6 +318,7 @@
 		"code": "AAAAB",
 		"conclusion": "I understand the message, it was clear for me that there is no way to get well of this.\n They control the police, they have the money, the guns and the power to silence anyone that faces them...\n\nIs better to focus on more popular things, at the end that is the way to driving sales...",
 		"number": "ending 9 of 9",
+		"key": "9",
 		"end": true
 	}
 }

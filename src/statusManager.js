@@ -19,6 +19,10 @@ class StatusManager {
     this.lastPublicationStats = {}
   }
 
+  setCompanyStats(stats) {
+    this.companyStats = stats
+  }
+
   setPublication (frontPageData, frontPageStats) {
     Object.keys(frontPageData).forEach((key)=>{
       this.news[key] = frontPageData[key]

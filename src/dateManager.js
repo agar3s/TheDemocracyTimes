@@ -21,6 +21,24 @@ class DateManager {
   setDate(date) {
     this.data = this.dates[date]
     this.currentDate = this.data.date
+
+    if(this.data.date.day===6 && this.data.date.month===2&&this.data.date.year===1933) return
+
+    let saveStatus = {
+      date: date,
+      asString: this.data.dateString,
+      companyStats: this.statusManager.companyStats
+    }
+    if (this.data.end) {
+      let endings = JSON.parse(localStorage.getItem('democracyTimes-endings-ADVJ18')) || {
+        '1': false,'2': false,'3': false,'4': false,'5': false,'6': false,'7': false,'8': false,'9': false
+      }
+      endings[this.data.key] = true
+      localStorage.setItem('democracyTimes-endings-ADVJ18', JSON.stringify(endings))
+      localStorage.removeItem('democracyTimes-ADVJ18')
+    }else{
+      localStorage.setItem('democracyTimes-ADVJ18', JSON.stringify(saveStatus))
+    }
   }
 
   getDialogue() {
