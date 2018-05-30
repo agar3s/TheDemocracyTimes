@@ -1,5 +1,4 @@
 import GeneralScene from './scene'
-import Translation from '../utils/translation'
 import Frontpage from '../sprites/frontpage'
 import NewsItem from '../sprites/newsitem'
 
@@ -22,15 +21,15 @@ class EditScene extends GeneralScene {
     let ratio = (this.screenBounds.height - this.screenBounds.paddingVertical*2)/5
     
     this.next = this.createButton({
-      x: this.screenBounds.width + this.screenBounds.paddingVertical*2,
+      x: this.screenBounds.width - this.screenBounds.paddingVertical*2,
       y: this.screenBounds.height - this.screenBounds.paddingVertical*2,
-      font: 'na22',
-      text: 'Ready to Print',
+      font: 'na28',
+      text: this.getText('nextPrint'),
       onClick: () => {
         this.saveFrontPage()
         this.changeToScene('resultsScene')
       },
-      scale: 1.4,
+      scale: 1,
       color: 0xc69d7f
     })
     this.next.setOrigin(1, 1)
@@ -70,10 +69,6 @@ class EditScene extends GeneralScene {
 
   update (time, dt) {
 
-  }
-
-  getText(val) {
-    return this.translations.translate(val)
   }
 
   registerEvents(ratio) {

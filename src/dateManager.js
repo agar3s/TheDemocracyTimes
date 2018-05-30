@@ -2,12 +2,22 @@ import {getStatusManager} from './statusManager'
 
 class DateManager {
   constructor (cache) {
-    this.dates = cache.json.get('dates')
-    this.news = cache.json.get('news')
-    this.dialogues = cache.json.get('dialogues')
+    this.cache = cache
+    this.setLanguage('en')
     this.statusManager = getStatusManager()
     //this.setDate("06-02-1933")
     this.setDate("06-02-1933")
+  }
+
+  setLanguage (language) {
+    if (language!='en'){
+      language = `_${language.toLowerCase()}`
+    } else {
+      language = ''
+    }
+    this.dates = this.cache.json.get(`dates${language}`)
+    this.news = this.cache.json.get(`news${language}`)
+    this.dialogues = this.cache.json.get(`dialogues${language}`)
   }
 
   getMonologue() {
@@ -96,6 +106,10 @@ class DateManager {
 
   isGameOver() {
     return !!this.data.end
+  }
+
+  getDateStringFor(date) {
+    return this.dates[date].dateString
   }
 }
 

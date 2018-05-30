@@ -36,7 +36,6 @@ class StatusManager {
 
   getSalesReport () {
     let score = this.lastPublicationStats.exclusivity +this.lastPublicationStats.relevancy +this.lastPublicationStats.popularity
-    console.log(this.lastPublicationStats.exclusivity, this.lastPublicationStats.relevancy, this.lastPublicationStats.popularity)
     let sold = (score||0) * 1450
     let overSold = sold > this.companyStats.printing 
     if (overSold) {

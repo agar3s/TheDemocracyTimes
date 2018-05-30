@@ -1,0 +1,389 @@
+{
+	"001": {
+		"headline": "Bares clandestinos en toda la ciudad",
+		"lead": "¿Quiénes son los proveedores detrás de estos sitios? Algunas personas señalan que el millonario Andy Montana está detrás de este negocio.",
+		"tags": ["social", "andy montana", "mafia", "charity"],
+		"by": "Jhonatan Ross",
+		"popularity": 0.6,
+		"relevancy": 0.4,
+		"exclusivity": 0.6
+	},
+	"002": {
+		"headline": "Continua la huelga en Soup & Pastas",
+		"lead": "Tercer día de huelga, las pérdidas se estiman en cientos de dólares.",
+		"tags": ["present", "soup & pastas", "labour party", "strikes"],
+		"by": "Lloyd Moore",
+		"popularity": 0.7,
+		"relevancy": 0.1,
+		"exclusivity": 0.3
+	},
+	"003": {
+		"headline": "Annette Gray cantará en el South Hall",
+		"lead": "La famosa cantante se presentará este 5 de Mayo con la banda Underground Boys.",
+	    "tags": ["culture and arts", "annette gray", "undeground boys"],
+		"by": "Victor Griffin",
+		"popularity": 0.5,
+		"relevancy": 0.4,
+		"exclusivity": 0.1
+	},
+	"004": {
+		"headline": "Quinta edición de la carrera Ernest Jones",
+		"lead": "La ciudad se prepara para el evento que buscará fondos para los veteranos de la guerra.",
+	    "tags": ["sports", "ernest jones", "city"],
+		"by": "Victor Griffin",
+		"popularity": 0.4,
+		"relevancy": 0.4,
+		"exclusivity": 0.2
+	},
+	"005": {
+		"headline": "Robo a la tienda de Marta Robinson",
+		"lead": "Unos $1,000 dólares en mercancía fueron robados de la popular tienda.",
+	    "tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.5,
+		"relevancy": 0.3,
+		"exclusivity": 0.2
+	},
+	"006": {
+		"headline": "El patrón de suicidio",
+		"lead": "Cada año en los Estados Unidos, entre 15.000 y 20.000 personas cometen suicidio.",
+		"tags": ["social", "andy montana", "mafia", "charity"],
+		"by": "Jhonatan Ross",
+		"popularity": 0.4,
+		"relevancy": 0.5,
+		"exclusivity": 0.1
+	},
+	"007": {
+		"headline": "El índice de la miseria humana",
+		"lead": "Le preguntamos a un estudiante de asuntos estadounidenses acerca del fin de la depresión que hemos vivido estos últimos años.",
+		"tags": ["present", "soup & pastas", "labour party", "strikes"],
+		"by": "Lloyd Moore",
+		"popularity": 0.2,
+		"relevancy": 0.3,
+		"exclusivity": 0.6
+	},
+	"008": {
+		"headline": "¿Cuál es la verdad acerca de la fortuna de Montana?",
+		"lead": "Es bien sabido que los restaurantes de Montana son de los mejores sitios para cenar en la ciudad, pero ¿son estos restaurantes su único negocio?",
+	    "tags": ["Andy", "annette gray", "undeground boys"],
+		"by": "Victor Griffin",
+		"popularity": 0.3,
+		"relevancy": 0.3,
+		"exclusivity": 0.5
+	},
+	"009": {
+		"headline": "¡Franklin D Roosevelt asesinado!",
+		"lead": "El presidente electo recibió 5 disparos durante un discurso en Miami, Giuseppe Zangara fue capturado.",
+	    "tags": ["sports", "ernest jones", "city"],
+		"by": "Victor Griffin",
+		"popularity": 1.6,
+		"relevancy": 0.9,
+		"exclusivity": 0.2
+	},
+	"010": {
+		"headline": "Montana y su historial como contrabandista",
+		"lead": "Hace 10 años cuando él tenía 16, fue capturado por contrabando de licores.",
+		"tags": ["Montana", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.65,
+		"relevancy": 0.15,
+		"exclusivity": 0.2
+	},
+	"011": {
+		"headline": "Caos en Miami",
+		"lead": "Después del tiroteo, se presentaron disturbios en la ciudad. La policía intenta recupera el control",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.65,
+		"relevancy": 0.6,
+		"exclusivity": -0.1
+	},
+	"012": {
+		"headline": "La posibilidad de una sesión especial se ha descartado",
+		"lead": "La charla sobre la crisis financiera estatal ya no se realizará.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.55,
+		"relevancy": 0.35,
+		"exclusivity": 0.2
+	},
+	"013": {
+		"headline": "Disturbios en Miami",
+		"lead": "Mas de 30 personas han sido capturadas, se estiman perdidas por miles de dólares.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.4,
+		"relevancy": 0.5,
+		"exclusivity": 0.1
+	},
+	"014": {
+		"headline": "Delincuentes se llevan $20.000 en asalto a banco",
+		"lead": "Floy Hamilton y compañía son los principales sospechosos.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.43,
+		"relevancy": 0.33,
+		"exclusivity": 0.33
+	},
+	"015": {
+		"headline": "Se ha declarado un salario mínimo de 25 centavos para este año",
+		"lead": "40 centavos se pagarán al final de siete años.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.4,
+		"relevancy": 0.4,
+		"exclusivity": 0.2
+	},
+	"016": {
+		"headline": "El número de muertos en el canton Toll aumenta",
+		"lead": "Al menos tres muertos más en la isla de Hanam.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.6,
+		"relevancy": 0.35,
+		"exclusivity": 0.1
+	},
+	"017": {
+		"headline": "Wells no cerrará",
+		"lead": "Smith dice que Wells reabrirá los sábados a finales de Julio.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.3,
+		"relevancy": 0.3,
+		"exclusivity": 0.3
+	},
+	"018": {
+		"headline": "Perry campeón mundial de tenis",
+		"lead": "La gente lo recibirá en su ciudad natal.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.6,
+		"relevancy": 0.35,
+		"exclusivity": 0.15
+	},
+	"019": {
+		"headline": "El dinero será el tema principal del parlamento mundial",
+		"lead": "Washington cree que este tema dominará la agenda como resultado de nuestro embargo.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.2,
+		"relevancy": 0.66,
+		"exclusivity": 0.15
+	},
+	"020": {
+		"headline": "Los nuevos aranceles británicos afectan los bienes estadounidenses terminados en Canadá",
+		"lead": "Después del primero de abril, se requerirá de un 50% por concepto de 'Contenido del imperio'.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.3,
+		"relevancy": 0.6,
+		"exclusivity": 0.1
+	},
+	"021": {
+		"headline": "La señorita Jane Hunter abre el tercer aniversario de la asociación comercial",
+		"lead": "La meta es llegar a los $100,000 durante las dos semanas de celebración.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.35,
+		"relevancy": 0.35,
+		"exclusivity": 0.3
+	},
+	"022": {
+		"headline": "Prisionero salta desde un cuarto piso huyendo de la policía",
+		"lead": "Recapturado por la policía cuando sus pies se atascaron en el barro.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.66,
+		"relevancy": 0.3,
+		"exclusivity": 0.2
+	},
+	"023": {
+		"headline": "Advertencia por discriminación",
+		"lead": "Cobrando un precio de admisión más alto para los clientes de color que para los blancos.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": -0.1,
+		"relevancy": 0.8,
+		"exclusivity": 0.3
+	},
+	"024": {
+		"headline": "Robado el Polk County bank",
+		"lead": "Se llevaron $1,100 en efectivo mientras el cajero se encontraba en su hora de almuerzo.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.4,
+		"relevancy": 0.2,
+		"exclusivity": 0.2
+	},
+	"025": {
+		"headline": "Chica no identificada muerta tras un accidente de auto",
+		"lead": "Un conductor intoxicado no vio la señal de alto.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.7,
+		"relevancy": -0.1,
+		"exclusivity": 0.4
+	},
+	"026": {
+		"headline": "Green advierte sobre la deflación",
+		"lead": "Declara que destruirá la civilización si se lleva al límite.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.2,
+		"relevancy": 0.8,
+		"exclusivity": 0.1
+	},
+	"027": {
+		"headline": "La santa alianza de los fascistas alemanes y Roma lucharía contra el comunismo alemán",
+		"lead": "El Vaticano indicó que era con el propósito de exterminar los rojos en Alemania.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.4,
+		"relevancy": 0.6,
+		"exclusivity": 0.1
+	},
+	"028": {
+		"headline": "Jhonatan Ross muerto durante un enfrentamiento de gangsters",
+		"lead": "Diez carros que pasaban por el restaurante \"My loved Venecia\" dispararon a la gente que se encontraba allí.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.7,
+		"relevancy": 0.8,
+		"exclusivity": 1
+	},
+	"029": {
+		"headline": "Condenado por asesinato",
+		"lead": "Montañero de Kentucky declarado culpable de la muerte de una madre anciana.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.4,
+		"relevancy": 0.4,
+		"exclusivity": 0.2
+	},
+	"030": {
+		"headline": "Pareja de ancianos fue robada, fueron atados en un sillón",
+		"lead": "Dos hombres blandos tomaron $400 del seguro de guerra de su hijo.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.8,
+		"relevancy": -0.1,
+		"exclusivity": 0.1
+	},
+	"031": {
+		"headline": "Herriot zarpa a Norte América esta mañana",
+		"lead": "Espera que la conferencia en Washington frene el \"sufrimiento global\"",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.4,
+		"relevancy": 0.3,
+		"exclusivity": 0.4
+	},
+	"032": {
+		"headline": "Soldados Estadounidenses arrestados en China",
+		"lead": "Dos soldados estadounidenses arrestados el lunes por las autoridades militares japonesas.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.2,
+		"relevancy": 0.7,
+		"exclusivity": 0.1
+	},
+	"033": {
+		"headline": "Los cortes de salario no son una solución para las finanzas",
+		"lead": "Ni siquiera la eliminación de algunos departamentos balancearía el presupuesto.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.4,
+		"relevancy": 0.4,
+		"exclusivity": 0.2
+	},
+	"034": {
+		"headline": "Menos autos matriculados",
+		"lead": "1.700 licencias fueron obtenidas este año, comparadas con las 2.500 del año pasado.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.3,
+		"relevancy": 0.3,
+		"exclusivity": 0.2
+	},
+	"035": {
+		"headline": "El asesino es aún un misterio",
+		"lead": "Las autoridades nuevamente intentan vincular la muerte con hendersonville",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.7,
+		"relevancy": -0.1,
+		"exclusivity": 0.2
+	},
+	"036": {
+		"headline": "Los dos equipos de Edneyville ganaron",
+		"lead": "Chicos y chicas ganaron contra los equipos de Mills River.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.55,
+		"relevancy": 0.3,
+		"exclusivity": 0.15
+	},
+	"037": {
+		"headline": "Piloto de avión se quemó hasta morir",
+		"lead": "Se estrelló en Kennesaw Mt. cerca de Atlanta",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.75,
+		"relevancy": 0.2,
+		"exclusivity": 0.1
+	},
+	"038": {
+		"headline": "Encontró un cadáver en su garaje",
+		"lead": "El forense cree que el veterano de guerra murió a causa de un gas venenoso.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.7,
+		"relevancy": 0.2,
+		"exclusivity": 0.1
+	},
+	"039": {
+		"headline": "Otro corte para los profesores",
+		"lead": "Recomendaciones del comité asesor serían radicales.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.4,
+		"relevancy": 0.6,
+		"exclusivity": 0.1
+	},
+	"a01": {
+		"headline": "La generosidad de Andy Montana",
+		"lead": "El pasado 18 de Febrero nuestro reportero Jhonatan Ross fue golpeado por la seguridad de Andy Montana.",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.6,
+		"relevancy": 0.6,
+		"exclusivity": 1
+	},
+	"a02": {
+		"headline": "¿La prohibición es una broma?",
+		"lead": "Algunos mal llamados \"restaurantes\" ofrecen fiestas privadas durante la noche, donde bebidas toxicas se le sirven a la gente. Muchos de estos restaurantes son propiedad de Andy Montana.",
+		"tags": ["andy", "ernest jones", "city"],
+		"by": "Lloyd More",
+		"popularity": 0.75,
+		"relevancy": 0.6,
+		"exclusivity": 1
+	},
+	"a03": {
+		"headline": "¡Comida gratis para todos!",
+		"lead": "El filántropo Andy Montana ofrece banquetes de caridad en las áreas más pobres de la ciudad.\"Solo queremos ayudar a la gente\" nos dice Montana",
+		"tags": ["andy", "ernest jones", "city"],
+		"by": "Benjamin Brown",
+		"popularity": 0.6,
+		"relevancy": 0.4,
+		"exclusivity": 1
+	},
+	"a04": {
+		"headline": "El crimen se toma la ciudad",
+		"lead": "Dos de las más poderosas mafias en la ciudad se encuentran en guerra. ¿Qué esta pasado con el departamento de policía? ¿Es verdad que todos son corruptos?",
+		"tags": ["sports", "ernest jones", "city"],
+		"by": "Benjamin Brown",
+		"popularity": 1,
+		"relevancy": 1,
+		"exclusivity": 1
+	}
+}

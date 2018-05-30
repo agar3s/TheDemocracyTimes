@@ -5,40 +5,23 @@ class CinematicScene extends GeneralScene {
   constructor () {
     super({key: 'cinematicScene'})
     this.background = 0x160101
-    this.introSequence = [
-      {
-        text: 'After 20 years working as a journalist, the newspaper I used to work closed like many others that broke as a result of the 29\'s crisis.',
-        image: 'strip2'
-      },
-      {
-        text: 'My good Friend Frank come with the idea to start a newspaper. So He and me founded the "Democracy Times" in May 28th 1932.',
-        image: 'strip1'
-      },
-      {
-        text: 'Frank is a smart guy and he has diversified inversions, he didn\'t lose money.\n I was flattered and honored when he said he could not find someone better than me to manage this newspaper',
-        image: 'strip3'
-      },
-      {
-        text: 'It has been a great opportunity to independently inform the reality that the city and the country is facing, that\'s why I love coming here day by day.',
-        image: 'strip4'
-      },
-    ]
     this.currentStripIndex = 0
   }
 
   create () {
+    this.introSequence = this.cache.json.get(`cinematic${this.translator.getSufix()}`)
     super.create()
     this.currentStripIndex = 0
     this.nextButton = this.createButton({
-      x: this.screenBounds.width + this.screenBounds.paddingVertical*2,
+      x: this.screenBounds.width - this.screenBounds.paddingVertical*2,
       y: this.screenBounds.height - this.screenBounds.paddingVertical*2,
-      font: 'na22',
-      text: 'Continue',
+      font: 'na28',
+      text: this.getText('next'),
       onClick: () => {
         //this.changeToScene('officeScene')
         this.next()
       },
-      scale: 1.4,
+      scale: 1,
       color: 0xc69d7f
     })
     this.nextButton.setOrigin(1, 1)

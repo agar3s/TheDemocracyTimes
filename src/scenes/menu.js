@@ -26,13 +26,13 @@ class MenuScene extends GeneralScene {
         console.error(exception)
     }
 
-    let start = this.createButton({
+    this.start = this.createButton({
       x: 640,
       y: 450,
       font: 'na28',
-      text: 'New Game',
+      text: this.getText('newgame'),
       onClick: () => {
-        console.log(game, game.sound, game.sound.usingWebAudio)
+        this.dateManager.setLanguage(this.translator.languageCode)
         this.startNewGame()
         this.changeToScene('cinematicScene')
       },
@@ -41,22 +41,23 @@ class MenuScene extends GeneralScene {
     })
 
     let previousState = JSON.parse(localStorage.getItem('democracyTimes-ADVJ18'))
-    console.log(previousState)
-    if(previousState) {
-      let continueG = this.createButton({
+    if (previousState) {
+      this.continueG = this.createButton({
         x: 640,
-        y: 510,
+        y: 560,
         font: 'na22',
-        text: `Continue on - ${previousState.asString}`,
+        text: this.getText('continue', [this.dateManager.getDateStringFor(previousState.date)]),
         onClick: () => {
           this.dateManager.setDate(previousState.date)
+          this.dateManager.setLanguage(this.translator.languageCode)
           this.statusManager.setCompanyStats(previousState.companyStats)
           this.changeToScene('monologueScene')
         },
         hoverColor: 0xc69d7f,
         scale: 1.6
       })
-    continueG.setAlpha(1)
+      this.continueG.setAlpha(1)
+      this.continueG.setData('date', previousState.date)
     }
     let endingState = JSON.parse(localStorage.getItem('democracyTimes-endings-ADVJ18'))
     if(endingState) {
@@ -64,32 +65,31 @@ class MenuScene extends GeneralScene {
       Object.keys(endingState).forEach((key)=>{
         if(endingState[key]) total++
       })
-      let resume = NewsItem.WrapBitmapText(
+      this.summary = NewsItem.WrapBitmapText(
         this,
         this.cameras.main.width/2,
-        this.cameras.main.height*0.82,
+        620,
         'na22',
-        `${total} of 9 endings unlocked`,
+        this.getText('endings', [total]),
         this.cameras.main.width
       )
-      resume.setOrigin(0.5, 0.5)
-      resume.setTint(0x62391b)
+      this.summary.setData('endings', total)
+      this.summary.setOrigin(0.5, 0.5)
+      this.summary.setTint(0x62391b)
     }
 
-
-
-
-    let language = this.createButton({
+    this.language = this.createButton({
       x: 640,
       y: 510,
       font: 'na28',
-      text: 'Language',
+      text: this.getText('language'),
       onClick: () => {
+        this.translator.changeLanguage()
+        this.refreshTexts()
       },
       hoverColor: 0xc69d7f,
       scale: 1.6
     })
-    language.setAlpha(0)
 
     let subtitle = NewsItem.WrapBitmapText(
       this,
@@ -102,27 +102,27 @@ class MenuScene extends GeneralScene {
     subtitle.setOrigin(0.5, 0.5)
     subtitle.setTint(0x62391b)
 
-    let info = NewsItem.WrapBitmapText(
+    this.info = NewsItem.WrapBitmapText(
       this,
       this.cameras.main.width/2,
       this.cameras.main.height*0.9,
       'na16',
-      'autosave enabled',
+      this.getText('autosave'),
       this.cameras.main.width
     )
-    info.setOrigin(0.5, 1)
-    info.setTint(0x62391b)
+    this.info.setOrigin(0.5, 1)
+    this.info.setTint(0x62391b)
 
-    let agar3s = NewsItem.WrapBitmapText(
+    this.agar3s = NewsItem.WrapBitmapText(
       this,
       this.cameras.main.width/2,
       this.cameras.main.height*0.95,
       'na16',
-      'Made by Agar3s',
+      this.getText('credits'),
       this.cameras.main.width
     )
-    agar3s.setOrigin(0.5, 1)
-    agar3s.setTint(0x62391b)
+    this.agar3s.setOrigin(0.5, 1)
+    this.agar3s.setTint(0x62391b)
 
   }
 
@@ -133,6 +133,24 @@ class MenuScene extends GeneralScene {
   startNewGame() {
     this.dateManager.setDate('06-02-1933')
     this.statusManager.resetStats()
+  }
+
+  refreshTexts() {
+    this.dateManager.setLanguage(this.translator.languageCode)
+    
+    this.updateText(this.start, this.getText('newgame'))
+    this.updateText(this.language, this.getText('language'))
+    this.agar3s.setText(this.getText('credits'))
+    this.info.setText(this.getText('autosave'))
+
+    if (this.summary) {
+      this.summary.setText(this.getText('endings', [this.summary.getData('endings')]))
+    }
+
+    if (this.continueG) {
+      let date = this.dateManager.getDateStringFor(this.continueG.getData('date'))
+      this.updateText(this.continueG, this.getText('continue', [date]))
+    }
   }
 
 }

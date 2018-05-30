@@ -44,7 +44,7 @@ class OfficeScene extends GeneralScene {
       "Charlie": charlie,
       "Evans": evans
     }
-    console.log(this.dialogueData)
+    
     let displayCharacter = undefined
 
     // dialogue basic system
@@ -66,14 +66,13 @@ class OfficeScene extends GeneralScene {
     })
 
     this.next = this.createButton({
-      x: this.screenBounds.width + this.screenBounds.paddingVertical*2,
+      x: this.screenBounds.width - this.screenBounds.paddingVertical*2,
       y: this.screenBounds.height - this.screenBounds.paddingVertical*2,
-      font: 'na22',
-      text: 'Continue to edit',
+      font: 'na28',
+      text: this.getText('nextEdit'),
       onClick: () => {
         this.changeToScene('editScene')
       },
-      scale: 1.4,
       color: 0xc69d7f
     })
     this.next.setOrigin(1, 1)

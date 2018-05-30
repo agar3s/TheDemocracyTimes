@@ -2,7 +2,7 @@
  taken from: https://sprite-storm.com/tutorial/phaser-tutorial/phaser-language-translator-plugin/
 */
 
-export default class Translation {
+class Translation {
   /**
   * Constructor for Translation
   *
@@ -12,7 +12,7 @@ export default class Translation {
   constructor(cache, translations) {
     this.defaultLanguage = 'en'
     this.availableLanguages = ['en', 'es']
-    this.translations = cache.json.get(translations)
+    this.translations = cache.json.get('translations')
 
     // check for user language
     let preferredLanguage = navigator.language || navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage || this.defaultLanguage
@@ -28,7 +28,7 @@ export default class Translation {
     }
 
     // if the language code is not in the available languages, then use the default language
-    if(!this.contains(this.availableLanguages, this.languageCode)) {
+    if(this.availableLanguages.indexOf(this.languageCode)==-1) {
       this.languageCode = this.defaultLanguage
     }
   }
@@ -46,7 +46,15 @@ export default class Translation {
     } else {
       return '-'
     }
-    }
+  }
+
+  translateWithParams(val, params) {
+    let translation = this.translate(val)
+    params.forEach((value, index)=>{
+      translation = translation.replace(`$[${index}]`, value)
+    })
+    return translation
+  }
 
   /**
   * @description loops through a given array and checks if the passed value is matched anywhere
@@ -64,4 +72,31 @@ export default class Translation {
     }
     return false
   }
+
+  changeLanguage () {
+    let index = this.availableLanguages.indexOf(this.languageCode)
+    index++
+    if(index >= this.availableLanguages.length) {
+      index = 0
+    }
+    this.languageCode = this.availableLanguages[index]
+  }
+
+  getSufix () {
+    if(this.languageCode == 'en')
+      return ''
+    return `_${this.languageCode}`
+  }
+}
+
+let translator
+
+let getTranslator = (cache) => {
+  if(!translator) {
+    translator = new Translation(cache)
+  }
+  return translator
+}
+export {
+  getTranslator
 }

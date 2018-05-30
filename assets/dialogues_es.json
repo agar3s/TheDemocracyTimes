@@ -1,0 +1,533 @@
+{
+	"06-02-1933":{
+		"character": "Frank",
+		"start": {
+			"text": "Ben, necesitamos hablar.",
+			"options": [{
+				"text": "Cuéntame, ¿qué sucede?",
+				"then": "A"
+			}]
+		},
+		"A": {
+			"text": "El negocio no está andando bien, si no incrementamos las ventas, me temo que tendremos que cerrar.",
+			"options": [{
+				"text": "Eso no suena bien. Danos un poco de tiempo Frank, Jhonatan está trabajando en una historia importante.",
+				"then": "B"
+			}]
+		},
+		"B": {
+			"text": "¿Así que una nueva historia? Necesitamos algo grande como en los viejos tiempos.",
+			"options": [{
+				"text": "Confía en mí. Aún no he perdido la chispa mi buen amigo."
+			}]
+		}
+	},
+	"13-02-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "¿Qué harás con el dinero?",
+			"options": [{
+				"text": "Lo dejaré en uno de eso restaurantes.",
+				"then": "A"
+				}, {
+				"text": "Nos estamos quedando sin dinero, podríamos tomar algunos dólares para salvar el periódico.",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "Deja que Betty lo deje por ti, ella no levantará ninguna sospecha.",
+			"options": [{
+				"text": "Tienes razón, es mejor enfocarse en la primera plana de mañana."
+			}]
+		},
+		"B": {
+			"text": "No estás hablando en serio, ¿no?",
+			"options": [{
+				"text": "Jajaja, claramente. Betty puede regresar el dinero al señor Montana."
+			}]
+		}
+	},
+	"16-02-1933":{
+		"character": "Mujer en el teléfono",
+		"start": {
+			"text": "Señor Brown, es una pena que hayas rechazado nuestro regalo y además publiques esas cosas horribles acerca de nuestro negocio.",
+			"options": [{
+				"text": "No les tenemos miedo.",
+				"then": "B"
+			}]
+		},
+		"B": {
+			"text": "Deberían...., moderen su lenguaje por su propio bien.",
+			"options": [{
+				"text": "Adiós",
+				"then": "C"
+			}]
+		},
+		"C": {
+			"character": "Jhonatan",
+			"text": "Cuéntame, ¿qué necesitas?",
+			"options": [{
+				"text": "No tenemos suficientes artículos para publicar hoy, ¿tienes algo sobre Montana?",
+				"then": "D"
+			}]
+		},
+		"D": {
+			"character": "Jhonatan",
+			"text": "Si, déjame terminar la nota para ti en un momento.",
+			"options": [{
+				"text": "Gracias, el asesinato de Roosvelt y este asunto con Montana...",
+				"then": "E"
+			}]
+		},
+		"E": {
+			"character": "Jhonatan",
+			"text": "Es cierto, parece que no vamos a tener esos \"días felices\" de nuevo.",
+			"options": [{
+				"text": "No, lastimosamente no..."
+			}]
+		}
+	},
+	"20-02-1933":{
+		"character": "Charlie",
+		"start": {
+			"text": "Déjame que me presente, algunas personas me dicen \"La bella Charlie\". Hablo en nombre de Andy Montana",
+			"options": [{
+				"text": "Puedo notar porque le dicen bella...",
+				"then": "A"
+				}, {
+				"text": "Reconozco su voz.",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "Gracias cariño, espero que el viejo Jhonatan se recupere pronto y regrese a trabajar a la oficina",
+			"options": [{
+				"text": "¿Por qué su jefe pago por los costos del hospital?",
+				"then": "D"
+			}]
+		},
+		"B": {
+			"text": "Si, charlamos por teléfono hace unos días. Te lo advertí cariño.",
+			"options": [{
+				"text": "Eso fue una amenaza, no una advertencia...",
+				"then": "C"
+			},{
+				"text": "Intentar matar a un reportero no es una advertencia.",
+				"then": "D"
+			}
+		]
+		},
+		"C": {
+			"text": "Llámalo como quieras, pero te dije que habría consecuencias.",
+			"options": [{
+				"text": "Ustedes casi matan a uno de los reporteros más reconocidos de la ciudad.",
+				"then": "D"
+			}]
+		},
+		"D": {
+			"text": "Estos matones estúpidos, la idea era asustarlo un poco, no tratar de matarlo...\nEso fue un error. Por eso es que mi Andy pago todos los costos del hospital.\nEscúchame, no queremos más noticias falsas acerca de donde proviene nuestro negocio, '¿vale?",
+			"options": [{
+				"text": "Solo hacemos nuestro trabajo.",
+				"then": "E"
+			}]
+		},
+		"E": {
+			"text": "Hazlo bien entonces. Adiós querido.",
+			"options": [{
+				"text": "..."
+			}]
+		}
+	},
+	"13-03-1933":{
+		"character": "Evans",
+		"start": {
+			"text": "He leído las noticias que han publicado sobre Montana, le ha declarado la guerra.",
+			"options": [{
+				"text": "Jhonatan es la persona detrás de la historia, su investigación debe ser contada.",
+				"then": "A"
+			}]
+		},
+		"A": {
+			"text": "Y nosotros en el \"Bureau of Investigation\" lo sabemos muy bien. Seré directo Señor Brown queremos que colaboren con nosotros en este caso.",
+			"options": [{
+				"text": "¿Qué clase de colaboración están buscando?",
+				"then": "B"
+			},{
+				"text": "Lo siento señor Evans, pero luego del asesinato del señor Roosvelt no deseo involucrar al periódico con ninguna institución del gobierno.",
+				"then":"E"
+			}]
+		},
+		"B": {
+			"text": "Hemos estado siguiendo este caso por unos meses, pero aun nos hacen falta pruebas para poner a Montana tras las rejas. Necesitamos trabajar juntos.",
+			"options": [{
+				"text": "Cuente con nosotros.",
+				"then":"C"
+			}, {
+				"text": "Creo que usted nos estaría poniendo en mayor riesgo si esta \"colaboración\" es descubierta.",
+				"then":"D"
+			}]
+		},
+		"C": {
+			"text": "Gracias señor Brown, le contactaremos muy pronto.",
+			"options": [{
+				"text": "Adiós."
+			}]
+		},
+		"D": {
+			"text": "Aprecio su preocupación, pero por favor tómese el tiempo de pensarlo, lo contactaré cuando el señor Ross retorne al trabajo.",
+			"options": [{
+				"text": "Gracias..."
+			}]
+		},
+		"E": {
+			"text": "Ya encontramos al culpable y lo encarcelamos.\nEl nuevo gobierno solo quiere garantizar el orden para todos los estadounidenses",
+			"options": [{
+				"text": "Aprecio su esfuerzo, pero déjenos trabajar por nuestra cuenta. Tenga un buen día señor Evans."
+			}]
+		}
+	},
+	"20-03-1933":{
+		"character": "Charlie",
+		"start": {
+			"text": "Hola querido, sabemos que un agente del BOI te ha contactado buscando una especie de alianza contra nosotros.\nSabes muy bien que no puedes atacarnos, ¿no?",
+			"options": [{
+				"text": "Sus métodos pueden intimidar a alguien débil, pero nosotros no caeremos en sus amenazas.",
+				"then": "A"
+				}, {
+				"text": "No, no hemos vuelto a hablar con él y en verdad no quiero verme involucrados entre ellos y ustedes.",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "¿Y si me acerco un poco?",
+			"options": [{
+				"text": "¡Aléjese de mí!",
+				"then": "C"
+			}]
+		},
+		"B": {
+			"text": "Lo siento mucho pero ya estas involucrado. Hemos escrito una pequeña nota para que publiques y nos ayudes a distraer a este tipo por un tiempo.",
+			"options": [{
+				"text": "Démela, voy a darle un vistazo.",
+				"then": "D"
+			},{
+				"text": "No publicaré mentiras en el \"Times\". ¡largo de aquí!",
+				"then": "C"
+			}]
+		},
+		"C": {
+			"text": "¡Oye! no tienes por qué ser así de rudo. Mi preocupación por ti es sincera.",
+			"options": [{
+				"text": "Que tenga un buen día señorita."
+			}]
+		},
+		"D": {
+			"text": "Eres un tipo muy inteligente, ¿sabías que encuentro eso muy atractivo en un hombre?",
+			"options": [{
+				"text": "Espero que no tengamos que vernos de nuevo."
+			}]
+		}
+	},
+	"10-04-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "Déjame seguir esta pista, puedo ir y revisar si realmente hay un testigo y si es una trampa.",
+			"options": [{
+				"text": "Creo que lo mejor es informar esto al señor Evans.",
+				"then": "A"
+				}, {
+				"text": "¿Y si es una trampa? Me preocupa tu seguridad.",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "Preferiría que no lo hicieses. No creo en ellos, pero es tu decisión.",
+			"options": [{
+				"text": "Lo sé, pero sería peor si terminas herido o ¡muerto!. Lo llamaré.",
+				"then": "C"
+			},{
+				"text": "Yo tampoco creo en ellos... adelante Jhonatan.",
+				"then": "D"
+			}]
+		},
+		"B": {
+			"text": "Ya estoy viejo Ben, si no tienes nada que perder lo único que puedes es ganar.",
+			"options": [{
+				"text": "La gente de esta ciudad perdería  un gran reportero, no voy a permitir que arriesgues tu vida.",
+				"then": "C"
+			},{
+				"text": "En verdad eres la persona más valiente que conozco. Tu reputación te precede. Adelante Jhonatan.",
+				"then": "D"
+			}]
+		},
+		"C": {
+			"text": "Tengo un mal presentimiento...",
+			"options": [{
+				"text": "No tenemos más opciones, contactaré con el luego de terminar la primera plana de mañana."
+			}]
+		},
+		"D": {
+			"text": "Entonces prepararé lo necesario para reunirme con Phil. Deséame suerte.",
+			"options": [{
+				"text": "Espero que te vaya bien."
+			}]
+		}
+	},
+	"17-04-1933":{
+		"character": "Evans",
+		"start": {
+			"text": "Mi sentido pésame, Jhonatan será recordado por su esfuerzo y dedicación por perseguir la verdad.",
+			"options": [{
+				"text": "¡Déjenos! alguien le contó a Montana sobre esa reunión y creo que fue uno de los suyos.",
+				"then": "A"
+				}, {
+				"text": "Fue mi culpa, deje que fuera tras ellos sin consultarle a ustedes primero.",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "Todas las personas que trabajan para este caso fueron seleccionadas por mí, todos ellos respetables. El soplón no está en nuestro equipo señor Brown.",
+			"options": [{
+				"text": "No puedo creer en nadie entonces. ¡Déjeme solo!",
+				"then": "C"
+			},{
+				"text": "No sé qué creer... hay una persona que puede testificar en contra de Montana.",
+				"then": "D"
+			}]
+		},
+		"B": {
+			"text": "No se culpe por eso, usted no fue quien lo mato. Fue Montana.",
+			"options": [{
+				"text": "¡Es verdad, debemos detenerlo cuanto antes! Hay algo que usted no sabe, sabemos de un testigo que puede hablar sobre Montana.",
+				"then": "D"
+			}]
+		},
+		"C":{
+			"text": "Nosotros no somos el enemigo señor Brown, son ellos.",
+			"options": [{
+				"text": "¡Largo de aquí!"
+			}]
+		},
+		"D":{
+			"text": "Tenemos que hablar antes que Montana lo encuentre.",
+			"options": [{
+				"text": "Le daré toda la información que tengo sobre él."
+			}]
+		}
+	},
+	"27-03-1933":{
+		"character": "Charlie-teléfono",
+		"start": {
+			"text": "Hola cariño, gracias por ayudarnos con ese pequeño problema.",
+			"options": [{
+				"text": "He terminado con usted, ahora por favor déjeme en paz.",
+				"then": "A"
+			}]
+		},
+		"A": {
+			"text": "Claro, pero sabes... parece que Jhonatan no ha aprendido la lección. Sé que él sigue preguntándole a cierta gente sobre nuestro negocio.",
+			"options": [{
+				"text": "He hablado con él para que deje de hacerlo, pero no quiere escucharme.",
+				"then": "B"
+			}, {
+				"text": "Hablaré con él una vez más, por favor no le hagan daño.",
+				"then": "C"
+			}]
+		},
+		"B": {
+			"text": "Si nos das algunos datos suyos, no necesitarías hablar con él nunca jamás.",
+			"options": [{
+				"text": "¿Qué diablos está sugiriendo? ¡Esta conversación se ha terminado!",
+				"then": "C"
+			}, {
+				"text": "No lo sé... aunque, no creo que vaya a detenerse.",
+				"then": "D"
+			}]
+		},
+		"C": {
+			"text": "Como quieras, adiós.",
+			"options": [{
+				"text": "adiós"
+			}]
+		},
+		"D": {
+			"text": "Que no se diga más, mañana en la mañana me entregas lo que necesito.",
+			"options": [{
+				"text": "..."
+			}]
+		}
+	},
+	"24-04-1933":{
+		"character": "Frank",
+		"start": {
+			"text": "Sin Jhonatan las ventas bajaran drásticamente. ¿Qué pretendes hacer Ben?",
+			"options": [{
+				"text": "En estos momentos hay una guerra entre Andy Montana y Phil Romano por el control del negocio del alcohol.",
+				"then": "A"
+			}]
+		},
+		"A": {
+			"text": "¿Y crees que es una buena idea publicar algo después de todos los problemas que has tenido?",
+			"options": [{
+				"text": "He estado viviendo con miedo los últimos meses, quizás ya es momento de enfrentar estos criminales.",
+				"then": "B"
+			}]
+		},
+		"B": {
+			"text": "Es tu decisión Ben, confió en ti.",
+			"options": [{
+				"text": "Gracias, es momento de trabajar."
+			}]
+		}
+	},
+	"03-04-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"01-05-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"29-05-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"05-06-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"12-06-1933":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	},
+	"sample":{
+		"character": "Jhon",
+		"start": {
+			"text": "sample text",
+			"options": [{
+				"text": "option A",
+				"then": "A"
+				}, {
+				"text": "option B",
+				"then": "B"
+			}]
+		},
+		"A": {
+			"text": "option A",
+			"options": [{
+				"text": "end option A"
+			}]
+		},
+		"B": {
+			"text": "option B",
+			"options": [{
+				"text": "end option B"
+			}]
+		}
+	}
+}

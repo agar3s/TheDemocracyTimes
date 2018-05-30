@@ -1,7 +1,7 @@
 
 let awsPrefix = 'https://s3.amazonaws.com/agar3s-assets/democracyTimes/'
-const env = 'PRODUCTION'
-//const env = 'DEV'
+//const env = 'PRODUCTION'
+const env = 'DEV'
 
 export default class BootScene extends Phaser.Scene {
   constructor (props) {
@@ -131,10 +131,15 @@ export default class BootScene extends Phaser.Scene {
     // json
     this.load.json('translations', urlBase+'assets/text.json')
     this.load.json('formats', urlBase+'assets/formats.json')
-    this.load.json('dates', urlBase+'assets/dates.json')
     this.load.json('layouts', urlBase+'assets/layouts.json')
+    this.load.json('dates', urlBase+'assets/dates.json')
+    this.load.json('dates_es', urlBase+'assets/dates_es.json')
     this.load.json('news', urlBase+'assets/news.json')
+    this.load.json('news_es', urlBase+'assets/news_es.json')
     this.load.json('dialogues', urlBase+'assets/dialogues.json')
+    this.load.json('dialogues_es', urlBase+'assets/dialogues_es.json')
+    this.load.json('cinematic', urlBase+'assets/cinematic.json')
+    this.load.json('cinematic_es', urlBase+'assets/cinematic_es.json')
 
   }
 }

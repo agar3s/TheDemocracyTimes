@@ -1,4 +1,4 @@
-import Translation from '../utils/translation'
+import {getTranslator} from '../utils/translation'
 import {getDateManager} from '../dateManager'
 import {getStatusManager} from '../statusManager'
 
@@ -11,7 +11,7 @@ export default class GeneralScene extends Phaser.Scene {
   }
 
   init () {
-    this.translations = new Translation(this.cache, 'translations')
+    this.translator = getTranslator(this.cache)
     this.dateManager = getDateManager(this.cache)
     this.statusManager = getStatusManager()
     this.layouts = this.cache.json.get('layouts')
@@ -76,10 +76,21 @@ export default class GeneralScene extends Phaser.Scene {
     })
     button.setData('type', 'button')
     button.setOrigin(0.5, 0.5)
+    button.setData('location',{x:props.x, y:props.y})
 
     button.setInteractive(new Phaser.Geom.Rectangle(0, 0, button.width, button.height), Phaser.Geom.Rectangle.Contains)
     button.setScale(props.scale || 1)
     return button
+  }
+
+  updateText(bitmapText, text) {
+    bitmapText.setText(text)
+    let x = bitmapText.getData('location').x + bitmapText.getTextBounds().local.width/2
+    let y = bitmapText.getData('location').y + bitmapText.getTextBounds().local.height/2
+    bitmapText.setX(x)
+    bitmapText.setY(y)
+    bitmapText.setOrigin(0.5, 0.5)
+    
   }
 
   changeToScene(key) {
@@ -87,5 +98,12 @@ export default class GeneralScene extends Phaser.Scene {
     this.time.delayedCall(timeToFade, () => {
       this.scene.start(key)
     }, [], this)
+  }
+
+  getText(val, params) {
+    if(params){
+      return this.translator.translateWithParams(val, params)
+    }
+    return this.translator.translate(val)
   }
 }

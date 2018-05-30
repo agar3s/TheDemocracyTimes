@@ -10,14 +10,14 @@ class MonologueScene extends GeneralScene {
   create () {
     super.create()
     let next = this.createButton({
-      x: this.screenBounds.width + this.screenBounds.paddingVertical*2,
+      x: this.screenBounds.width - this.screenBounds.paddingVertical*2,
       y: this.screenBounds.height - this.screenBounds.paddingVertical*2,
-      font: 'na22',
-      text: 'Continue',
+      font: 'na28',
+      text: this.getText('next'),
       onClick: () => {
         this.changeToScene('officeScene')
       },
-      scale: 1.4,
+      scale: 1,
       color: 0xc69d7f
     })
     next.setOrigin(1, 1)

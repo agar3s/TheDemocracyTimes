@@ -22,7 +22,6 @@ class EndingScene extends GeneralScene {
     })
     next.setOrigin(1, 1)
 
-    console.log(this.dateManager.data)
     let title = NewsItem.WrapBitmapText(
       this,
       this.cameras.main.width/2,

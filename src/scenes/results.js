@@ -9,10 +9,10 @@ class ResultsScene extends GeneralScene {
   create () {
     super.create()
     let next = this.createButton({
-      x: this.screenBounds.width + this.screenBounds.paddingVertical*2,
+      x: this.screenBounds.width - this.screenBounds.paddingVertical*2,
       y: this.screenBounds.height - this.screenBounds.paddingVertical*2,
-      font: 'na22',
-      text: 'Continue',
+      font: 'na28',
+      text: this.getText('next'),
       onClick: () => {
         this.dateManager.nextDay()
         if(this.dateManager.isGameOver()) {
@@ -21,7 +21,7 @@ class ResultsScene extends GeneralScene {
           this.changeToScene('monologueScene')
         }
       },
-      scale: 1.4,
+      scale: 1,
       color: 0xc69d7f
     })
 
@@ -34,7 +34,7 @@ class ResultsScene extends GeneralScene {
       this.cameras.main.width/2,
       this.cameras.main.height*0.1,
       'na28',
-      'Sales Result',
+      this.getText('saleResult'),
       this.cameras.main.width
     )
 
@@ -43,23 +43,23 @@ class ResultsScene extends GeneralScene {
     title.setScale(1.4)
     let report = this.statusManager.getSalesReport()
 
-    this.displayStats('Newspapers printed:', `${report.printed.toFixed(0)}`, this.cameras.main.height*0.2, 0.8)
-    this.displayStats('Newspapers sold:', `${report.sold.toFixed(0)}`, this.cameras.main.height*0.2+25, 1.2)
+    this.displayStats(this.getText('Rprinted'), `${report.printed.toFixed(0)}`, this.cameras.main.height*0.2, 0.8)
+    this.displayStats(this.getText('Rsold'), `${report.sold.toFixed(0)}`, this.cameras.main.height*0.2+25, 1.2)
 
-    this.displayStats('Income =====================', '', this.cameras.main.height*0.2+75, 1.6)
-    this.displayStats('Sales', `${report.sales.toFixed(2)} usd`, this.cameras.main.height*0.2+100, 1.6)
-    this.displayStats('Advertising', `${report.advertising.toFixed(2)} usd`, this.cameras.main.height*0.2+125, 2.0)
-    this.displayStats('Total', `${report.total.toFixed(2)} usd`, this.cameras.main.height*0.2+150, 2.4)
+    this.displayStats(this.getText('Rincome'),'', this.cameras.main.height*0.2+75, 1.6)
+    this.displayStats(this.getText('Rsales'), `${report.sales.toFixed(2)} usd`, this.cameras.main.height*0.2+100, 1.6)
+    this.displayStats(this.getText('Radvertising'), `${report.advertising.toFixed(2)} usd`, this.cameras.main.height*0.2+125, 2.0)
+    this.displayStats(this.getText('Rtotal'), `${report.total.toFixed(2)} usd`, this.cameras.main.height*0.2+150, 2.4)
     
-    this.displayStats('Costs ======================', '', this.cameras.main.height*0.2+200, 2.8)
-    this.displayStats('Employees', `${report.employees.toFixed(2)} usd`, this.cameras.main.height*0.2+225, 2.8)
-    this.displayStats('Printing', `${report.printing.toFixed(2)} usd`, this.cameras.main.height*0.2+250, 3.2)
-    this.displayStats('Office', `${report.office.toFixed(2)} usd`, this.cameras.main.height*0.2+275, 3.6)
-    this.displayStats('Costs', `${report.costs.toFixed(2)} usd`, this.cameras.main.height*0.2+300, 4)
+    this.displayStats(this.getText('Rcosts'), '', this.cameras.main.height*0.2+200, 2.8)
+    this.displayStats(this.getText('Remployees'), `${report.employees.toFixed(2)} usd`, this.cameras.main.height*0.2+225, 2.8)
+    this.displayStats(this.getText('Rprinting'), `${report.printing.toFixed(2)} usd`, this.cameras.main.height*0.2+250, 3.2)
+    this.displayStats(this.getText('Roffice'), `${report.office.toFixed(2)} usd`, this.cameras.main.height*0.2+275, 3.6)
+    this.displayStats(this.getText('Rcoststotal'), `${report.costs.toFixed(2)} usd`, this.cameras.main.height*0.2+300, 4)
 
-    this.displayStats('Capital', `${report.capital.toFixed(2)} usd`, this.cameras.main.height*0.2+350, 4.4)
-    this.displayStats('Revenue', `${report.revenue.toFixed(2)} usd`, this.cameras.main.height*0.2+375, 4.8)
-    this.displayStats('New Capital', `${report.newCapital.toFixed(2)} usd`, this.cameras.main.height*0.2+400, 5.2)
+    this.displayStats(this.getText('Rcapital'), `${report.capital.toFixed(2)} usd`, this.cameras.main.height*0.2+350, 4.4)
+    this.displayStats(this.getText('Rrevenue'), `${report.revenue.toFixed(2)} usd`, this.cameras.main.height*0.2+375, 4.8)
+    this.displayStats(this.getText('RnewCapital'), `${report.newCapital.toFixed(2)} usd`, this.cameras.main.height*0.2+400, 5.2)
 
 
     this.time.delayedCall(5800, () => {
