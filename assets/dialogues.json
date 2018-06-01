@@ -9,14 +9,14 @@
 			}]
 		},
 		"A": {
-			"text": "The business is not doing so well, I'm afraid if we don't increase the sales, we should close.",
+			"text": "The business is not doing so well, I'm afraid if we don't increase sales, we should close.",
 			"options": [{
-				"text": "That doesn't sound good. Give us some time, Jhonatan is working on a big story",
+				"text": "That doesn't sound good. Give me some time, Jhonatan is working on a big story",
 				"then": "B"
 			}]
 		},
 		"B": {
-			"text": "A new story huh? We need something big like in your old good days.",
+			"text": "A new story huh? We need something big, like in your old good days.",
 			"options": [{
 				"text": "I'm still in the good days my friend."
 			}]
@@ -27,7 +27,7 @@
 		"start": {
 			"text": "What are you going to do with the money?",
 			"options": [{
-				"text": "I'll put it back in one of that restaurants.",
+				"text": "I'll take it back to one of those restaurants.",
 				"then": "A"
 				}, {
 				"text": "We are running out of money, we can take some dollars to save the newspaper.",
@@ -43,14 +43,14 @@
 		"B": {
 			"text": "Are you kidding, right?",
 			"options": [{
-				"text": "Hahaha, obviously. Betty can return the money to Mr Montana."
+				"text": "Hahaha, obviously. Betty can return the money to Mr. Montana."
 			}]
 		}
 	},
 	"16-02-1933":{
 		"character": "Woman at Phone",
 		"start": {
-			"text": "Mr. Brown, its a shame that you regret our gift and also you publish those ugly things about our business.",
+			"text": "Mr. Brown, it's a shame that you rejected our gift and instead keep publishing those ugly things about our business.",
 			"options": [{
 				"text": "We are not afraid of you",
 				"then": "B"
@@ -81,7 +81,7 @@
 		},
 		"E": {
 			"character": "Jhonatan",
-			"text": "That's true, we haven't these \"happy days\" back.",
+			"text": "That's true, we won't have these \"happy days\" back.",
 			"options": [{
 				"text": "No, unfortunately..."
 			}]
@@ -92,7 +92,7 @@
 		"start": {
 			"text": "let me introduce myself, some people know me as \"Charlie the pretty\". I speak in the name of Andy Montana.",
 			"options": [{
-				"text": "I can see they call you pretty...",
+				"text": "I can see why they call you pretty...",
 				"then": "A"
 				}, {
 				"text": "I recognize your voice",
@@ -100,7 +100,7 @@
 			}]
 		},
 		"A": {
-			"text": "Thanks darling, I hope the old Jhonatan is soon feeling well enough to come back to the office.",
+			"text": "Thanks darling, I hope old Jhonatan is feeling well enough soon to return to the office.",
 			"options": [{
 				"text": "Why did your boss pay for the hospital expenses?",
 				"then": "D"
@@ -125,14 +125,14 @@
 			}]
 		},
 		"D": {
-			"text": "These stupid bullies, the idea was to scare him a little, not trying to kill him...\nIt was a mistake. That's why the dear Andy take care of all the costs of the hospital.\nDarling, we don't want more fake news about our business, is that right?",
+			"text": "These stupid bullies, the idea was to scare him a little, not trying to kill him...\nIt was a mistake. That's why dear Andy took care of all the costs of the hospital.\nDarling, we don't want any more fake news about our business, is that right?",
 			"options": [{
-				"text": "We're doing our jobs.",
+				"text": "We're doing our job.",
 				"then": "E"
 			}]
 		},
 		"E": {
-			"text": "Do it well then, bye darling.",
+			"text": "Do it well then... bye, darling.",
 			"options": [{
 				"text": "..."
 			}]
@@ -143,7 +143,7 @@
 		"start": {
 			"text": "I read the news you published about Montana, you actually declared war on him.",
 			"options": [{
-				"text": "Jhonatan is the man behind the story, his investigation is worth to be told.",
+				"text": "Jhonatan is the man behind the story, his investigation is worth being told.",
 				"then": "A"
 			}]
 		},
@@ -153,17 +153,17 @@
 				"text": "What kind of collaboration are you looking for?",
 				"then": "B"
 			},{
-				"text": "Sorry Mr. Evans but after the assassination of Mr. Roosvelt. I don't want to be involved with any government institution.",
+				"text": "Sorry Mr. Evans but after the assassination of Mr. Roosevelt. I don't want to be involved with any government institution.",
 				"then":"E"
 			}]
 		},
 		"B": {
-			"text": "We've been following this case for some months, but we need more proves to put Andy behind bars. We just need to work together.",
+			"text": "We've been following this case for some months, but we need more evidence to put Andy behind bars. We just need to work together.",
 			"options": [{
 				"text": "Count on us",
 				"then":"C"
 			}, {
-				"text": "I think you can put us in more danger if they discovered this \"collaboration\" as you called.",
+				"text": "I think you can put us in more danger if they discovered this \"collaboration\" as you call it.",
 				"then":"D"
 			}]
 		},
@@ -174,15 +174,15 @@
 			}]
 		},
 		"D": {
-			"text": "I appreciate your concern, take a time to think about it, and I'll contact you later when Mr. Ross will return to work.",
+			"text": "I appreciate your concern, take some time to think about it. I'll contact you later when Mr. Ross returns to work.",
 			"options": [{
 				"text": "Thanks..."
 			}]
 		},
 		"E": {
-			"text": "We already found the guilty and put him behind bars.\nThe new government only wants to guarantee the order for all the Americans.",
+			"text": "We already found the guilty and put him behind bars.\nThe new government only wants to guarantee the order for all Americans.",
 			"options": [{
-				"text": "I appreciate your efforts, but leave us to work by ourselves. Have a good day Mr. Evans."
+				"text": "I appreciate your efforts, but let us to work by ourselves. Have a good day Mr. Evans."
 			}]
 		}
 	},
@@ -194,7 +194,7 @@
 				"text": "Your methods can intimidate someone weak, but we will not fall into your threats.",
 				"then": "A"
 				}, {
-				"text": "We haven't talk again and I don't want to be involved between them and you.",
+				"text": "We have not talked again, and I don't want to be involved between them and you.",
 				"then": "B"
 			}]
 		},
@@ -206,12 +206,12 @@
 			}]
 		},
 		"B": {
-			"text": "You are already involved in it. We write a small note that you can publish to help us to distract this guy for a while.",
+			"text": "You are already involved in this. We wrote a small note you can publish to help us distract this guy for a while.",
 			"options": [{
 				"text": "Give it to me, I'll take a look.",
 				"then": "D"
 			},{
-				"text": "I'll not publish lies in the Democracy Times, go away!",
+				"text": "I will NOT publish lies in The Democracy Times, go away!",
 				"then": "C"
 			}]
 		},
@@ -224,26 +224,26 @@
 		"D": {
 			"text": "Clever boy, that is the attitude I found sexy in a man.",
 			"options": [{
-				"text": "I hope we don't need to see you again."
+				"text": "I hope we don't get to see you again."
 			}]
 		}
 	},
 	"10-04-1933":{
 		"character": "Jhon",
 		"start": {
-			"text": "Leave me to follow this clue, I can check if this is a trap or a real witness.",
+			"text": "Let me follow this clue, I can check if this is a trap or a real witness.",
 			"options": [{
-				"text": "I think is better to inform about this to Mr. Evans.",
+				"text": "I think is better to inform Mr. Evans about this.",
 				"then": "A"
 				}, {
-				"text": "What if is a trap?, I'm worried about your safety.",
+				"text": "What if it's a trap?, I'm worried about your safety.",
 				"then": "B"
 			}]
 		},
 		"A": {
-			"text": "I would prefer not to do it. I don't trust in them, but is your choice.",
+			"text": "I would prefer not to. I don't trust them, but it's your choice.",
 			"options": [{
-				"text": "I know it, but I'd hate to end up with you hurt or dead. I'll call him.",
+				"text": "I know, but I'd hate to end up with you injured or dead. I'll call him.",
 				"then": "C"
 			},{
 				"text": "I don't trust them either... Go ahead Jhonatan.",
@@ -263,7 +263,7 @@
 		"C": {
 			"text": "I have a bad feeling about this...",
 			"options": [{
-				"text": "We haven't more options, I'll contact him after finishing tomorrow's front page."
+				"text": "We don't have any other options, I'll contact him after finishing tomorrow's front page."
 			}]
 		},
 		"D": {
@@ -278,15 +278,15 @@
 		"start": {
 			"text": "I'm sorry for your lost. Jhonatan will be remembered for his dedicated efforts and commitment to pursue the truth.",
 			"options": [{
-				"text": "Leave us! someone told Andy about that meeting and I think it was one of your guys.",
+				"text": "Leave us! someone told Andy about that meeting and I think it was one of your guys!",
 				"then": "A"
 				}, {
-				"text": "It was my fault, I leaved him to go after it without consulting you.",
+				"text": "It was my fault, I left him to go after him without consulting you.",
 				"then": "B"
 			}]
 		},
 		"A": {
-			"text": "All the people that work in this case were selected by me, all them are respectable people. The pigeon is not on our team Mr. Brown.",
+			"text": "All the people that work in this case were selected by me, all of them are respectable people. The pigeon is not in our team, Mr. Brown.",
 			"options": [{
 				"text": "I can't trust anybody, no more. Leave me alone.",
 				"then": "C"
@@ -309,7 +309,7 @@
 			}]
 		},
 		"D":{
-			"text": "We need to talk with him as fast as possible before Andy find him.",
+			"text": "We need to talk with him as fast as possible before Andy finds him.",
 			"options": [{
 				"text": "I'll give you the information that I have."
 			}]
@@ -320,22 +320,22 @@
 		"start": {
 			"text": "Hi darling, thanks for helping us with that little problem.",
 			"options": [{
-				"text": "I've done with you, please leave us alone.",
+				"text": "I'm done with you, please leave us alone.",
 				"then": "A"
 			}]
 		},
 		"A": {
 			"text": "Sure, but you know it looks like Jhonatan hasn't learned the lesson. I know that he continues asking people about our business.",
 			"options": [{
-				"text": "I talked with him about put an end to this story, but he don't want to.",
+				"text": "I talked with him about putting an end to this story, but he doesn't want to.",
 				"then": "B"
 			}, {
-				"text": "I'll talk with Jhonatan one more time, please don't hurt him.",
+				"text": "I'll talk with Jhonatan one more time, please don't harm him.",
 				"then": "C"
 			}]
 		},
 		"B": {
-			"text": "If you give us some personal information about him, you don't need to talk with us never again.",
+			"text": "If you give us some personal information about him, you won't need to talk with us ever again.",
 			"options": [{
 				"text": "What are you suggesting? this conversation is over!",
 				"then": "C"
