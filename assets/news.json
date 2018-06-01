@@ -1,7 +1,7 @@
 {
 	"001": {
-		"headline": "Speakeasies around all the city",
-		"lead": "Who are the providers of this clandestine places? there are some people saying that the Millonaire Andy Montana is behind this business.",
+		"headline": "Speakeasies all around the city",
+		"lead": "Who are the suppliers of these clandestine places? some people is saying the Millonaire Andy Montana is behind this business.",
 		"tags": ["social", "andy montana", "mafia", "charity"],
 		"by": "Jhonatan Ross",
 		"popularity": 0.6,
@@ -37,7 +37,7 @@
 	},
 	"005": {
 		"headline": "Marta Robinson's storehouse robbed",
-		"lead": "Yesterday around $1,000 dollars in merchandise stolen from the popular store.",
+		"lead": "Yesterday around $1,000 dollars in merchandise were stolen from the popular store.",
 	    "tags": ["sports", "ernest jones", "city"],
 		"by": "Lloyd More",
 		"popularity": 0.5,
@@ -55,7 +55,7 @@
 	},
 	"007": {
 		"headline": "An index of human misery",
-		"lead": "A student of American affairs asked recently what he look for signs that the Depression was passing.",
+		"lead": "A student of American affairs was asked recently what he look for as signs that the Depression was passing.",
 		"tags": ["present", "soup & pastas", "labour party", "strikes"],
 		"by": "Lloyd Moore",
 		"popularity": 0.2,
@@ -64,7 +64,7 @@
 	},
 	"008": {
 		"headline": "What is the truth behind Montana's fortune?",
-		"lead": "It's well known that Montana's restaurants are one of the best places to eat in the city, but these restaurants are his only business?",
+		"lead": "It's well known that Montana's restaurants are one of the best places to eat in the city, but are these restaurants his only business?",
 	    "tags": ["Andy", "annette gray", "undeground boys"],
 		"by": "Victor Griffin",
 		"popularity": 0.3,
@@ -91,7 +91,7 @@
 	},
 	"011": {
 		"headline": "Chaos in Miami",
-		"lead": "After the shooting, there were riots in all the city. The police try to recover the control.",
+		"lead": "After the shooting, there were riots in all the city. The police tries to recover control.",
 		"tags": ["sports", "ernest jones", "city"],
 		"by": "Lloyd More",
 		"popularity": 0.65,
@@ -100,7 +100,7 @@
 	},
 	"012": {
 		"headline": "The possibility of a special session discounted",
-		"lead": "State financial crisis is averted with the decision to issues warrants on tax fund.",
+		"lead": "State financial crisis is averted with the decision to issues warrants on tax funds.",
 		"tags": ["sports", "ernest jones", "city"],
 		"by": "Lloyd More",
 		"popularity": 0.55,
@@ -109,7 +109,7 @@
 	},
 	"013": {
 		"headline": "Riots in Miami",
-		"lead": "More than 30 persons captured, estimated losses round thousands of dollars.",
+		"lead": "More than 30 persons captured, estimated losses around thousands of dollars.",
 		"tags": ["sports", "ernest jones", "city"],
 		"by": "Lloyd More",
 		"popularity": 0.4,
@@ -118,7 +118,7 @@
 	},
 	"014": {
 		"headline": "Bandits take $20,000 in Bank Robbery",
-		"lead": "Floy Hamilton and Companion Sought as suspects.",
+		"lead": "Floy Hamilton and Companion sought as suspects.",
 		"tags": ["sports", "ernest jones", "city"],
 		"by": "Lloyd More",
 		"popularity": 0.43,
@@ -126,8 +126,8 @@
 		"exclusivity": 0.33
 	},
 	"015": {
-		"headline": "Minimum of 25 cents is set in the first year",
-		"lead": "Forty cents would be paid at end of seven years.",
+		"headline": "Minimum Wage of 25 cents set for the first year",
+		"lead": "Forty cents would be paid after seven years.",
 		"tags": ["sports", "ernest jones", "city"],
 		"by": "Lloyd More",
 		"popularity": 0.4,
@@ -162,7 +162,7 @@
 		"exclusivity": 0.15
 	},
 	"019": {
-		"headline": "Money chief issue for world parley",
+		"headline": "Money chief issues for world parley",
 		"lead": "Washington believes topic may dominate talks as a result of our embargo",
 		"tags": ["sports", "ernest jones", "city"],
 		"by": "Lloyd More",
@@ -244,7 +244,7 @@
 	},
 	"028": {
 		"headline": "Jhonatan Ross killed in a gangster assault",
-		"lead": "Ten cars passing by the \"My loved Venecia\" restaurant shooting to the people in there.",
+		"lead": "Ten cars passed by \"My loved Venecia\" restaurant shooting to the people in there.",
 		"tags": ["sports", "ernest jones", "city"],
 		"by": "Lloyd More",
 		"popularity": 0.7,
@@ -333,7 +333,7 @@
 		"exclusivity": 0.1
 	},
 	"038": {
-		"headline": "Find a body of L.A. North in his garage today",
+		"headline": "Body of L.A. North found in his garage today",
 		"lead": "The coroner believes war veteran's death due to gas poisoning.",
 		"tags": ["sports", "ernest jones", "city"],
 		"by": "Lloyd More",
