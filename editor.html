@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editor</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		.scene {
+			width: 800px;
+			padding: 10px;
+			border: 1px solid #777;
+			margin: 0 auto 10px;
+			background: #ffe;
+		}
+		.line {
+			margin-left: 40px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border: 1px solid #555;
+			padding: 5px;
+		}
+		.text {
+			width: 100%;
+			padding: 5px;
+		}
+		textarea {
+			font-style: italic;
+		}
+		.classBox {
+			display: block;
+		}
+		.optionBox {
+			display: inline-flex;
+			margin-bottom: 5px;
+		}
+		.optionBox::before { 
+		    content: "*";
+		}
+		.optionBox textarea {
+			width: 400px;
+			margin: 0px 10px;
+		}
+		.optionBox input {
+			width: 100px;
+			margin: 5px 6px;
+		}
+		#instructions {
+			position: fixed;
+			top: 10px;
+			left: 10px;
+			width: 300px;
+		}
+
+		#exported {
+			float: left;
+		    display: block;
+		    position: fixed;
+		    top: 40px;
+		    right: 0px;
+		    margin: 10px;
+		    width: 300px;
+		    height: 400px;
+			font-style: inherit;
+		}
+	</style>
+</head>
+<body>
+	<p id='instructions'>
+		El json que está cargando se encuentra en "assets/dialogues.json".
+		<br>
+		<br>
+		Modificar cada caja de texto, actualiza automaticamente el json en la derecha.
+		<br>
+		<br>
+		Al terminar se debe copiar el json de la derecha y reemplazar el contenido del archivo: "assets/dialogues.json".
+	</p>
+	<div id='container'>
+	</div>
+	<textarea id='exported' disabled></textarea>
+
+<script type="text/javascript" src="dist/editorBundle.js"></script>
+</body>
+</html>

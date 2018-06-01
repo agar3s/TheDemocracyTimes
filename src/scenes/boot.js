@@ -1,7 +1,7 @@
 
 let awsPrefix = 'https://s3.amazonaws.com/agar3s-assets/democracyTimes/'
-//const env = 'PRODUCTION'
-const env = 'DEV'
+const env = 'PRODUCTION'
+//const env = 'DEV'
 
 export default class BootScene extends Phaser.Scene {
   constructor (props) {
