@@ -120,6 +120,9 @@ export default class BootScene extends Phaser.Scene {
 
     // audio
     this.load.audio('amazingBackgroundMusic', urlBase+'assets/sounds/WalkingAlong.ogg')
+    this.load.audio('continueSound', urlBase+'assets/sounds/continue.ogg')
+    this.load.audio('grabPaperFrontPageSound', urlBase+'assets/sounds/grabFromFrontPage.ogg')
+    this.load.audio('grabPaperDesktopSound', urlBase+'assets/sounds/grabFromDesktop.ogg')
 
 
     // comic strips

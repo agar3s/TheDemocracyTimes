@@ -46,7 +46,10 @@ export default class NewsItem {
     this.container.setInteractive(new Phaser.Geom.Rectangle(0, 0, this.geometry.width, this.geometry.height), Phaser.Geom.Rectangle.Contains)
     this.scene.input.setDraggable(this.container)
 
+    this.shadow = this.scene.add.graphics()
+    this.shadow.setAlpha(0)
     this.graphics = this.scene.add.graphics()
+    this.container.add(this.shadow)
     this.container.add(this.graphics)
     this.container.x = this.geometry.x
     this.container.y = this.geometry.y
@@ -60,10 +63,18 @@ export default class NewsItem {
     this.listeners = []
 
     this.drawClip()
+
+    this.container.drawShadow = (alpha) => {
+      this.shadow.setAlpha(alpha)
+    }
   }
 
 
   drawClip () {
+    this.shadow.clear()
+    this.shadow.fillStyle(0x0, 1)
+    this.shadow.fillRect(10, 10, this.clipDimensions.width, this.clipDimensions.height)
+    
     this.graphics.clear()
 
     this.graphics.lineStyle(1, 0xc69d7f, 1)

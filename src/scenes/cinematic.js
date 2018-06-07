@@ -19,6 +19,7 @@ class CinematicScene extends GeneralScene {
       text: this.getText('next'),
       onClick: () => {
         //this.changeToScene('officeScene')
+        this.sound.add('continueSound').play()
         this.next()
       },
       scale: 1,
