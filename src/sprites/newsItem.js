@@ -123,6 +123,7 @@ export default class NewsItem {
     this.body.draw(this.clipDimensions.columns)
   }
 
+
   update() {
 
   }

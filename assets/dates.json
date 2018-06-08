@@ -320,5 +320,17 @@
 		"number": "ending 9 of 9",
 		"key": "9",
 		"end": true
+	},
+
+	"demo": {
+		"date": {"day": 29, "month": 5, "year": 1933},
+		"dateString": "June 12th, 1933",
+		"title": "incrimination",
+		"code": "AAAAABAAB",
+		"monologue": "fake data",
+		"dialogue": "12-06-1933",
+		"news": ["001", "002", "003", "004", "005", "006"],
+		"layouts": ["02", "01", "03", "04"],
+		"nextRules": {"default":"end10"}
 	}
 }

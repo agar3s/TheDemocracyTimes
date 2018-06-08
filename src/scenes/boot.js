@@ -1,7 +1,7 @@
 
 let awsPrefix = 'https://s3.amazonaws.com/agar3s-assets/democracyTimes/'
-const env = 'PRODUCTION'
-//const env = 'DEV'
+//const env = 'PRODUCTION'
+const env = 'DEV'
 
 export default class BootScene extends Phaser.Scene {
   constructor (props) {
@@ -72,7 +72,7 @@ export default class BootScene extends Phaser.Scene {
       this.cache.bitmapFont.entries.get('vtt24').data.lineHeight = 22
 
 
-      this.scene.start('menuScene')
+      this.scene.start('editScene')
 
 
 
@@ -120,7 +120,8 @@ export default class BootScene extends Phaser.Scene {
 
     // audio
     this.load.audio('amazingBackgroundMusic', urlBase+'assets/sounds/WalkingAlong.ogg')
-    this.load.audio('continueSound', urlBase+'assets/sounds/continue.ogg')
+    this.load.audio('continueSound', urlBase+'assets/sounds/next.ogg')
+    this.load.audio('turnPaper', urlBase+'assets/sounds/next.ogg')
     this.load.audio('grabPaperFrontPageSound', urlBase+'assets/sounds/grabFromFrontPage.ogg')
     this.load.audio('grabPaperDesktopSound', urlBase+'assets/sounds/grabFromDesktop.ogg')
 

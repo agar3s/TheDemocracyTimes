@@ -6,7 +6,7 @@ class DateManager {
     this.setLanguage('en')
     this.statusManager = getStatusManager()
     //this.setDate("06-02-1933")
-    this.setDate("06-02-1933")
+    this.setDate("demo")
   }
 
   setLanguage (language) {

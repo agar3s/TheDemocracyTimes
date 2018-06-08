@@ -78,6 +78,7 @@ export default class Frontpage {
       })
       button.setData('onClick', () => {
         if (button.getData('selected')) return
+        this.scene.sound.add('turnPaper').play()
         this.loadLayout(key, i)
         for (var i = 0; i < this.layoutButtons.length; i++) {
           let otherButton = this.layoutButtons[i]
