@@ -30,8 +30,8 @@ export default class NewsItem {
 
     this.getRandomCoords = () => {
       return {
-        x: screenBounds.paddingLateral + screenBounds.width/2 + ~~((screenBounds.width/2 -screenBounds.paddingLateral - this.clipDimensions.width)*Math.random()),
-        y: screenBounds.paddingVertical + ~~((screenBounds.height - this.clipDimensions.height)*Math.random())
+        x: screenBounds.x + (screenBounds.width - format.width * this.ratio)*Math.random(),
+        y: screenBounds.y + (screenBounds.height - format.height * this.ratio)*Math.random()
       }
     }
     this.geometry = new Phaser.Geom.Rectangle(

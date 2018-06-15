@@ -46,7 +46,10 @@ export default class GeneralScene extends Phaser.Scene {
       }
     })
     this.cameras.main.fadeIn(timeToFade)
+    this.drawBackground()
+  }
 
+  drawBackground () {
     // check layout
     var graphics = this.add.graphics()
     graphics.fillStyle(this.background, 1)

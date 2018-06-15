@@ -2,6 +2,8 @@
 export default class Frontpage {
   constructor (config) {
     this.scene = config.scene
+    this.x = config.x
+    this.y = config.y
     let screenBounds = config.screenBounds
     this.layouts = config.layouts
     // check layout
@@ -14,28 +16,25 @@ export default class Frontpage {
     this.header = 0.4
     this.ratio = (screenBounds.height - screenBounds.paddingVertical*2)/5
 
-    this.paddingTop = ((screenBounds.height - screenBounds.paddingVertical*2) - (height + this.header) * this.ratio)/2 + screenBounds.paddingVertical
-    this.paddingLeft = (screenBounds.width - screenBounds.paddingLateral)/2 - (width * this.ratio)
-    this.paddingTop = ~~this.paddingTop
-    this.paddingLeft = ~~this.paddingLeft
+    this.x -= width * this.ratio + 20
 
     // front page
     graphics.fillStyle(0xffe1cb, 1)
     //graphics.fillStyle(0xe7d1a8, 1)
-    graphics.fillRect(this.paddingLeft-10, this.paddingTop-10, width * this.ratio + 20, (height + this.header) * this.ratio + 20)
-    graphics.strokeRect(this.paddingLeft, this.paddingTop, width * this.ratio, (height + this.header) * this.ratio)
+    graphics.fillRect(this.x-10, this.y-10, width * this.ratio + 20, (height + this.header) * this.ratio + 20)
+    graphics.strokeRect(this.x, this.y, width * this.ratio, (height + this.header) * this.ratio)
     
     // this.header
-    let logo = this.scene.add.sprite(this.paddingLeft+width*this.ratio*0.5, this.paddingTop + 5, 'head')
+    let logo = this.scene.add.sprite(this.x+width*this.ratio*0.5, this.y + 5, 'head')
     logo.setOrigin(0.5, 0)
     let widthScale = ((width*0.6)*this.ratio)/255
     logo.setScale(widthScale)
     logo.setTint(0x5f3618)
     graphics.beginPath()
-    graphics.moveTo(this.paddingLeft, this.paddingTop+this.header*this.ratio - this.ratio/14)
-    graphics.lineTo(width*this.ratio + this.paddingLeft, this.paddingTop+this.header*this.ratio - this.ratio/14)
-    graphics.moveTo(this.paddingLeft, this.paddingTop+this.header*this.ratio - this.ratio/35)
-    graphics.lineTo(width*this.ratio + this.paddingLeft, this.paddingTop+this.header*this.ratio - this.ratio/35)
+    graphics.moveTo(this.x, this.y+this.header*this.ratio - this.ratio/14)
+    graphics.lineTo(width*this.ratio + this.x, this.y+this.header*this.ratio - this.ratio/14)
+    graphics.moveTo(this.x, this.y+this.header*this.ratio - this.ratio/35)
+    graphics.lineTo(width*this.ratio + this.x, this.y+this.header*this.ratio - this.ratio/35)
     graphics.strokePath()
 
 
@@ -44,7 +43,7 @@ export default class Frontpage {
     graphics.lineStyle(0.5, 0x226622, 0.08)
     for (var j = 0; j < 8; j++) {
       for (var i = 0; i < 6; i++) {
-        graphics.strokeRect(this.paddingLeft + i*this.ratio*0.5, this.paddingTop + (j+this.header*2)*this.ratio*0.5, this.ratio*0.5, this.ratio*0.5)
+        graphics.strokeRect(this.x + i*this.ratio*0.5, this.y + (j+this.header*2)*this.ratio*0.5, this.ratio*0.5, this.ratio*0.5)
       }
     }
 
@@ -113,8 +112,8 @@ export default class Frontpage {
       let clip = this.layout[i]
       let space = {
         rect: new Phaser.Geom.Rectangle(
-          this.paddingLeft + clip.i*this.ratio,
-          this.paddingTop + (clip.j+this.header)*this.ratio,
+          this.x + clip.i*this.ratio,
+          this.y + (clip.j+this.header)*this.ratio,
           clip.w*this.ratio,
           clip.h*this.ratio
         ),
