@@ -105,8 +105,8 @@ class EditScene extends GeneralScene {
       y: 100,
       scene: this,
       type: 'folder',
-      width: 191,
-      height: 259
+      width: 191*1.8,
+      height: 259*1.8
     })
 
     var cursors = this.input.keyboard.createCursorKeys()

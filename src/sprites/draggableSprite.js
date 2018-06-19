@@ -10,6 +10,8 @@ export default class DraggableSprite {
     this.type = config.type
 
     this.container = this.scene.add.container(this.width, this.height)
+    this.container.x = this.x
+    this.container.y = this.y
     this.container.setData('item', this)
     this.container.setData('type', this.type)
     this.container.setData('draggable', true)
