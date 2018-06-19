@@ -110,6 +110,10 @@ export default class BootScene extends Phaser.Scene {
     this.load.spritesheet('evans', urlBase+'assets/evans.png', { frameWidth: 55, frameHeight: 104 })
     this.load.spritesheet('charlie', urlBase+'assets/charlie.png', { frameWidth: 63, frameHeight: 100 })
     this.load.spritesheet('desktop', urlBase+'assets/desktop.png', { frameWidth: 320, frameHeight: 51 })
+    this.load.spritesheet('clock', urlBase+'assets/clock.png', { frameWidth: 288, frameHeight: 303 })
+    this.load.spritesheet('arrows', urlBase+'assets/arrows.png', { frameWidth: 137, frameHeight: 10 })
+    
+    this.load.spritesheet('folder1', urlBase+'assets/folder.png', { frameWidth: 191, frameHeight: 259 })
 
     // mini layouts
     this.load.spritesheet('layout01', urlBase+'assets/layouts/01.png', { frameWidth: 88, frameHeight: 127 })
@@ -124,7 +128,7 @@ export default class BootScene extends Phaser.Scene {
     this.load.audio('turnPaper', urlBase+'assets/sounds/next.ogg')
     this.load.audio('grabPaperFrontPageSound', urlBase+'assets/sounds/grabFromFrontPage.ogg')
     this.load.audio('grabPaperDesktopSound', urlBase+'assets/sounds/grabFromDesktop.ogg')
-
+    this.load.audio('tick', urlBase+'assets/sounds/ticking-noise.ogg')
 
     // comic strips
     this.load.spritesheet('strip1', urlBase+'assets/strip/strip1_sepia2.png', { frameWidth: 446, frameHeight: 360 })

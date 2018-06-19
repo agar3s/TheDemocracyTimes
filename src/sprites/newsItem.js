@@ -1,9 +1,10 @@
-
+import DraggableSprite from './draggableSprite'
 import NewsBody from './newsBody'
 
-export default class NewsItem {
+export default class NewsItem extends DraggableSprite {
   constructor (config, newsData) {
-    this.scene = config.scene
+    super(config)
+
     this.ratio = config.ratio
 
     let screenBounds = config.screenBounds
@@ -34,25 +35,9 @@ export default class NewsItem {
         y: screenBounds.y + (screenBounds.height - format.height * this.ratio)*Math.random()
       }
     }
-    this.geometry = new Phaser.Geom.Rectangle(
-      this.getRandomCoords().x, this.getRandomCoords().y,
-      format.width * this.ratio,
-      format.height * this.ratio
-    )
 
-    this.container = this.scene.add.container(this.geometry.width, this.geometry.height)
-    this.container.setData('type', 'newsitem')
-    this.container.setData('item', this)
-    this.container.setInteractive(new Phaser.Geom.Rectangle(0, 0, this.geometry.width, this.geometry.height), Phaser.Geom.Rectangle.Contains)
-    this.scene.input.setDraggable(this.container)
-
-    this.shadow = this.scene.add.graphics()
-    this.shadow.setAlpha(0)
-    this.graphics = this.scene.add.graphics()
-    this.container.add(this.shadow)
-    this.container.add(this.graphics)
-    this.container.x = this.geometry.x
-    this.container.y = this.geometry.y
+    this.container.x = this.getRandomCoords().x
+    this.container.y = this.getRandomCoords().y
 
     this.body = new NewsBody({
       graphics: this.scene.add.graphics(),
@@ -62,19 +47,23 @@ export default class NewsItem {
 
     this.listeners = []
 
-    this.drawClip()
-
-    this.container.drawShadow = (alpha) => {
-      this.shadow.setAlpha(alpha)
-    }
+    this.paperSound = this.scene.sound.add('grabPaperDesktopSound')
+    this.paperSound.allowMultiple = true
+    this.paperSound.addMarker({name:'0',duration:0.486, start:0})
+    this.paperSound.addMarker({name:'1',duration:(0.786-0.595), start:0.595})
+    this.paperSound.addMarker({name:'2',duration:(1.322-1.136), start:1.136})
+    this.paperSound.addMarker({name:'3',duration:(2.053-1.846), start:1.846}) // me gusta para continue
+    this.paperSound.addMarker({name:'4',duration:(2.791-2.660), start:2.660})
+    this.paperSound.addMarker({name:'5',duration:(3.091-2.834), start:2.834})
+    this.paperSound.addMarker({name:'6',duration:(3.424-3.233), start:3.233})
+    this.draw()
   }
 
 
-  drawClip () {
-    this.shadow.clear()
-    this.shadow.fillStyle(0x0, 1)
-    this.shadow.fillRect(10, 10, this.clipDimensions.width, this.clipDimensions.height)
-    
+  draw () {
+    super.draw()
+    if(!this.body) return
+
     this.graphics.clear()
 
     this.graphics.lineStyle(1, 0xc69d7f, 1)
@@ -124,10 +113,6 @@ export default class NewsItem {
   }
 
 
-  update() {
-
-  }
-
   resetPosition() {
     this.fitTo()
     let coords = this.getRandomCoords()
@@ -152,7 +137,6 @@ export default class NewsItem {
     }
     this.notifyRemoved()
     this.layoutIndex = i
-    this.geometry = rectangle
     this.container.input.hitArea = new Phaser.Geom.Rectangle(0, 0, format.width * this.ratio, format.height * this.ratio)
     this.container.x = rectangle.x
     this.container.y = rectangle.y
@@ -162,9 +146,11 @@ export default class NewsItem {
     this.clipDimensions.leadFont = format.leadFont
     this.clipDimensions.columns = format.columns
     this.clipDimensions.pics = format.pics
+    this.width = this.clipDimensions.width
+    this.height = this.clipDimensions.height
     this.headlineBitmap.destroy()
     this.leadBitmap.destroy()
-    this.drawClip()
+    this.draw()
   }
 
 
@@ -182,6 +168,34 @@ export default class NewsItem {
     for (var i = this.listeners.length - 1; i >=0 ; i--) {
       this.listeners.splice(i, 1)[0]()
     }
+  }
+
+  onDragStart(pointer) {
+    super.onDragStart(pointer)
+    let number = ~~(Math.random()*7)
+    this.paperSound.play(`${number}`)
+  }
+
+  onDrag(pointer, dragX, dragY) {
+    super.onDrag(pointer, dragX, dragY)
+    let mainCamera = this.scene.cameras.main
+    let inside = this.scene.frontpage.checkItem({
+      x: pointer.x + mainCamera.scrollX,
+      y: pointer.y + mainCamera.scrollY
+    })
+    if (inside) {
+      this.container.setAlpha(0.8)
+      this.container.drawShadow(0.3)
+    } else {
+      this.container.setAlpha(1)
+      this.container.drawShadow(0.4)
+    }
+  }
+
+  onDragEnd (pointer) {
+    super.onDragEnd(pointer)
+    this.scene.frontpage.attachItem(this)
+    this.container.setAlpha(1)
   }
   
   static WrapBitmapText (scene, x, y, font, text, maxWidth) {

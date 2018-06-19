@@ -1,13 +1,12 @@
 import GeneralScene from './scene'
 import Frontpage from '../sprites/frontpage'
 import NewsItem from '../sprites/newsitem'
+import PocketWatch from '../sprites/pocketWatch'
+import Folder from '../sprites/folder'
 
 class EditScene extends GeneralScene {
   constructor () {
     super({key: 'editScene'})
-  }
-
-  preload () {
   }
 
   init() {
@@ -60,10 +59,8 @@ class EditScene extends GeneralScene {
       x: this.screenBounds.width*0.5,
       y: this.screenBounds.height*0.05
     })
-    
 
     this.registerEvents(ratio)
-
 
     // news to publish
     // news basic distribution
@@ -83,23 +80,34 @@ class EditScene extends GeneralScene {
           width: this.baseBounds.width*0.5,
           height: this.screenBounds.height - this.screenBounds.paddingVertical*2
         },
-        ratio
+        ratio,
+        width: ratio*formats['clip'].width,
+        height: ratio*formats['clip'].height,
+        type: 'newsitem'
       },
       newsData[i]
       ))
     }
-    this.paperSound = this.sound.add('grabPaperDesktopSound')
-    this.paperSound.allowMultiple = true
-    this.paperSound.addMarker({name:'0',duration:0.486, start:0})
-    this.paperSound.addMarker({name:'1',duration:(0.786-0.595), start:0.595})
-    this.paperSound.addMarker({name:'2',duration:(1.322-1.136), start:1.136})
-    this.paperSound.addMarker({name:'3',duration:(2.053-1.846), start:1.846}) // me gusta para continue
-    this.paperSound.addMarker({name:'4',duration:(2.791-2.660), start:2.660})
-    this.paperSound.addMarker({name:'5',duration:(3.091-2.834), start:2.834})
-    this.paperSound.addMarker({name:'6',duration:(3.424-3.233), start:3.233})
 
+    // watch
+    this.pocketWatch = new PocketWatch({
+      x: 410,
+      y: 540,
+      scene: this,
+      type: 'clock',
+      width: 144,
+      height: 151
+    })
 
-
+    // folders
+    this.folder1 = new Folder({
+      x: 120,
+      y: 100,
+      scene: this,
+      type: 'folder',
+      width: 191,
+      height: 259
+    })
 
     var cursors = this.input.keyboard.createCursorKeys()
     var controlConfig = {
@@ -116,28 +124,6 @@ class EditScene extends GeneralScene {
     this.controls = new Phaser.Cameras.Controls.SmoothedKeyControl(controlConfig)
     this.cameras.main.setScroll(this.baseBounds.width*0.3, 0)
 
-
-    var graphics = this.add.graphics()
-    graphics.lineStyle(1, 0xff00ff, 1)
-    graphics.fillStyle(0,0x0, 0)
-    
-    // desktop
-    graphics.strokeRect(
-      this.baseBounds.width*0.3 + 15, 15,
-      this.baseBounds.width - 30, this.baseBounds.height - 30
-    )
-    graphics.strokeRect(
-      this.baseBounds.width*0.3, 15,
-      this.baseBounds.width*0.5, this.baseBounds.height - 30
-    )
-
-    graphics.lineStyle(1, 0x00ffff, 1)
-    graphics.strokeRect(
-      this.screenBounds.width*0.5,
-      this.screenBounds.paddingVertical,
-      this.baseBounds.width*0.5,
-      this.screenBounds.height - this.screenBounds.paddingVertical*2
-    )
   }
 
   saveFrontPage() {
@@ -148,8 +134,11 @@ class EditScene extends GeneralScene {
     this.statusManager.setPublication(news, this.frontpage.calculateStats())
   }
 
+
   update (time, dt) {
     this.controls.update(dt)
+
+    this.pocketWatch.update(dt)
   }
 
   registerEvents(ratio) {
@@ -158,58 +147,33 @@ class EditScene extends GeneralScene {
     let dragOrigin = {x: mainCamera.scrollX,y: mainCamera.scrollY}
 
     this.input.on('dragstart', (pointer, container) => {
-      if(container.getData('type') === 'newsitem') {
-        let number = ~~(Math.random()*7)
-        this.paperSound.play(`${number}`)
-        let currentIndex = this.children.list.indexOf(container)
-        if (currentIndex !== -1 && currentIndex < this.children.list.length - 1) {
-            this.children.list.splice(currentIndex, 1)
-            this.children.list.push(container)
-        }
-        container.x -= 10
-        container.y -= 10
-        container.drawShadow(0.4)
+      if(container.getData('draggable')){
+        let item = container.getData('item')
+        item.onDragStart(pointer)
       }else {
-        dragOrigin = {x: mainCamera.scrollX,y: mainCamera.scrollY}
+        dragOrigin = {x: mainCamera.scrollX, y: mainCamera.scrollY}
       }
     }, this)
 
     this.input.on('drag', (pointer, container, dragX, dragY) => {
-      if(container.getData('type') === 'newsitem') {
-        container.x = dragX - 10
-        container.y = dragY - 10
-        let inside = this.frontpage.checkItem({
-          x: pointer.x + mainCamera.scrollX,
-          y: pointer.y + mainCamera.scrollY
-        })
-        if (inside) {
-          container.setAlpha(0.8)
-          container.drawShadow(0.3)
-        } else {
-          container.setAlpha(1)
-          container.drawShadow(0.4)
-        }
+      if(container.getData('draggable')){
+        let item = container.getData('item')
+        item.onDrag(pointer, dragX, dragY)
       } else {
         dragX = dragOrigin.x - dragX
         if(dragX<0) dragX = 0
         if(dragX>this.screenBounds.width-this.baseBounds.width) dragX = this.screenBounds.width-this.baseBounds.width
         mainCamera.setScroll(dragX, 0)
-        console.log(dragX)
       }
     }, this)
 
     this.input.on('dragend', (pointer, container) => {
-      if(container.getData('type') === 'newsitem') {
-        container.drawShadow(0)
-        container.x += 10
-        container.y += 10
-        this.frontpage.attachItem(container.getData('item'))
-        container.setAlpha(1)
+      if(container.getData('draggable')){
+        let item = container.getData('item')
+        item.onDragEnd(pointer)
       }
     }, this)
   }
-
-
 }
 
 export {
