@@ -1,22 +1,22 @@
-import NewsItem from '../sprites/newsitem'
+import NewsItem from '../newsitem'
 
 export default class File {
   constructor (config) {
     this.scene = config.scene
-    this.x = config.x
-    this.y = config.y
+    this.x = config.x + ~~(Math.random()*10)
+    this.y = config.y + ~~(Math.random()*10)
+    this.index = config.index
 
     this.width = config.width
     this.height = config.height
     this.graphics = this.scene.add.graphics()
     this.container = this.scene.add.container(this.width, this.height)
-    this.container.x = this.x + ~~(Math.random()*10)
-    this.container.y = this.y + ~~(Math.random()*10)
-    this.container.angle += (Math.random()-Math.random())*1
+    this.container.x = this.x
+    this.container.y = this.y
     this.container.add(this.graphics)
 
     this.parent = config.parent
-    this.parent.add(this.container)
+    this.parent.container.add(this.container)
     this.draw()
   }
 
@@ -36,22 +36,21 @@ export default class File {
     this.graphics.strokePath()
   }
 
-  addNextPage() {
-    let pageButton = this.scene.add.container(30, 30)
-    pageButton.x = this.width-60
-    pageButton.y = this.height-60
-    pageButton.setInteractive(new Phaser.Geom.Rectangle(this.x,this.y,30,30), Phaser.Geom.Rectangle.Contains)
-    pageButton.setData('type', 'button')
-    pageButton.setData('onClick', ()=>{
-      console.log('onClick')
-    })
-    pageButton.setData('onHover', ()=>{})
-    pageButton.setData('onOut', ()=>{})
+  addInteractiveObject(gameObject, onClickData) {
+    gameObject.setInteractive(new Phaser.Geom.Rectangle(0, 0, gameObject.width, gameObject.height), Phaser.Geom.Rectangle.Contains)
 
-    let debug = this.scene.add.graphics()
-    debug.fillStyle(0,1)
-    debug.fillRect(this.x,this.y,30,30)
-    pageButton.add(debug)
-    this.parent.add(pageButton)
+    gameObject.setData('type', 'button')
+    gameObject.setData('onClick', () => {
+      this.parent.notifyEvent(onClickData)
+    })
+    gameObject.setData('onHover', () => {})
+    gameObject.setData('onOut', () => {})
+
+    // debug
+    this.graphics.fillStyle(0xc69d7f,0.4)
+    this.graphics.fillRect(gameObject.x-gameObject.width/2-this.x, gameObject.y-this.y, gameObject.width, gameObject.height)
+    // end debug
+
+    this.parent.addToInteractiveLayer(this.index, gameObject)
   }
 }

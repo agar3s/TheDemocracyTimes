@@ -52,52 +52,15 @@ export default class Frontpage {
     this.layoutGraphics = this.scene.add.graphics()
 
     let layoutOptions = config.availableLayouts
-    this.setLayoutOptions(layoutOptions)
+    this.currentLayout = ''
     this.loadLayout(layoutOptions[0])
-
-  }
-
-  setLayoutOptions (options) {
-    this.layoutButtons = []
-    for (var i = 0; i < options.length; i++) {
-      let key = options[i]
-      let button = this.scene.add.sprite(70, 100 + i*120, `layout${key}`)
-      button.setScale(0.8)
-      button.setAlpha(0.6)
-      button.setInteractive()
-      button.setData('type', 'button')
-      button.setData('selected', false)
-      button.setData('onHover', ()=>{
-        if (button.getData('selected')) return
-        button.setAlpha(0.8).setScale(0.85)
-      })
-      button.setData('onOut', () => {
-        if (button.getData('selected')) return
-        button.setAlpha(0.6).setScale(0.8)
-      })
-      button.setData('onClick', () => {
-        if (button.getData('selected')) return
-        this.scene.sound.add('turnPaper').play()
-        this.loadLayout(key, i)
-        for (var i = 0; i < this.layoutButtons.length; i++) {
-          let otherButton = this.layoutButtons[i]
-          otherButton.setAlpha(0.6).setScale(0.8)
-          otherButton.setData('selected', false)
-        }
-        button.setScale(0.9).setAlpha(1)
-        button.setData('selected', true)
-      })
-      this.layoutButtons.push(button)
-    }
   }
 
 
   loadLayout(key) {
-    this.layout = this.layouts[key]
-    this.layoutButtons.forEach((button) => {
-      if(button.texture.key!==`layout${key}`) return
-      button.setScale(0.9).setAlpha(1).setData('selected', true)
-    })
+    if(key == this.currentLayout) return
+    this.currentLayout = key
+    this.layout = this.layouts[this.currentLayout]
 
     // if newspaces is not empty save the newsItemContainer
     let oldNews = this.newspaces.map((space) => {

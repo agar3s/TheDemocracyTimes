@@ -100,6 +100,7 @@ class EditScene extends GeneralScene {
     })
 
     // folders
+    this.folderHandle = this.folderHandle.bind(this)
     this.folder1 = new Folder({
       x: 120,
       y: 100,
@@ -108,6 +109,7 @@ class EditScene extends GeneralScene {
       width: 191*1.8,
       height: 259*1.8
     })
+    this.folder1.addInteractionListener(this.folderHandle)
 
     var cursors = this.input.keyboard.createCursorKeys()
     var controlConfig = {
@@ -173,6 +175,14 @@ class EditScene extends GeneralScene {
         item.onDragEnd(pointer)
       }
     }, this)
+  }
+
+  folderHandle (event) {
+    switch(event.type) {
+      case 'changeLayout':
+        this.frontpage.loadLayout(event.layout)
+      break
+    }
   }
 }
 

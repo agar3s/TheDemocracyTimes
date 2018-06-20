@@ -1,14 +1,15 @@
 import DraggableSprite from './draggableSprite'
-import File from './file'
+import File from './files/file'
+import LayoutFile from './files/layoutFile'
 
 export default class Folder extends DraggableSprite {
   constructor (config) {
     super(config)
     let image = this.scene.add.sprite(0, 0, 'folder1').setOrigin(0).setScale(1.8)
-    //this.graphics.fillRect(0, 0, this.width, this.height)
     this.container.add(image)
-    this.container.setData('onClick', this.onClick)
+    this.listeners = []
 
+    this.interactiveObjects = {'always': []}
     // add file
     this.files = []
     this.addFile({})
@@ -23,23 +24,21 @@ export default class Folder extends DraggableSprite {
 
   }
 
-  onClick() {
-    console.log('click me!')
-  }
-
   addFile (props) {
-    let file = new File({
+    let pageIndex = this.files.length
+    this.interactiveObjects[`${pageIndex}`] = []
+
+    let file = new LayoutFile({
       scene: this.scene,
       x: 10,
       y: 10,
       width: this.width,
       height: this.height,
-      parent: this.container,
-      index: this.files.length,
+      parent: this,
+      index: pageIndex,
       props: props
     })
     this.files.push(file)
-    console.log(this.container)
   }
 
   addNextPage() {
@@ -49,6 +48,7 @@ export default class Folder extends DraggableSprite {
     this.nextPageButton.setInteractive(new Phaser.Geom.Rectangle(10,10,30,30), Phaser.Geom.Rectangle.Contains)
     this.nextPageButton.setData('type', 'button')
     this.nextPageButton.setData('onClick', ()=>{
+      this.hideFile(this.fileIndex)
       if((++this.fileIndex)>=this.files.length) {
         this.fileIndex = 0
       }
@@ -56,12 +56,42 @@ export default class Folder extends DraggableSprite {
     })
     this.nextPageButton.setData('onHover', ()=>{})
     this.nextPageButton.setData('onOut', ()=>{})
-
-    this.container.add(this.nextPageButton)
+    this.addToInteractiveLayer('always', this.nextPageButton)
   }
 
   moveToFile(index) {
     this.container.bringToTop(this.files[index].container)
-    this.container.bringToTop(this.nextPageButton)
+
+    this.interactiveObjects[`${index}`].forEach((gameObject) => {
+      gameObject.setAlpha(1)
+      this.container.bringToTop(gameObject)
+    })
+    this.interactiveObjects['always'].forEach((gameObject) => {
+      this.container.bringToTop(gameObject)
+    })
+  }
+
+  hideFile(index) {
+    this.interactiveObjects[`${index}`].forEach((gameObject) => {
+      gameObject.setAlpha(0)
+    })
+  }
+
+  addToInteractiveLayer(pageIndex, gameObject) {
+    if(pageIndex!='always'){
+      gameObject.setAlpha(0)
+    }
+    this.interactiveObjects[`${pageIndex}`].push(gameObject)
+    this.container.add(gameObject)
+  }
+
+  addInteractionListener(listener) {
+    this.listeners.push(listener)
+  }
+
+  notifyEvent (data) {
+    this.listeners.forEach((listener)=>{
+      listener(data)
+    })
   }
 }
