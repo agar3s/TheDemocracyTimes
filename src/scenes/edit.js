@@ -57,7 +57,10 @@ class EditScene extends GeneralScene {
       layouts: this.layouts,
       availableLayouts: this.dateManager.getLayouts(),
       x: this.screenBounds.width*0.5,
-      y: this.screenBounds.height*0.05
+      y: this.screenBounds.height*0.05,
+      width: 3 * ratio + 20,
+      height: 4.4 * ratio + 20,
+      type: 'frontpage'
     })
 
     this.registerEvents(ratio)

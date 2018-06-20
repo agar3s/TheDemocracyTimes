@@ -1,15 +1,16 @@
+import DraggableSprite from './draggableSprite'
 
-export default class Frontpage {
+export default class Frontpage extends DraggableSprite {
   constructor (config) {
-    this.scene = config.scene
-    this.x = config.x
-    this.y = config.y
+    super(config)
+
     let screenBounds = config.screenBounds
     this.layouts = config.layouts
+    
     // check layout
-    var graphics = this.scene.add.graphics()
-    graphics.lineStyle(1, 0xc69d7f, 1)
-    graphics.fillStyle(0x111111, 1)
+    //var graphics = this.scene.add.graphics()
+    this.graphics.lineStyle(1, 0xc69d7f, 1)
+    //graphics.fillStyle(0x111111, 1)
     
     let width = 3
     let height = 4
@@ -19,31 +20,33 @@ export default class Frontpage {
     this.x -= width * this.ratio + 20
 
     // front page
-    graphics.fillStyle(0xffe1cb, 1)
+    this.graphics.fillStyle(0xffe1cb, 1)
     //graphics.fillStyle(0xe7d1a8, 1)
-    graphics.fillRect(this.x-10, this.y-10, width * this.ratio + 20, (height + this.header) * this.ratio + 20)
-    graphics.strokeRect(this.x, this.y, width * this.ratio, (height + this.header) * this.ratio)
+    this.graphics.fillRect(0, 0, width * this.ratio + 20, (height + this.header) * this.ratio + 20)
+    this.graphics.strokeRect(10, 10, width * this.ratio, (height + this.header) * this.ratio)
     
     // this.header
-    let logo = this.scene.add.sprite(this.x+width*this.ratio*0.5, this.y + 5, 'head')
+    let logo = this.scene.add.sprite(10+width*this.ratio*0.5, 15, 'head')
     logo.setOrigin(0.5, 0)
     let widthScale = ((width*0.6)*this.ratio)/255
     logo.setScale(widthScale)
     logo.setTint(0x5f3618)
-    graphics.beginPath()
-    graphics.moveTo(this.x, this.y+this.header*this.ratio - this.ratio/14)
-    graphics.lineTo(width*this.ratio + this.x, this.y+this.header*this.ratio - this.ratio/14)
-    graphics.moveTo(this.x, this.y+this.header*this.ratio - this.ratio/35)
-    graphics.lineTo(width*this.ratio + this.x, this.y+this.header*this.ratio - this.ratio/35)
-    graphics.strokePath()
+    this.container.add(logo)
+
+    this.graphics.beginPath()
+    this.graphics.moveTo(10, 10+this.header*this.ratio - this.ratio/14)
+    this.graphics.lineTo(width*this.ratio + 10, 10+this.header*this.ratio - this.ratio/14)
+    this.graphics.moveTo(10, 10+this.header*this.ratio - this.ratio/35)
+    this.graphics.lineTo(width*this.ratio + 10, 10+this.header*this.ratio - this.ratio/35)
+    this.graphics.strokePath()
 
 
     // grid layout
     this.newsAttached = 0
-    graphics.lineStyle(0.5, 0x226622, 0.08)
+    this.graphics.lineStyle(0.5, 0x226622, 0.08)
     for (var j = 0; j < 8; j++) {
       for (var i = 0; i < 6; i++) {
-        graphics.strokeRect(this.x + i*this.ratio*0.5, this.y + (j+this.header*2)*this.ratio*0.5, this.ratio*0.5, this.ratio*0.5)
+        this.graphics.strokeRect(10 + i*this.ratio*0.5, 10 + (j+this.header*2)*this.ratio*0.5, this.ratio*0.5, this.ratio*0.5)
       }
     }
 
@@ -54,6 +57,8 @@ export default class Frontpage {
     let layoutOptions = config.availableLayouts
     this.currentLayout = ''
     this.loadLayout(layoutOptions[0])
+
+    this.container.add(this.layoutGraphics)
   }
 
 
@@ -75,11 +80,15 @@ export default class Frontpage {
       let clip = this.layout[i]
       let space = {
         rect: new Phaser.Geom.Rectangle(
-          this.x + clip.i*this.ratio,
-          this.y + (clip.j+this.header)*this.ratio,
+          this.container.x + clip.i*this.ratio+10,
+          this.container.y + (clip.j+this.header)*this.ratio+10,
           clip.w*this.ratio,
           clip.h*this.ratio
         ),
+        relativeCoords: {
+          x: clip.i*this.ratio+10,
+          y: (clip.j+this.header)*this.ratio+10,
+        },
         hover: false,
         filled: undefined,
         format: `${clip.w}x${clip.h}`,
@@ -107,6 +116,43 @@ export default class Frontpage {
     this.setNewsAttached(i)
   }
 
+  onDragStart (pointer) {
+    super.onDragStart(pointer)
+    this.newspaces.forEach((space) => {
+      let newsItemContainer = space.filled
+      if(!newsItemContainer) return
+      newsItemContainer.container.x -=2
+      newsItemContainer.container.y -=2
+      this.scene.children.bringToTop(newsItemContainer.container)
+    })
+  }
+
+  onDrag(pointer, dragX, dragY) {
+    super.onDrag(pointer, dragX, dragY)
+    this.newspaces.forEach((space) => {
+      let newsItemContainer = space.filled
+      if(!newsItemContainer) return
+      
+      newsItemContainer.container.x = this.container.x+space.relativeCoords.x
+      newsItemContainer.container.y = this.container.y+space.relativeCoords.y
+    })
+  }
+
+  onDragEnd(pointer) {
+    super.onDragEnd(pointer)
+    for (var i = 0; i < this.layout.length; i++) {
+      let space = this.newspaces[i]
+      let clip = this.layout[i]
+      space.rect.x = this.container.x + clip.i*this.ratio + 10
+      space.rect.y = this.container.y + (clip.j+this.header)*this.ratio + 10
+      let newsItemContainer = space.filled
+      if(!newsItemContainer) continue
+      newsItemContainer.container.x +=2
+      newsItemContainer.container.y +=2 
+    }
+    this.drawLayout()
+  }
+
   checkItem (point) {
     let inside = false
     for (var i = 0; i < this.newspaces.length; i++) {
@@ -132,10 +178,8 @@ export default class Frontpage {
         drawOnTop = rect
       }
       this.layoutGraphics.lineStyle(1, 0x502709, 1)
-      this.layoutGraphics.strokeRect(rect.x, rect.y, rect.width, rect.height)
+      this.layoutGraphics.strokeRect(rect.x-this.container.x, rect.y-this.container.y, rect.width, rect.height)
     }
-    this.layoutGraphics.lineStyle(2, 0xffffff, 1)
-    this.layoutGraphics.strokeRect(drawOnTop.x+2, drawOnTop.y+2, drawOnTop.width-4, drawOnTop.height-4)
   }
 
   attachItem (newsItemContainer) {
