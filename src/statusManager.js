@@ -23,6 +23,7 @@ class StatusManager {
     this.companyStats = stats
   }
 
+  /**deprecated*/
   setPublication (frontPageData, frontPageStats) {
     Object.keys(frontPageData).forEach((key)=>{
       this.news[key] = frontPageData[key]

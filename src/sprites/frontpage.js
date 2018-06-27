@@ -209,6 +209,7 @@ export default class Frontpage extends DraggableSprite {
     }
   }
 
+  /**deprecated*/
   calculateStats() {
     let total = 0
     let exc = 0
@@ -228,6 +229,18 @@ export default class Frontpage extends DraggableSprite {
       relevancy: rel,
       popularity: pop
     }
+  }
+
+  calculateValues () {
+    return this.newspaces.map(space => {
+      return {
+        quality: 1,
+        impact: 2,
+        sensacionalism: 3,
+        topic: 4,
+        exclusive: 5
+      }
+    })
   }
 
 

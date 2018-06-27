@@ -3,10 +3,7 @@
 		"headline": "Speakeasies all around the city",
 		"lead": "Who are the suppliers of these clandestine places? some people is saying the Millonaire Andy Montana is behind this business.",
 		"tags": ["social", "andy montana", "mafia", "charity"],
-		"by": "Jhonatan Ross",
-		"popularity": 0.6,
-		"relevancy": 0.4,
-		"exclusivity": 0.6
+		"impact": 40
 	},
 	"002": {
 		"headline": "The strike continues on Soup & Pastas",

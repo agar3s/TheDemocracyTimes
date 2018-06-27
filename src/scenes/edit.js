@@ -4,6 +4,8 @@ import NewsItem from '../sprites/newsitem'
 import PocketWatch from '../sprites/pocketWatch'
 import Folder from '../sprites/folder'
 
+import {getSalesManager} from '../salesManager'
+
 class EditScene extends GeneralScene {
   constructor () {
     super({key: 'editScene'})
@@ -23,6 +25,9 @@ class EditScene extends GeneralScene {
       paddingLateral: 10,
       paddingVertical: 10
     }
+
+    this.salesManager = getSalesManager()
+    //this.salesManager.calculateSales()
   }
 
   create () {
@@ -133,10 +138,10 @@ class EditScene extends GeneralScene {
 
   saveFrontPage() {
     let news = {}
-    this.newsItems.forEach((newsItemContainer)=>{
+    this.newsItems.forEach((newsItemContainer) => {
       news[newsItemContainer.id] = {score: newsItemContainer.score}
     })
-    this.statusManager.setPublication(news, this.frontpage.calculateStats())
+    //this.statusManager.setPublication(news, this.frontpage.calculateStats())
   }
 
 

@@ -28,7 +28,7 @@ export default class PocketWatch extends DraggableSprite {
     this.container.y = this.y
     this.alarm = {hour:-1, min:-1}
     this.setTime(4, 58)
-    this.setAlarm(5, 0)
+    //this.setAlarm(5, 58)
 
     this.container.drawShadow = (alpha) => {
       watchShadow.setAlpha(alpha)

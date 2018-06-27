@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "devedit": "webpack --config webpack.editor.js",
-    "editor": "serve ."
+    "editor": "serve .",
+    "sales": "webpack --config webpack.salesSim.js && node dist/salesSimBundle.js"
   },
   "repository": {
     "type": "git",
